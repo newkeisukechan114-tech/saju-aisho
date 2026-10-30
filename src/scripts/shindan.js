@@ -3,6 +3,7 @@ import { STEMS, STEM_KO, BRANCHES, BRANCH_KO, ANIMALS, EL, EL_VAR, stemEl, BRANC
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const AFF = document.getElementById('result')?.dataset.aff || '';
+const PX = document.getElementById('result')?.dataset.px || '';
 const mod = (a, n) => ((a % n) + n) % n;
 function jdn(y, m, d) {
   const a = Math.floor((14 - m) / 12), yy = y + 4800 - a, mm = m + 12 * a - 3;
@@ -216,7 +217,7 @@ function render() {
       <h3>このポイント、お相手の本当の気持ちは<br>占い師に直接聞けます</h3>
       <p>クンハプで分かるのは、ふたりが生まれ持った気質です。お相手が今どう感じているか、この先どう動けばいいかは、あなたたちの状況を聞いたうえで占い師が具体的に答えてくれます。</p>
       <div class="asks"><span class="asks-h">相談するときは、こう聞いてみてください</span><ul>${pts.map(p => `<li>「${p[3]}」</li>`).join('')}</ul></div>
-      ${AFF ? `<a class="btn-cta" href="${AFF}" rel="sponsored nofollow noopener" target="_blank">ココナラ電話占いで相談する</a>` : '<span class="btn-cta is-disabled">ご案内の準備中です</span>'}
+      ${AFF ? `<a class="btn-cta" href="${AFF}" rel="sponsored nofollow noopener" target="_blank">ココナラ電話占いで相談する</a>${PX ? `<img class="a8px" src="${PX}" width="1" height="1" alt="">` : ''}` : '<span class="btn-cta is-disabled">ご案内の準備中です</span>'}
       <span class="note">ココナラ電話占いは、初回は最大30分無料で試せます（条件は公式サイトでご確認ください）。</span>
     </div>
     <div class="copy-row"><button class="btn-ghost" type="button" id="copy">結果をコピーしてシェア</button><button class="btn-ghost" type="button" id="again">もう一度占う</button><span class="note" id="copied" aria-live="polite"></span></div>`;

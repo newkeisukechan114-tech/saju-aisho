@@ -7,6 +7,7 @@ const {
   text = 'ココナラ電話占いなら、初回は最大30分無料で試せます。恋愛や相性の相談が得意な占い師を選んで、気になっていることを1つ聞いてみましょう。',
 } = Astro.props;
 const url = SITE.affiliate.coconalaUrl;
+const pixel = SITE.affiliate.coconalaPixel;
 ---
 <div class="cta frame reveal">
   <Corners />
@@ -16,5 +17,6 @@ const url = SITE.affiliate.coconalaUrl;
   {url
     ? <a class="btn-cta" href={url} rel="sponsored nofollow noopener" target="_blank">ココナラ電話占いで相談する</a>
     : <span class="btn-cta is-disabled">ご案内の準備中です</span>}
+  {url && pixel && <img class="a8px" src={pixel} width="1" height="1" alt="" loading="lazy" />}
   <span class="note">料金や無料の条件は、ココナラ電話占いの公式サイトで最新の情報をご確認ください。</span>
 </div>

@@ -21,7 +21,9 @@ export const SITE = {
   },
   // A8.net で提携が承認されたら、ココナラ電話占いの広告リンクを入れる
   affiliate: {
-    coconalaUrl: '',
+    // A8.net 素材ID 031（テキスト）。リンク先と、成果計測用の1×1画像
+    coconalaUrl: 'https://px.a8.net/svt/ejp?a8mat=4BES26+33C4G2+2PEO+BXYEA',
+    coconalaPixel: 'https://www13.a8.net/0.gif?a8mat=4BES26+33C4G2+2PEO+BXYEA',
   },
   categories: CATEGORIES,
 };

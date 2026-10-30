@@ -379,3 +379,5 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .contact .status.err { color: #DB8F86; }
 .contact .btn[disabled] { opacity: .6; cursor: wait; }
 @media (max-width: 720px) { .contact { padding: 24px 20px; } }
+
+.a8px { position: absolute; width: 1px; height: 1px; border: 0; opacity: 0; pointer-events: none; }
