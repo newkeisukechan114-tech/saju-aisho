@@ -12,7 +12,7 @@ export const SITE = {
   // ドメイン取得後に astro.config.mjs の site と合わせて変更
   url: 'https://saju-aisho.com',
   // 運営者のニックネーム（本名でなくて大丈夫です）
-  author: '[運営者のニックネーム]',
+  author: 'ソウルのサジュ恋愛相性占い 運営者',
   // お問い合わせ用のGoogleフォームのURL（未設定のあいだは「準備中」と表示）
   contactFormUrl: '',
   sns: {
