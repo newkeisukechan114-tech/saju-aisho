@@ -358,3 +358,24 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .article .cta, .article .next { margin-top: 28px; }
 .center-box { text-align: center; justify-items: center; }
 @media (max-width: 720px) { .prose { padding: 24px 20px; } }
+
+/* お問い合わせフォーム */
+.contact { padding: 32px 36px; display: grid; gap: 20px; }
+.field-row { display: grid; gap: 6px; }
+.field-row label { font-size: 13px; color: var(--ivory); letter-spacing: .04em; }
+.field-row .req, .field-row .opt { font-size: 11px; margin-left: 6px; padding: 0 6px; border: 1px solid var(--gold-soft); color: var(--gold); }
+.field-row .opt { color: var(--muted); border-color: var(--gold-faint); }
+.contact textarea { font: inherit; font-size: 16px; color: var(--ivory); background: rgba(0,0,0,.45); border: 1px solid var(--gold-faint); border-radius: 2px; padding: 11px 12px; width: 100%; resize: vertical; line-height: 1.7; }
+.contact textarea:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+.contact .hint { font-size: 12px; color: var(--muted); justify-self: end; font-variant-numeric: tabular-nums; }
+.contact .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact .agree { display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--ivory); }
+.contact .agree input { width: 18px; height: 18px; accent-color: #C9A55C; }
+.contact .agree a { color: var(--gold); }
+.contact .notes { margin: 0; padding-left: 1.2em; font-size: 13px; color: var(--muted); }
+.contact .actions { display: grid; gap: 10px; justify-items: center; }
+.contact .status { margin: 0; font-size: 14px; min-height: 1.6em; text-align: center; }
+.contact .status.ok { color: #E6CF92; }
+.contact .status.err { color: #DB8F86; }
+.contact .btn[disabled] { opacity: .6; cursor: wait; }
+@media (max-width: 720px) { .contact { padding: 24px 20px; } }

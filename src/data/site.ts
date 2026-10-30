@@ -14,7 +14,7 @@ export const SITE = {
   // 運営者のニックネーム（本名でなくて大丈夫です）
   author: 'ソウルのサジュ恋愛相性占い 運営者',
   // お問い合わせ用のGoogleフォームのURL（未設定のあいだは「準備中」と表示）
-  contactFormUrl: '',
+  contactFormUrl: "", // 使っていません（お問い合わせはサイト内のフォーム）
   sns: {
     x: '', // 例: https://x.com/seoul_saju
     instagram: '', // 例: https://www.instagram.com/seoul_saju/

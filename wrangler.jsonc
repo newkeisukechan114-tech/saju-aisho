@@ -1,8 +1,15 @@
 {
   "name": "saju-aisho",
   "compatibility_date": "2026-10-30",
+  "main": "./worker/index.js",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
-  }
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  // お問い合わせメールの送信。届け先は秘密の変数 CONTACT_TO（ダッシュボードで設定）
+  "send_email": [{ "name": "SEB" }],
+  // ダッシュボードで設定した変数を、デプロイのたびに消さない
+  "keep_vars": true
 }

@@ -2,19 +2,93 @@
 import Base from '../layouts/Base.astro';
 import Corners from '../components/Corners.astro';
 import { SITE } from '../data/site';
-const form = SITE.contactFormUrl;
+const kinds = ['サイトへのご意見', '記事の誤りのご指摘', '広告・掲載について', 'その他'];
 ---
-<Base title="お問い合わせ" description={`${SITE.name}へのお問い合わせ。`}>
+<Base title="お問い合わせ" description={`${SITE.name}へのお問い合わせフォームです。`}>
   <div class="page-head">
     <div class="crumb"><a href="/">トップ</a><span>／</span>お問い合わせ</div>
-    <div class="block-head"><span class="en">Contact</span><h1>お問い合わせ</h1></div>
+    <div class="block-head"><span class="en">Contact</span><h1>お問い合わせ</h1><p>サイトへのご意見や、記事の誤りのご指摘などは、こちらのフォームからお送りください。</p></div>
   </div>
-  <div class="prose frame center-box">
+
+  <form class="contact frame" id="contact-form" novalidate>
     <Corners />
-    <p>サイトへのご意見や、記事の誤りのご指摘などは、下のフォームからお送りください。内容を確認のうえ、必要に応じてお返事します。</p>
-    <p>個別の占いの鑑定や、相性診断の結果についてのご相談には、お答えできません。ご了承ください。</p>
-    {form
-      ? <p><a class="btn" href={form} rel="noopener" target="_blank">お問い合わせフォームを開く</a></p>
-      : <p class="note">お問い合わせフォームは準備中です。</p>}
-  </div>
+    <div class="field-row">
+      <label for="c-kind">お問い合わせの種類</label>
+      <select id="c-kind" name="kind">
+        {kinds.map((k) => <option value={k}>{k}</option>)}
+      </select>
+    </div>
+    <div class="field-row">
+      <label for="c-name">お名前 <span class="opt">任意・ニックネーム可</span></label>
+      <input id="c-name" name="name" type="text" maxlength="50" autocomplete="nickname" />
+    </div>
+    <div class="field-row">
+      <label for="c-email">メールアドレス <span class="req">必須</span></label>
+      <input id="c-email" name="email" type="email" maxlength="200" autocomplete="email" required />
+    </div>
+    <div class="field-row">
+      <label for="c-message">内容 <span class="req">必須</span></label>
+      <textarea id="c-message" name="message" rows="8" maxlength="2000" required></textarea>
+      <span class="hint" id="c-count">0 / 2000文字</span>
+    </div>
+    <div class="hp" aria-hidden="true">
+      <label for="c-website">この欄は空のままにしてください</label>
+      <input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+    </div>
+    <label class="agree" for="c-agree"><input id="c-agree" name="agree" type="checkbox" /> <span><a href="/privacy/">プライバシーポリシー</a>に同意して送信します</span></label>
+    <ul class="notes">
+      <li>個別の占いの鑑定や、相性診断の結果についてのご相談にはお答えできません。</li>
+      <li>内容を確認のうえ、必要に応じてお返事します。お返事まで数日いただくことがあります。</li>
+    </ul>
+    <div class="actions">
+      <button class="btn" type="submit" id="c-submit">送信する</button>
+      <p class="status" id="c-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
 </Base>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const status = document.getElementById('c-status')!;
+  const submit = document.getElementById('c-submit') as HTMLButtonElement;
+  const msg = document.getElementById('c-message') as HTMLTextAreaElement;
+  const count = document.getElementById('c-count')!;
+  const startedAt = Date.now();
+  msg.addEventListener('input', () => { count.textContent = `${msg.value.length} / 2000文字`; });
+
+  const say = (text: string, kind: 'ok' | 'err' | '' = '') => { status.textContent = text; status.className = `status ${kind}`; };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const email = String(fd.get('email') || '').trim();
+    const message = String(fd.get('message') || '').trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return say('メールアドレスを確認してください。', 'err');
+    if (message.length < 10) return say('内容は10文字以上で入力してください。', 'err');
+    if (!(document.getElementById('c-agree') as HTMLInputElement).checked) return say('プライバシーポリシーへの同意にチェックを入れてください。', 'err');
+
+    submit.disabled = true;
+    say('送信しています…');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          kind: fd.get('kind'), name: fd.get('name'), email, message,
+          website: fd.get('website'), agree: true, startedAt,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok) {
+        form.reset(); count.textContent = '0 / 2000文字';
+        say('送信しました。お問い合わせありがとうございます。', 'ok');
+      } else {
+        say('送信できませんでした。時間をおいて、もう一度お試しください。', 'err');
+      }
+    } catch {
+      say('通信に失敗しました。電波のよい場所で、もう一度お試しください。', 'err');
+    } finally {
+      submit.disabled = false;
+    }
+  });
+</script>
