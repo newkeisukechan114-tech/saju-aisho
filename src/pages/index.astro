@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import Corners from '../components/Corners.astro';
+import { getCollection } from 'astro:content';
+const latest = (await getCollection('articles', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .slice(0, 3);
+---
+<Base>
+    <div class="hero">
+      <div class="seal"><span class="gold-text">合</span></div>
+      <div class="eyebrow">Gunghap · Seoul</div>
+      <h1>ふたりの生年月日で、<br>韓国の相性占いを<span class="gold-text">最後まで無料</span>で。</h1>
+      <div class="ornament"><i></i></div>
+      <p>韓国の四柱推命「사주（サジュ）」でふたりの命式を比べる、韓国式の相性占い「궁합（クンハプ）」。交際や結婚の前に相性を見る、ソウルの定番の占いです。</p>
+      <a class="btn" href="/shindan/">相性を占う</a>
+      <span class="note">無料・登録なし・生年月日は保存しません</span>
+    </div>
+    <nav class="menu" aria-label="コンテンツ">
+      <a class="menu-card frame reveal" href="/shindan/"><span class="en">Gunghap</span><b>相性診断</b><span class="desc">ふたりの四柱から、相性の点数と4つの読み解きを出します。</span><span class="go">占う</span></a>
+      <a class="menu-card frame reveal" href="/nisshu/"><span class="en">Day Masters</span><b>10の日主</b><span class="desc">生まれた日の天干でわかる、あなたの恋愛の傾向。</span><span class="go">読む</span></a>
+      <a class="menu-card frame reveal" href="/guide/"><span class="en">First Reading</span><b>はじめての電話占い</b><span class="desc">怖くない？高くならない？よくある不安にお答えします。</span><span class="go">読む</span></a>
+      <a class="menu-card frame reveal" href="/articles/"><span class="en">Column</span><b>コラム</b><span class="desc">サジュとクンハプの基本や、恋愛の悩みに役立つ読みもの。</span><span class="go">読む</span></a>
+    </nav>
+  {latest.length > 0 && (
+    <section class="block">
+      <div class="block-head reveal"><span class="en">Column</span><h2>新着コラム</h2></div>
+      <div class="posts">
+        {latest.map((a) => (
+          <a class="post frame reveal" href={`/articles/${a.slug}/`}><Corners /><span class="cat">{a.data.category}</span><b>{a.data.title}</b></a>
+        ))}
+      </div>
+    </section>
+  )}
+</Base>

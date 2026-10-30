@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import Corners from '../components/Corners.astro';
+import { SITE } from '../data/site';
+---
+<Base title="運営者情報" description={`${SITE.name}の運営者と、記事を書くときの方針についてのページです。`}>
+  <div class="page-head">
+    <div class="crumb"><a href="/">トップ</a><span>／</span>運営者情報</div>
+    <div class="block-head"><span class="en">About</span><h1>運営者情報</h1></div>
+  </div>
+  <div class="prose frame">
+    <Corners />
+    <h2>運営者</h2>
+    <table>
+      <tbody>
+        <tr><th>サイト名</th><td>{SITE.name}</td></tr>
+        <tr><th>運営者</th><td>{SITE.author}</td></tr>
+        <tr><th>お問い合わせ</th><td><a href="/contact/">お問い合わせページ</a>からご連絡ください。</td></tr>
+      </tbody>
+    </table>
+
+    <h2>このサイトについて</h2>
+    <p>[ここに、運営者がサジュや韓国の占いに興味を持ったきっかけと、どんな体験をもとに書いているかを書きます。顔や本名を出す必要はありません。]</p>
+    <p>相性診断は、韓国の四柱推命「サジュ」の考え方をもとに、ふたりの生年月日を比べて相性を読み解くものです。計算はあなたの端末の中だけで行い、生年月日を保存したり送信したりすることはありません。</p>
+
+    <h2>記事を書くときの方針</h2>
+    <ul>
+      <li>実際に体験したことと、本や公式情報で調べたことを分けて書きます。</li>
+      <li>電話占いなどの体験談には、体験した日付を書きます。</li>
+      <li>料金・無料の条件・キャンセルや個人情報の扱いは、公式の最新情報を確認してから書き、確認日を添えます。</li>
+      <li>「必ず当たる」「運命が変わる」のような言い切りはせず、感想は感想として書きます。</li>
+      <li>不安をあおる表現は使いません。占いは、ふたりの関係を考えるためのヒントとしてお使いください。</li>
+    </ul>
+
+    <h2>広告について</h2>
+    <p>当サイトは、アフィリエイトプログラム（A8.netなど）を利用しています。広告リンクを含むページには「PR」と表示しています。</p>
+  </div>
+</Base>

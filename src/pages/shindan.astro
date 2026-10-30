@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import Corners from '../components/Corners.astro';
+import { SITE } from '../data/site';
+---
+<Base title="四柱推命で恋愛の相性を無料診断（韓国式サジュ・クンハプ）" description="ふたりの生年月日と生まれた時間から、韓国の四柱推命「サジュ」で恋愛の相性を無料で診断します。相性の点数、4つの観点の読み解き、ふたりが気をつけたい3つのポイントがわかります。">
+    <div class="page-head">
+      <div class="crumb"><a href="/">トップ</a><span>／</span>相性診断</div>
+      <div class="block-head"><span class="en">Gunghap</span><h1>サジュで占う韓国式 相性診断</h1><p>ふたりの生年月日から、それぞれのサジュ（四柱）を出して比べるクンハプ（相性占い）です。日主の結びつき・暮らしのリズム・干支・五行の補い合いから相性を読み解きます。</p></div>
+    </div>
+    <form class="tool frame" id="form" novalidate>
+      <Corners />
+      <div class="people">
+        <div class="person">
+          <h3>あなた <small>본인</small></h3>
+          <div class="field">
+            <span class="flabel" id="a-date-l">生年月日</span>
+            <button type="button" class="date-btn" id="a-date-btn" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="a-date-l a-date-btn"><span class="dv">クリックして選ぶ</span><span class="ic" aria-hidden="true"></span></button>
+            <input type="hidden" id="a-date">
+            <div class="picker frame" id="a-picker" role="dialog" aria-label="生年月日を選ぶ" hidden></div>
+          </div>
+          <div class="field">
+            <span class="flabel" id="a-hour-l">生まれた時間（わからなければそのまま）</span>
+            <button type="button" class="date-btn" id="a-hour-btn" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="a-hour-l a-hour-btn"><span class="dv">わからない</span><span class="ic" aria-hidden="true"></span></button>
+            <input type="hidden" id="a-hour" value="">
+            <div class="picker frame" id="a-hpicker" role="dialog" aria-label="生まれた時間を選ぶ" hidden></div>
+          </div>
+        </div>
+        <div class="knot" aria-hidden="true">合</div>
+        <div class="person">
+          <h3>お相手 <small>상대</small></h3>
+          <div class="field">
+            <span class="flabel" id="b-date-l">生年月日</span>
+            <button type="button" class="date-btn" id="b-date-btn" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="b-date-l b-date-btn"><span class="dv">クリックして選ぶ</span><span class="ic" aria-hidden="true"></span></button>
+            <input type="hidden" id="b-date">
+            <div class="picker frame" id="b-picker" role="dialog" aria-label="生年月日を選ぶ" hidden></div>
+          </div>
+          <div class="field">
+            <span class="flabel" id="b-hour-l">生まれた時間（わからなければそのまま）</span>
+            <button type="button" class="date-btn" id="b-hour-btn" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="b-hour-l b-hour-btn"><span class="dv">わからない</span><span class="ic" aria-hidden="true"></span></button>
+            <input type="hidden" id="b-hour" value="">
+            <div class="picker frame" id="b-hpicker" role="dialog" aria-label="生まれた時間を選ぶ" hidden></div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" type="submit" id="run">相性を占う</button>
+        <span class="note">生年月日はこの画面の中だけで計算し、保存も送信もしません。</span>
+      </div>
+      <div class="err" id="err" role="alert"></div>
+    </form>
+    <div class="result" id="result" aria-live="polite" data-aff={SITE.affiliate.coconalaUrl}></div>
+
+    <section class="howto">
+      <div class="block-head reveal"><span class="en">How it works</span><h2>サジュとクンハプの関係</h2><p>「サジュ」と「クンハプ」は別々の占いではありません。<b>ふたりのサジュを並べて比べること</b>を、韓国ではクンハプと呼びます。このサイトもその方法で占っています。</p></div>
+      <ol class="steps">
+        <li class="frame reveal"><Corners /><span class="num">壹</span><h3>ひとりずつサジュを出す</h3><p>生年月日と生まれた時間から、年・月・日・時の4本の柱を出します。これが「사주（サジュ）＝四つの柱」で、日本の四柱推命と同じしくみです。</p></li>
+        <li class="frame reveal"><Corners /><span class="num">貳</span><h3>ふたりのサジュを比べる</h3><p>日主どうし、日支どうし、生まれ年の干支どうし、五行のバランスの4つを比べます。比べて相性を見ることが「궁합（クンハプ）」です。</p></li>
+        <li class="frame reveal"><Corners /><span class="num">參</span><h3>相性と気をつけたい点がわかる</h3><p>4つの結果をまとめて相性の点数を出し、ふたりがつまずきやすいポイントと、うまくいくコツをお伝えします。</p></li>
+      </ol>
+      <div class="glossary frame reveal"><Corners />
+        <h3>ことばの意味</h3>
+        <dl>
+          <dt>サジュ（사주・四柱）</dt><dd>生まれた年・月・日・時から出す4本の柱。その人が生まれ持った性質を表します。</dd>
+          <dt>クンハプ（궁합・宮合）</dt><dd>「相性」という意味の韓国語。ふたりのサジュを比べて相性を見る占いのことも指します。</dd>
+          <dt>ティックンハプ（띠궁합）</dt><dd>生まれ年の干支だけで見る、手軽な相性占い。このサイトでは「干支の相性」として結果に含めています。</dd>
+          <dt>日主（일간・イルガン）</dt><dd>生まれた日の天干。サジュの中心で、その人の本質を表します。</dd>
+          <dt>五行（오행・オヘン）</dt><dd>木・火・土・金・水の5つの要素。サジュの8文字を5つに分けて、性質のバランスを見ます。</dd>
+        </dl>
+      </div>
+      <div class="limits frame reveal"><Corners />
+        <h3>この診断でわからないこと</h3>
+        <p>本格的なクンハプでは、ふたりの運気の流れ（大運・年運）がいつ重なるか、相手が自分にとってどんな役割の人か（十神）まで読み解きます。結婚や復縁のタイミングなど、より踏み込んだことを知りたいときは、<a href="/guide/">占い師への相談</a>がおすすめです。</p>
+      </div>
+    </section>
+</Base>
+<script>
+  import '../scripts/shindan.js';
+</script>

@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import Corners from '../../components/Corners.astro';
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../../data/site';
+const articles = (await getCollection('articles', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+const fmt = (d: Date) => `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+---
+<Base title="コラム一覧｜サジュ・クンハプ・恋愛の相性" description="韓国の四柱推命（サジュ）と相性占い（クンハプ）の基本、日主の解説、恋愛の悩み、電話占いの使い方などのコラム一覧です。">
+  <div class="page-head">
+    <div class="crumb"><a href="/">トップ</a><span>／</span>コラム</div>
+    <div class="block-head"><span class="en">Column</span><h1>コラム</h1><p>サジュとクンハプの基本から、恋愛の悩み、電話占いの使い方まで。</p></div>
+  </div>
+  {articles.length === 0 ? (
+    <p class="note center">記事は準備中です。</p>
+  ) : (
+    CATEGORIES.filter((c) => articles.some((a) => a.data.category === c)).map((c) => (
+      <section class="cat-group">
+        <h2 class="cat-title reveal">{c}</h2>
+        <div class="posts">
+          {articles.filter((a) => a.data.category === c).map((a) => (
+            <a class="post frame reveal" href={`/articles/${a.slug}/`}>
+              <Corners />
+              <span class="cat">{fmt(a.data.publishedAt)}{a.data.pr && ' ・ PR'}</span>
+              <b>{a.data.title}</b>
+              <span class="desc">{a.data.description}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))
+  )}
+</Base>

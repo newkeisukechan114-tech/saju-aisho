@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import Corners from '../components/Corners.astro';
+import { SITE } from '../data/site';
+const form = SITE.contactFormUrl;
+---
+<Base title="お問い合わせ" description={`${SITE.name}へのお問い合わせ。`}>
+  <div class="page-head">
+    <div class="crumb"><a href="/">トップ</a><span>／</span>お問い合わせ</div>
+    <div class="block-head"><span class="en">Contact</span><h1>お問い合わせ</h1></div>
+  </div>
+  <div class="prose frame center-box">
+    <Corners />
+    <p>サイトへのご意見や、記事の誤りのご指摘などは、下のフォームからお送りください。内容を確認のうえ、必要に応じてお返事します。</p>
+    <p>個別の占いの鑑定や、相性診断の結果についてのご相談には、お答えできません。ご了承ください。</p>
+    {form
+      ? <p><a class="btn" href={form} rel="noopener" target="_blank">お問い合わせフォームを開く</a></p>
+      : <p class="note">お問い合わせフォームは準備中です。</p>}
+  </div>
+</Base>

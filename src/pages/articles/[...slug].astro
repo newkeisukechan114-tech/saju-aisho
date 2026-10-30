@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import Corners from '../../components/Corners.astro';
+import PRNotice from '../../components/PRNotice.astro';
+import AffiliateCTA from '../../components/AffiliateCTA.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => !data.draft);
+  return articles.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const fmt = (d: Date) => `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+---
+<Base title={entry.data.title} description={entry.data.description}>
+  <article class="article">
+    <div class="page-head">
+      <div class="crumb"><a href="/">トップ</a><span>／</span><a href="/articles/">コラム</a><span>／</span>{entry.data.category}</div>
+      <div class="article-head">
+        <span class="cat">{entry.data.category}</span>
+        <h1>{entry.data.title}</h1>
+        <p class="dates">
+          公開日 <time datetime={entry.data.publishedAt.toISOString()}>{fmt(entry.data.publishedAt)}</time>
+          {entry.data.updatedAt && <> ・ 更新日 <time datetime={entry.data.updatedAt.toISOString()}>{fmt(entry.data.updatedAt)}</time></>}
+        </p>
+      </div>
+    </div>
+    {entry.data.pr && <PRNotice />}
+    <div class="prose frame"><Corners /><Content /></div>
+    {entry.data.pr && <AffiliateCTA />}
+    <div class="next frame reveal"><Corners /><p>あなたとお相手の相性は、生年月日だけで占えます。</p><a class="btn" href="/shindan/">相性を占う</a></div>
+  </article>
+</Base>

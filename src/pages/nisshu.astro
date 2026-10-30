@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import Corners from '../components/Corners.astro';
+import { STEMS, STEM_KO, STEM_INFO, EL, EL_VAR, stemEl } from '../data/saju-data.js';
+---
+<Base title="10の日主（イルガン）でわかる性格と恋愛傾向｜四柱推命・サジュ" description="生まれた日の天干「日主」は、四柱推命（サジュ）でその人の本質を表します。甲木から癸水まで、10の日主の性格と恋愛の傾向を紹介します。">
+    <div class="page-head">
+      <div class="crumb"><a href="/">トップ</a><span>／</span>10の日主</div>
+      <div class="block-head"><span class="en">Ten Day Masters</span><h1>10の日主（일간・イルガン）</h1><p>生まれた日の天干「日主」は、サジュでいちばん大切な“自分そのもの”。タップすると恋愛の傾向が開きます。</p></div>
+    </div>
+    <div class="stems">
+      {STEMS.map((s, i) => (
+        <details class="frame reveal" style={`transition-delay:${(i % 5) * 90}ms`}>
+          <summary>
+            <span class="dot" style={`background:var(${EL_VAR[stemEl(i)]})`}></span>
+            <span class="k">{s}<small>{STEM_KO[i]}</small></span>
+            <span class="img">{STEM_INFO[i][0]}の{EL[stemEl(i)]}</span>
+          </summary>
+          <p>{STEM_INFO[i][1]}</p>
+        </details>
+      ))}
+    </div>
+    <div class="next frame reveal"><Corners /><p>自分とお相手の日主は、相性診断で調べられます。</p><a class="btn" href="/shindan/">相性を占う</a></div>
+</Base>
