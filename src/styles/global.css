@@ -36,16 +36,9 @@ header.site .wrap { display: flex; align-items: center; justify-content: space-b
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .logo .mark { width: 42px; height: 42px; flex: none; display: block; }
 .logo .words { display: grid; line-height: 1.25; }
-.logo .words small, .logo .words b {
-  background: linear-gradient(110deg, #9C7A3A 0%, #E2C98F 22%, #BF9A55 40%, #EBD7A6 50%, #BF9A55 60%, #E2C98F 78%, #9C7A3A 100%);
-  background-size: 250% 100%; background-position: 100% 0;
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  animation: sheen 20s ease-in-out infinite;
-}
+.logo .words small, .logo .words b { color: #D4B26C; }
 .logo .words small { font-family: var(--display); font-size: 10px; letter-spacing: .4em; }
 .logo .words b { font-family: var(--display); font-size: 19px; font-weight: 700; letter-spacing: .08em; }
-@keyframes sheen { 0%, 45% { background-position: 100% 0; } 95%, 100% { background-position: 0% 0; } }
-@media (prefers-reduced-motion: reduce) { .logo .words small, .logo .words b { animation: none; background-position: 50% 0; } }
 nav.main { display: flex; gap: 22px; flex-wrap: wrap; font-size: 13px; letter-spacing: .08em; }
 nav.main a { text-decoration: none; color: var(--muted); transition: color .3s; }
 nav.main a:hover, nav.main a:focus-visible { color: var(--gold); }
