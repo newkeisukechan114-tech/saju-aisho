@@ -1,5 +1,5 @@
 ---
-title: 韓国で人気の「AI占い」とは？ロボットがサジュ（四柱推命）を読む時代
+title: 韓国・ソウルで人気のAI占いカフェ「ビナイダ」とは？ロボットがサジュ（四柱推命）を読む
 description: ソウル・益善洞のAI占いのお店「ビナイダ」（住所・料金・地図つき）や、生成AIでサジュを占う使い方を紹介。AIはどうやって四柱推命を読むのか、気軽に試すときの注意点、人に相談する占いとの違いまでまとめます。
 category: サジュの基本
 publishedAt: 2026-10-31
@@ -16,16 +16,30 @@ draft: false
   <figcaption>イメージイラスト（運営者作成）</figcaption>
 </figure>
 
-## 韓屋の街・益善洞（イクソンドン）の「ビナイダ」
+## ソウルのAI占いカフェ「ビナイダ」とは
 
 韓国の報道で多く取り上げられているのが、ソウル・鍾路区（チョンノグ）の益善洞（イクソンドン）にある「ビナイダ（VINAIDA）」です。2026年2月にオープンした、韓国の巫俗（ムーダン）文化をテーマにした体験型のお店です。
 
 益善洞は、古い韓屋（ハノク）を生かしたカフェや雑貨店が並ぶ人気の街で、お店はその路地の一角にあります。店名の「ビナイダ」は、韓国語で「切に祈ります」という意味です。
 
+お店の入口の様子は、ビナイダの公式Instagramの動画で見られます。
+
+<figure class="insta">
+  <iframe src="https://www.instagram.com/reel/DWXtDaxE2WJ/embed/" title="ビナイダ公式Instagramの動画（益善洞のお店の入口）" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+  <figcaption>出典：ビナイダ公式Instagram（@vinaida_official）</figcaption>
+</figure>
+
 店内には、サジュを読む「AI巫女」のブースと、人相を読むロボットがあります。
 
 - **AI巫女のサジュ占い**：名前・性別・生年月日を入力し、恋愛・お金・健康・勉強・仕事の中から気になるテーマを選びます。受話器やヘッドセットでAIと会話すると、最後にQRコード付きのお守りカードがもらえます。QRコードを読み込むと、五行のバランスなど詳しい結果をスマートフォンで見られます。
 - **ロボットの人相占い**：カメラで顔を撮ると、ロボットアームが似顔絵を描きながら人相を読み解きます。似顔絵はそのまま記念に持ち帰れます。
+
+AI巫女は「アミ（AMI）」、人相を読むロボットは「タングン（DANGUN）」という名前のキャラクターです。公式Instagramでは、それぞれのキャラクターのビジュアルが公開されています。
+
+<figure class="insta">
+  <iframe src="https://www.instagram.com/p/DWQ3W8kk4TX/embed/" title="ビナイダ公式Instagramの投稿（人相を読むキャラクター「タングン」）" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+  <figcaption>出典：ビナイダ公式Instagram（@vinaida_official）</figcaption>
+</figure>
 
 <figure>
   <img src="/images/articles/ai-uranai-flow.svg" alt="AI占いブースの流れ。1 名前・性別・生年月日を入力、2 恋愛・お金・仕事などのテーマを選ぶ、3 受話器やヘッドセットでAIと話す、4 QRコード付きのお守りカードを受け取る" width="960" height="300" loading="lazy">
@@ -53,6 +67,7 @@ draft: false
 | 営業時間 | 月〜金 12:00〜21:00／土 10:00〜22:00／日 10:00〜21:00 |
 | 料金 | AIのサジュ占い 7,000ウォン／人相占いと似顔絵 8,000ウォン（報道時点） |
 | 言語 | 韓国語のほか、日本語・英語に対応 |
+| 公式サイト | [ビナイダ公式サイト（日本語）](https://vinaida-jp.imweb.me/)／[公式Instagram](https://www.instagram.com/vinaida_official/) |
 
 <div class="map">
   <iframe src="https://www.google.com/maps?q=37.5737694,126.9903514&z=17&hl=ja&output=embed" title="ビナイダ 益善洞店の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
@@ -61,6 +76,8 @@ draft: false
 [Googleマップで「ビナイダ 益善洞店」を開く](https://www.google.com/maps/search/?api=1&query=VINAIDA%20Ikseon%20Branch&query_place_id=ChIJ5Sxha5WjfDURcNzRO6W422Q)
 
 ※営業時間はGoogleマップの情報、料金は2026年春の韓国の報道をもとにしています（2026年10月31日確認）。変わることがあるので、行く前に最新の情報を確かめてください。
+
+ビナイダは、ソウルの百貨店でのポップアップ出店や、63ビルの展望台とのコラボレーションも公式Instagramで告知しています。出店場所が変わることもあるので、お店の最新情報は公式Instagramで確かめるのが確実です。
 
 ### 弘大（ホンデ）には無人のAIタロット機も
 
