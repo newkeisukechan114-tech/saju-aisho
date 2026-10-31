@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-label="AI占いブースの流れ：情報を入力、テーマを選ぶ、AIと会話、お守りカードを受け取る">
+  <rect width="960" height="300" fill="#0b0a08"/>
+  <g font-family="sans-serif" fill="#D4B26C" text-anchor="middle">
+    <g transform="translate(120 0)">
+      <circle cx="0" cy="110" r="52" fill="none" stroke="#D4B26C" stroke-width="2"/>
+      <text y="104" font-size="26" font-family="serif">1</text><text y="130" font-size="13">入力</text>
+      <text y="200" font-size="15">名前・性別・</text><text y="222" font-size="15">生年月日を入力</text>
+    </g>
+    <g transform="translate(360 0)">
+      <circle cx="0" cy="110" r="52" fill="none" stroke="#D4B26C" stroke-width="2"/>
+      <text y="104" font-size="26" font-family="serif">2</text><text y="130" font-size="13">テーマ</text>
+      <text y="200" font-size="15">恋愛・お金・仕事</text><text y="222" font-size="15">などから選ぶ</text>
+    </g>
+    <g transform="translate(600 0)">
+      <circle cx="0" cy="110" r="52" fill="none" stroke="#D4B26C" stroke-width="2"/>
+      <text y="104" font-size="26" font-family="serif">3</text><text y="130" font-size="13">会話</text>
+      <text y="200" font-size="15">受話器やヘッドセットで</text><text y="222" font-size="15">AIと話す</text>
+    </g>
+    <g transform="translate(840 0)">
+      <circle cx="0" cy="110" r="52" fill="none" stroke="#D4B26C" stroke-width="2"/>
+      <text y="104" font-size="26" font-family="serif">4</text><text y="130" font-size="13">お守り</text>
+      <text y="200" font-size="15">QRコード付きの</text><text y="222" font-size="15">カードを受け取る</text>
+    </g>
+  </g>
+  <g stroke="#D4B26C" stroke-opacity=".6" stroke-width="1.5" fill="none">
+    <path d="M186 110 H294 M286 104 l8 6 -8 6"/><path d="M426 110 H534 M526 104 l8 6 -8 6"/><path d="M666 110 H774 M766 104 l8 6 -8 6"/>
+  </g>
+  <text x="480" y="276" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#D4B26C" fill-opacity=".6">報道をもとに運営者が作成したイメージ図</text>
+</svg>
