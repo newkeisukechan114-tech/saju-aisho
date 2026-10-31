@@ -196,7 +196,7 @@ function render() {
   const hb = $('b-hour').value === '' ? null : Number($('b-hour').value);
   const A = saju(pa[0], pa[1], pa[2], ha), B = saju(pb[0], pb[1], pb[2], hb);
   const c = compat(A, B), t = title(c.score), pts = cautions(A, B);
-  lastText = `【韓国式相性占い クンハプ】ふたりの相性は${c.score}点「${t[0]}」\nあなたの日主：${STEMS[A.day.s]}（${STEM_INFO[A.day.s][0]}）／お相手の日主：${STEMS[B.day.s]}（${STEM_INFO[B.day.s][0]}）\n#サジュ #韓国占い #ソウルのサジュ恋愛相性占い`;
+  lastText = `【韓国式相性占い クンハプ】ふたりの相性は${c.score}点「${t[0]}」\nあなたの日主：${STEMS[A.day.s]}（${STEM_INFO[A.day.s][0]}）／お相手の日主：${STEMS[B.day.s]}（${STEM_INFO[B.day.s][0]}）\n\n誕生日を入れるだけで、ふたりの相性を無料で占えます👇\nhttps://saju-aisho.com/shindan/\n\n#サジュ #韓国占い #ソウルのサジュ恋愛相性占い`;
   $('result').innerHTML = `
     <div class="score-card frame">${CORNERS}
       <span class="tag">ふたりの相性</span>
