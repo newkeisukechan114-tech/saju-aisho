@@ -4,7 +4,7 @@ description: 2027年の干支「丁未」の意味と、60年ぶりの「赤い�
 category: 年運
 publishedAt: 2026-11-01
 pr: true
-draft: true
+draft: false
 ---
 
 2027年の干支は「丁未（ひのとひつじ）」です。60年に一度めぐってくる組み合わせで、「赤い未年」とも呼ばれます。
