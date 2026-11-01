@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="2027年 丁未（ひのとひつじ）赤い未年のイメージイラスト">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140f0c"/><stop offset="1" stop-color="#2a1712"/></linearGradient>
+    <radialGradient id="flame" cx=".5" cy=".6" r=".5"><stop offset="0" stop-color="#F6D27A" stop-opacity=".55"/><stop offset="1" stop-color="#C8503A" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#sky)"/>
+  <g fill="#D4B26C" opacity=".55"><circle cx="110" cy="70" r="1.6"/><circle cx="300" cy="44" r="1.2"/><circle cx="660" cy="60" r="1.5"/><circle cx="850" cy="96" r="1.2"/><circle cx="520" cy="30" r="1"/></g>
+  <!-- hills (未 = 夏の終わりの土) -->
+  <path d="M0 360 Q240 300 480 330 T960 320 V480 H0Z" fill="#3a2418"/>
+  <path d="M0 400 Q300 350 600 380 T960 370 V480 H0Z" fill="#4a2c1c"/>
+  <!-- candle (丁 = 灯火) -->
+  <circle cx="480" cy="190" r="120" fill="url(#flame)"/>
+  <rect x="462" y="210" width="36" height="110" rx="4" fill="#efe2c4"/>
+  <path d="M480 128 C500 158 506 180 480 206 C454 180 460 158 480 128Z" fill="#E8603C"/>
+  <path d="M480 150 C490 168 492 182 480 198 C468 182 470 168 480 150Z" fill="#F6D27A"/>
+  <!-- sheep silhouette (original, simple) -->
+  <g transform="translate(640 300)" fill="#efe2c4">
+    <ellipse cx="0" cy="0" rx="58" ry="34"/>
+    <circle cx="-40" cy="-20" r="20"/><circle cx="-10" cy="-30" r="22"/><circle cx="22" cy="-26" r="20"/><circle cx="44" cy="-8" r="18"/>
+    <ellipse cx="-66" cy="-4" rx="17" ry="21" fill="#9a7656"/><ellipse cx="-58" cy="-24" rx="10" ry="5" fill="#9a7656" transform="rotate(-25 -58 -24)"/><circle cx="-72" cy="-8" r="2.4" fill="#2a1712"/>
+    <rect x="-34" y="26" width="8" height="26" rx="3" fill="#2a1712"/><rect x="-12" y="28" width="8" height="24" rx="3" fill="#2a1712"/>
+    <rect x="16" y="28" width="8" height="24" rx="3" fill="#2a1712"/><rect x="36" y="26" width="8" height="26" rx="3" fill="#2a1712"/>
+  </g>
+  <text x="480" y="448" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C" letter-spacing="6">2027 丁未 ― 赤い未年</text>
+</svg>
