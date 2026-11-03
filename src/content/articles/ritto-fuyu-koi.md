@@ -4,7 +4,7 @@ description: 2026年の立冬は11月7日。暦の上で冬が始まるこの日
 category: 恋愛の悩み
 publishedAt: 2026-11-03
 pr: true
-draft: true
+draft: false
 ---
 
 2026年の立冬は、11月7日（土）です。暦の上では、この日から冬が始まります。
