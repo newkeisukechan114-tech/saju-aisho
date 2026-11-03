@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="十二支と月・季節の対応図。亥は11月で、立冬から始まる冬（水）の最初の月">
+<rect width="960" height="540" fill="#0b0a08"/>
+<path d="M424.4,62.3 A215,215 0 0 1 535.6,62.3 L511.1,154.1 A120,120 0 0 0 448.9,154.1Z" fill="#6178AE" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="480.0" y="100.5" text-anchor="middle" font-family="serif" font-size="34" fill="#6178AE">子</text>
+<text x="480.0" y="131.5" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">12月</text>
+<path d="M535.6,62.3 A215,215 0 0 1 632.0,118.0 L564.9,185.1 A120,120 0 0 0 511.1,154.1Z" fill="#6178AE" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="570.8" y="124.8" text-anchor="middle" font-family="serif" font-size="34" fill="#6178AE">丑</text>
+<text x="551.8" y="150.7" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">1月</text>
+<path d="M632.0,118.0 A215,215 0 0 1 687.7,214.4 L595.9,238.9 A120,120 0 0 0 564.9,185.1Z" fill="#5E9C80" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="637.2" y="191.2" text-anchor="middle" font-family="serif" font-size="34" fill="#5E9C80">寅</text>
+<text x="604.3" y="203.2" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">2月</text>
+<path d="M687.7,214.4 A215,215 0 0 1 687.7,325.6 L595.9,301.1 A120,120 0 0 0 595.9,238.9Z" fill="#5E9C80" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="661.5" y="282.0" text-anchor="middle" font-family="serif" font-size="34" fill="#5E9C80">卯</text>
+<text x="623.5" y="275.0" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">3月</text>
+<path d="M687.7,325.6 A215,215 0 0 1 632.0,422.0 L564.9,354.9 A120,120 0 0 0 595.9,301.1Z" fill="#5E9C80" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="637.2" y="372.7" text-anchor="middle" font-family="serif" font-size="34" fill="#5E9C80">辰</text>
+<text x="604.3" y="346.8" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">4月</text>
+<path d="M632.0,422.0 A215,215 0 0 1 535.6,477.7 L511.1,385.9 A120,120 0 0 0 564.9,354.9Z" fill="#C9665B" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="570.8" y="439.2" text-anchor="middle" font-family="serif" font-size="34" fill="#C9665B">巳</text>
+<text x="551.8" y="399.3" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">5月</text>
+<path d="M535.6,477.7 A215,215 0 0 1 424.4,477.7 L448.9,385.9 A120,120 0 0 0 511.1,385.9Z" fill="#C9665B" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="480.0" y="463.5" text-anchor="middle" font-family="serif" font-size="34" fill="#C9665B">午</text>
+<text x="480.0" y="418.5" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">6月</text>
+<path d="M424.4,477.7 A215,215 0 0 1 328.0,422.0 L395.1,354.9 A120,120 0 0 0 448.9,385.9Z" fill="#C9665B" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="389.2" y="439.2" text-anchor="middle" font-family="serif" font-size="34" fill="#C9665B">未</text>
+<text x="408.2" y="399.3" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">7月</text>
+<path d="M328.0,422.0 A215,215 0 0 1 272.3,325.6 L364.1,301.1 A120,120 0 0 0 395.1,354.9Z" fill="#DCD8CC" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="322.8" y="372.8" text-anchor="middle" font-family="serif" font-size="34" fill="#DCD8CC">申</text>
+<text x="355.7" y="346.8" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">8月</text>
+<path d="M272.3,325.6 A215,215 0 0 1 272.3,214.4 L364.1,238.9 A120,120 0 0 0 364.1,301.1Z" fill="#DCD8CC" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="298.5" y="282.0" text-anchor="middle" font-family="serif" font-size="34" fill="#DCD8CC">酉</text>
+<text x="336.5" y="275.0" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">9月</text>
+<path d="M272.3,214.4 A215,215 0 0 1 328.0,118.0 L395.1,185.1 A120,120 0 0 0 364.1,238.9Z" fill="#DCD8CC" fill-opacity="0.18" stroke="#0b0a08" stroke-width="3"/>
+<text x="322.8" y="191.2" text-anchor="middle" font-family="serif" font-size="34" fill="#DCD8CC">戌</text>
+<text x="355.7" y="203.2" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">10月</text>
+<path d="M328.0,118.0 A215,215 0 0 1 424.4,62.3 L448.9,154.1 A120,120 0 0 0 395.1,185.1Z" fill="#6178AE" fill-opacity="0.55" stroke="#0b0a08" stroke-width="3"/>
+<text x="389.2" y="124.8" text-anchor="middle" font-family="serif" font-size="34" fill="#ffffff">亥</text>
+<text x="408.2" y="150.7" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cfc6b0">11月</text>
+<text x="480.0" y="207.0" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6178AE">冬・水</text>
+<text x="550.0" y="277.0" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#5E9C80">春・木</text>
+<text x="480.0" y="347.0" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#C9665B">夏・火</text>
+<text x="410.0" y="277.0" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#DCD8CC">秋・金</text>
+<line x1="368.5" y1="76.9" x2="268" y2="66" stroke="#D4B26C" stroke-width="1.5"/>
+<g font-family="sans-serif" fill="#D4B26C"><text x="40" y="52" font-size="18">11月7日（立冬）から</text><text x="40" y="78" font-size="18">「亥」の月＝冬のはじまり</text></g>
+<text x="920" y="520" text-anchor="end" font-family="sans-serif" font-size="12" fill="#8a7a5a">月は節入り（立冬など）で切り替わります／運営者作成</text>
+</svg>

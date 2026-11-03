@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="2026年11月7日からの月の柱「己亥（つちのとい）」の説明図。己は土、亥は水">
+  <rect width="960" height="360" fill="#0b0a08"/>
+  <text x="480" y="52" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#cfc6b0">2026年11月7日〜12月6日ごろの「月の柱」</text>
+  <g transform="translate(250 80)">
+    <rect width="200" height="230" rx="10" fill="#15120d" stroke="#D3A64A" stroke-width="2"/>
+    <text x="100" y="40" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#cfc6b0">十干</text>
+    <text x="100" y="130" text-anchor="middle" font-family="serif" font-size="80" fill="#D3A64A">己</text>
+    <text x="100" y="175" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#D3A64A">つちのと</text>
+    <text x="100" y="208" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#cfc6b0">五行：土（田畑の土）</text>
+  </g>
+  <g transform="translate(510 80)">
+    <rect width="200" height="230" rx="10" fill="#10141f" stroke="#6178AE" stroke-width="2"/>
+    <text x="100" y="40" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#cfc6b0">十二支</text>
+    <text x="100" y="130" text-anchor="middle" font-family="serif" font-size="80" fill="#8ea6dc">亥</text>
+    <text x="100" y="175" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#8ea6dc">い</text>
+    <text x="100" y="208" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#cfc6b0">五行：水（冬のはじまり）</text>
+  </g>
+  <text x="920" y="345" text-anchor="end" font-family="sans-serif" font-size="12" fill="#8a7a5a">運営者作成</text>
+</svg>
