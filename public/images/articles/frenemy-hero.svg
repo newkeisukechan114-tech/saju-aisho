@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="笑顔で握手するふたりと、その後ろで向かい合う影のイメージイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16121b"/><stop offset="1" stop-color="#0b0a0e"/></linearGradient>
+    <radialGradient id="spot" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".22"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <ellipse cx="480" cy="270" rx="360" ry="200" fill="url(#spot)"/>
+  <!-- shadows on wall -->
+  <g fill="#2a2032" opacity=".9">
+    <circle cx="300" cy="120" r="44"/><path d="M240 175 Q300 150 360 175 L380 300 L220 300Z"/>
+    <circle cx="660" cy="120" r="44"/><path d="M600 175 Q660 150 720 175 L740 300 L580 300Z"/>
+  </g>
+  <path d="M420 120 L455 150 L440 160 L480 190 L465 198 L520 235" stroke="#C9665B" stroke-width="4" fill="none" stroke-linejoin="round" opacity=".8"/>
+  <!-- front figures -->
+  <g>
+    <circle cx="350" cy="230" r="40" fill="#e9dcc2"/>
+    <path d="M335 228 q6 -6 12 0 M355 228 q6 -6 12 0" stroke="#3a2c2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M338 246 q12 12 24 0" stroke="#3a2c2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M290 420 Q290 290 350 285 Q410 290 420 360 L470 335" stroke="#e9dcc2" stroke-width="0" fill="#5c5288"/>
+    <path d="M290 420 Q290 290 350 285 Q405 290 415 350 L462 330 L470 350 L420 380 L410 420Z" fill="#5c5288"/>
+    <circle cx="610" cy="230" r="40" fill="#e9dcc2"/>
+    <path d="M595 228 q6 -6 12 0 M615 228 q6 -6 12 0" stroke="#3a2c2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M598 246 q12 12 24 0" stroke="#3a2c2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M670 420 Q670 290 610 285 Q555 290 545 350 L498 330 L490 350 L540 380 L550 420Z" fill="#8a5a5a"/>
+    <ellipse cx="480" cy="342" rx="24" ry="14" fill="#e9dcc2"/>
+  </g>
+  <rect x="0" y="420" width="960" height="60" fill="#0b0a0e"/>
+  <text x="480" y="458" text-anchor="middle" font-family="serif" font-size="20" fill="#D4B26C" letter-spacing="5">表では仲良し、心の中ではライバル（イメージ）</text>
+</svg>

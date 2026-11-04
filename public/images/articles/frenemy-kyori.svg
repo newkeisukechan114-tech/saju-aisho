@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-label="モヤモヤする相手との距離の取り方3ステップ：1 比べる物差しを自分に戻す、2 話す情報を選ぶ、3 協力する場面を決める">
+  <rect width="960" height="340" fill="#0b0a08"/>
+  <text x="480" y="44" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#D4B26C">モヤモヤする相手との、ちょうどいい距離の取り方</text>
+  <g font-family="sans-serif" text-anchor="middle">
+    <g transform="translate(170 0)">
+      <circle cx="0" cy="140" r="56" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+      <path d="M-26 150 L26 150 M0 112 L0 150 M-30 130 L-20 112 L-10 130Z M10 130 L20 112 L30 130Z" stroke="#D4B26C" stroke-width="3" fill="none" stroke-linejoin="round"/>
+      <text y="232" font-size="18" fill="#D4B26C">1 比べる物差しを</text><text y="258" font-size="18" fill="#D4B26C">自分に戻す</text>
+      <text y="290" font-size="14" fill="#cfc6b0">昨日の自分と比べる</text>
+    </g>
+    <g transform="translate(480 0)">
+      <circle cx="0" cy="140" r="56" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+      <path d="M-28 118 H28 V152 H4 L-8 166 V152 H-28Z" stroke="#D4B26C" stroke-width="3" fill="none" stroke-linejoin="round"/>
+      <path d="M-14 136 H14" stroke="#D4B26C" stroke-width="3"/>
+      <text y="232" font-size="18" fill="#D4B26C">2 話す情報を選ぶ</text>
+      <text y="264" font-size="14" fill="#cfc6b0">大事な予定や本音は</text><text y="286" font-size="14" fill="#cfc6b0">信頼できる人に</text>
+    </g>
+    <g transform="translate(790 0)">
+      <circle cx="0" cy="140" r="56" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+      <path d="M-30 146 L-12 128 L4 140 L-8 152Z M30 146 L12 128 L-4 140 L8 152Z" stroke="#D4B26C" stroke-width="3" fill="none" stroke-linejoin="round"/>
+      <text y="232" font-size="18" fill="#D4B26C">3 協力する場面を</text><text y="258" font-size="18" fill="#D4B26C">決める</text>
+      <text y="290" font-size="14" fill="#cfc6b0">得意なことで手を組む</text>
+    </g>
+  </g>
+  <g stroke="#8a7a5a" stroke-width="1.5"><path d="M245 140 H405 M555 140 H715"/></g>
+  <text x="920" y="328" text-anchor="end" font-family="sans-serif" font-size="12" fill="#8a7a5a">運営者作成</text>
+</svg>
