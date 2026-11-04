@@ -8,8 +8,8 @@
 <rect x="560" y="80" width="160" height="62" rx="31" fill="#15120d" stroke="#5E9C80" stroke-width="2.5"/>
 <text x="604" y="123" text-anchor="middle" font-family="serif" font-size="32" fill="#5E9C80">乙</text>
 <text x="666" y="118" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#cfc6b0">草花・陰</text>
-<line x1="345" y1="111" x2="555" y2="111" stroke="#5E9C80" stroke-width="2" stroke-dasharray="8 6"/>
-<rect x="382" y="96" width="136" height="30" rx="15" fill="#0b0a08" stroke="#5E9C80" stroke-width="1.5"/><text x="450" y="117" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5E9C80">仲間＆ライバル</text>
+<line x1="350" y1="119" x2="550" y2="119" stroke="#5E9C80" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="450" y="102" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#5E9C80">仲間＆ライバル</text>
 <text x="120" y="204" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#C9665B">火</text>
 <rect x="180" y="164" width="160" height="62" rx="31" fill="#15120d" stroke="#C9665B" stroke-width="2.5"/>
 <text x="224" y="207" text-anchor="middle" font-family="serif" font-size="32" fill="#C9665B">丙</text>
@@ -17,8 +17,8 @@
 <rect x="560" y="164" width="160" height="62" rx="31" fill="#15120d" stroke="#C9665B" stroke-width="2.5"/>
 <text x="604" y="207" text-anchor="middle" font-family="serif" font-size="32" fill="#C9665B">丁</text>
 <text x="666" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#cfc6b0">灯火・陰</text>
-<line x1="345" y1="195" x2="555" y2="195" stroke="#C9665B" stroke-width="2" stroke-dasharray="8 6"/>
-<rect x="382" y="180" width="136" height="30" rx="15" fill="#0b0a08" stroke="#C9665B" stroke-width="1.5"/><text x="450" y="201" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#C9665B">仲間＆ライバル</text>
+<line x1="350" y1="203" x2="550" y2="203" stroke="#C9665B" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="450" y="186" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#C9665B">仲間＆ライバル</text>
 <text x="120" y="288" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#D3A64A">土</text>
 <rect x="180" y="248" width="160" height="62" rx="31" fill="#15120d" stroke="#D3A64A" stroke-width="2.5"/>
 <text x="224" y="291" text-anchor="middle" font-family="serif" font-size="32" fill="#D3A64A">戊</text>
@@ -26,8 +26,8 @@
 <rect x="560" y="248" width="160" height="62" rx="31" fill="#15120d" stroke="#D3A64A" stroke-width="2.5"/>
 <text x="604" y="291" text-anchor="middle" font-family="serif" font-size="32" fill="#D3A64A">己</text>
 <text x="666" y="286" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#cfc6b0">田畑・陰</text>
-<line x1="345" y1="279" x2="555" y2="279" stroke="#D3A64A" stroke-width="2" stroke-dasharray="8 6"/>
-<rect x="382" y="264" width="136" height="30" rx="15" fill="#0b0a08" stroke="#D3A64A" stroke-width="1.5"/><text x="450" y="285" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#D3A64A">仲間＆ライバル</text>
+<line x1="350" y1="287" x2="550" y2="287" stroke="#D3A64A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="450" y="270" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#D3A64A">仲間＆ライバル</text>
 <text x="120" y="372" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#DCD8CC">金</text>
 <rect x="180" y="332" width="160" height="62" rx="31" fill="#15120d" stroke="#DCD8CC" stroke-width="2.5"/>
 <text x="224" y="375" text-anchor="middle" font-family="serif" font-size="32" fill="#DCD8CC">庚</text>
@@ -35,8 +35,8 @@
 <rect x="560" y="332" width="160" height="62" rx="31" fill="#15120d" stroke="#DCD8CC" stroke-width="2.5"/>
 <text x="604" y="375" text-anchor="middle" font-family="serif" font-size="32" fill="#DCD8CC">辛</text>
 <text x="666" y="370" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#cfc6b0">宝石・陰</text>
-<line x1="345" y1="363" x2="555" y2="363" stroke="#DCD8CC" stroke-width="2" stroke-dasharray="8 6"/>
-<rect x="382" y="348" width="136" height="30" rx="15" fill="#0b0a08" stroke="#DCD8CC" stroke-width="1.5"/><text x="450" y="369" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#DCD8CC">仲間＆ライバル</text>
+<line x1="350" y1="371" x2="550" y2="371" stroke="#DCD8CC" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="450" y="354" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#DCD8CC">仲間＆ライバル</text>
 <text x="120" y="456" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#6178AE">水</text>
 <rect x="180" y="416" width="160" height="62" rx="31" fill="#15120d" stroke="#6178AE" stroke-width="2.5"/>
 <text x="224" y="459" text-anchor="middle" font-family="serif" font-size="32" fill="#6178AE">壬</text>
@@ -44,6 +44,6 @@
 <rect x="560" y="416" width="160" height="62" rx="31" fill="#15120d" stroke="#6178AE" stroke-width="2.5"/>
 <text x="604" y="459" text-anchor="middle" font-family="serif" font-size="32" fill="#6178AE">癸</text>
 <text x="666" y="454" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#cfc6b0">雨露・陰</text>
-<line x1="345" y1="447" x2="555" y2="447" stroke="#6178AE" stroke-width="2" stroke-dasharray="8 6"/>
-<rect x="382" y="432" width="136" height="30" rx="15" fill="#0b0a08" stroke="#6178AE" stroke-width="1.5"/><text x="450" y="453" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6178AE">仲間＆ライバル</text>
+<line x1="350" y1="455" x2="550" y2="455" stroke="#6178AE" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="450" y="438" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#6178AE">仲間＆ライバル</text>
 <text x="920" y="508" text-anchor="end" font-family="sans-serif" font-size="12" fill="#8a7a5a">同じ日主どうしは「比肩」／運営者作成</text></svg>

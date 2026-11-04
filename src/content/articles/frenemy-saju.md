@@ -4,7 +4,7 @@ description: 2026年によく使われた言葉「フレネミー」。友達な
 category: 相性
 publishedAt: 2026-11-04
 pr: true
-draft: true
+draft: false
 ---
 
 仲が良いはずなのに、なぜか一緒にいると疲れる。うれしい報告をしたら、少し冷たい反応が返ってきた。そんな相手を表す言葉として、2026年は「**フレネミー**」がよく使われました。
@@ -46,7 +46,7 @@ draft: true
 自分と**同じ五行で、陰陽がちがう日主**の相手は「劫財」の関係です。たとえば、大樹タイプの「甲」と草花タイプの「乙」は、どちらも「木」の仲間ですが、陰と陽がちがいます。
 
 <figure>
-  <img src="/images/articles/frenemy-gouzai.svg" alt="劫財（ごうざい）の組み合わせ図。同じ五行で陰陽がちがう日主の組み合わせ：甲と乙、丙と丁、戊と己、庚と辛、壬と癸" width="960" height="520" loading="lazy">
+  <img src="/images/articles/frenemy-gouzai.svg?v=2" alt="劫財（ごうざい）の組み合わせ図。同じ五行で陰陽がちがう日主の組み合わせ：甲と乙、丙と丁、戊と己、庚と辛、壬と癸" width="960" height="520" loading="lazy">
   <figcaption>劫財になる日主の組み合わせ（運営者作成）</figcaption>
 </figure>
 
