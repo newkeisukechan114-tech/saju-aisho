@@ -4,7 +4,7 @@ description: 2026年の新語・流行語大賞にノミネートされた「言
 category: 恋愛の悩み
 publishedAt: 2026-11-06
 pr: true
-draft: true
+draft: false
 ---
 
 「好きなのに、うまく言えない」「モヤモヤしているのに、何がイヤなのか説明できない」。そんな経験はありませんか。
