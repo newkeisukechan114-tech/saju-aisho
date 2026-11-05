@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="胸のモヤモヤが、ことばの吹き出しに変わっていくイメージイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient>
+    <radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <!-- person (side, simple) -->
+  <circle cx="230" cy="190" r="56" fill="#5c5288"/>
+  <path d="M150 420 Q150 270 230 262 Q310 270 310 420Z" fill="#5c5288"/>
+  <!-- tangled scribble near chest -->
+  <path d="M250 320 c20 -30 60 -10 40 15 s-50 20 -30 -15 s60 -5 45 25 s-55 10 -35 -20" stroke="#8a7aa8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- flow arrow dots -->
+  <g fill="#D4B26C"><circle cx="350" cy="290" r="4"/><circle cx="385" cy="270" r="5"/><circle cx="425" cy="250" r="6"/></g>
+  <!-- speech bubble -->
+  <ellipse cx="640" cy="200" rx="230" ry="130" fill="url(#g)"/>
+  <path d="M470 130 Q470 80 520 80 H790 Q840 80 840 130 V250 Q840 300 790 300 H560 L500 340 L515 300 H520 Q470 300 470 250Z" fill="#15120d" stroke="#D4B26C" stroke-width="2.5"/>
+  <path d="M655 170 c-14 -26 -52 -16 -48 12 c4 26 48 46 48 60 c0 -14 44 -34 48 -60 c4 -28 -34 -38 -48 -12Z" fill="#e98aa0"/>
+  <g stroke="#D4B26C" stroke-width="4" stroke-linecap="round"><path d="M530 135 H600 M710 135 H790 M530 265 H620 M690 265 H790"/></g>
+  <text x="480" y="452" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">モヤモヤを、ことばに（イメージ）</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-label="日主10タイプ別、気持ちを言葉にするときのクセ。甲 かっこつけて言えない、乙 合わせて本音をしまう、丙 勢いで言いすぎる、丁 さみしさをためこむ、戊 態度だけで伝えがち、己 自分の希望を後回し、庚 言葉が強くなりがち、辛 傷つくのがこわい、壬 気まぐれに見られる、癸 考えすぎて言えない">
+<rect width="960" height="470" fill="#0b0a08"/>
+<text x="480" y="42" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#D4B26C">日主別・気持ちを言葉にするときのクセ</text>
+<rect x="40" y="70" width="430" height="62" rx="12" fill="#15120d" stroke="#5E9C80" stroke-width="2"/>
+<text x="80" y="113" text-anchor="middle" font-family="serif" font-size="32" fill="#5E9C80">甲</text>
+<text x="116" y="109" font-family="sans-serif" font-size="15" fill="#A9A190">大樹</text>
+<text x="180" y="110" font-family="sans-serif" font-size="18" fill="#EEE7D7">かっこつけて言えない</text>
+<rect x="490" y="70" width="430" height="62" rx="12" fill="#15120d" stroke="#5E9C80" stroke-width="2"/>
+<text x="530" y="113" text-anchor="middle" font-family="serif" font-size="32" fill="#5E9C80">乙</text>
+<text x="566" y="109" font-family="sans-serif" font-size="15" fill="#A9A190">草花</text>
+<text x="630" y="110" font-family="sans-serif" font-size="18" fill="#EEE7D7">合わせて本音をしまう</text>
+<rect x="40" y="146" width="430" height="62" rx="12" fill="#15120d" stroke="#C9665B" stroke-width="2"/>
+<text x="80" y="189" text-anchor="middle" font-family="serif" font-size="32" fill="#C9665B">丙</text>
+<text x="116" y="185" font-family="sans-serif" font-size="15" fill="#A9A190">太陽</text>
+<text x="180" y="186" font-family="sans-serif" font-size="18" fill="#EEE7D7">勢いで言いすぎる</text>
+<rect x="490" y="146" width="430" height="62" rx="12" fill="#15120d" stroke="#C9665B" stroke-width="2"/>
+<text x="530" y="189" text-anchor="middle" font-family="serif" font-size="32" fill="#C9665B">丁</text>
+<text x="566" y="185" font-family="sans-serif" font-size="15" fill="#A9A190">灯火</text>
+<text x="630" y="186" font-family="sans-serif" font-size="18" fill="#EEE7D7">さみしさをためこむ</text>
+<rect x="40" y="222" width="430" height="62" rx="12" fill="#15120d" stroke="#D3A64A" stroke-width="2"/>
+<text x="80" y="265" text-anchor="middle" font-family="serif" font-size="32" fill="#D3A64A">戊</text>
+<text x="116" y="261" font-family="sans-serif" font-size="15" fill="#A9A190">山</text>
+<text x="180" y="262" font-family="sans-serif" font-size="18" fill="#EEE7D7">態度だけで伝えがち</text>
+<rect x="490" y="222" width="430" height="62" rx="12" fill="#15120d" stroke="#D3A64A" stroke-width="2"/>
+<text x="530" y="265" text-anchor="middle" font-family="serif" font-size="32" fill="#D3A64A">己</text>
+<text x="566" y="261" font-family="sans-serif" font-size="15" fill="#A9A190">田畑</text>
+<text x="630" y="262" font-family="sans-serif" font-size="18" fill="#EEE7D7">自分の希望を後回し</text>
+<rect x="40" y="298" width="430" height="62" rx="12" fill="#15120d" stroke="#DCD8CC" stroke-width="2"/>
+<text x="80" y="341" text-anchor="middle" font-family="serif" font-size="32" fill="#DCD8CC">庚</text>
+<text x="116" y="337" font-family="sans-serif" font-size="15" fill="#A9A190">鋼</text>
+<text x="180" y="338" font-family="sans-serif" font-size="18" fill="#EEE7D7">言葉が強くなりがち</text>
+<rect x="490" y="298" width="430" height="62" rx="12" fill="#15120d" stroke="#DCD8CC" stroke-width="2"/>
+<text x="530" y="341" text-anchor="middle" font-family="serif" font-size="32" fill="#DCD8CC">辛</text>
+<text x="566" y="337" font-family="sans-serif" font-size="15" fill="#A9A190">宝石</text>
+<text x="630" y="338" font-family="sans-serif" font-size="18" fill="#EEE7D7">傷つくのがこわい</text>
+<rect x="40" y="374" width="430" height="62" rx="12" fill="#15120d" stroke="#6178AE" stroke-width="2"/>
+<text x="80" y="417" text-anchor="middle" font-family="serif" font-size="32" fill="#6178AE">壬</text>
+<text x="116" y="413" font-family="sans-serif" font-size="15" fill="#A9A190">大海</text>
+<text x="180" y="414" font-family="sans-serif" font-size="18" fill="#EEE7D7">気まぐれに見られる</text>
+<rect x="490" y="374" width="430" height="62" rx="12" fill="#15120d" stroke="#6178AE" stroke-width="2"/>
+<text x="530" y="417" text-anchor="middle" font-family="serif" font-size="32" fill="#6178AE">癸</text>
+<text x="566" y="413" font-family="sans-serif" font-size="15" fill="#A9A190">雨露</text>
+<text x="630" y="414" font-family="sans-serif" font-size="18" fill="#EEE7D7">考えすぎて言えない</text>
+<text x="920" y="455" text-anchor="end" font-family="sans-serif" font-size="12" fill="#8a7a5a">運営者作成</text></svg>

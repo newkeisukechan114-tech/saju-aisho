@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="気持ちを言語化する3ステップ：1 気持ちに名前をつける、2 理由を一つ添える、3 お願いの形にする。例：さみしかった、最近会えていなかったから、今度ゆっくり話したいな">
+  <rect width="960" height="360" fill="#0b0a08"/>
+  <text x="480" y="42" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#D4B26C">気持ちを「言語化」する3ステップ</text>
+  <g font-family="sans-serif" text-anchor="middle">
+    <g transform="translate(170 70)">
+      <rect x="-130" y="0" width="260" height="210" rx="14" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+      <text y="44" font-size="30" font-family="serif" fill="#D4B26C">1</text>
+      <text y="84" font-size="18" fill="#EEE7D7">気持ちに名前をつける</text>
+      <text y="118" font-size="14" fill="#A9A190">うれしい・さみしい・不安…</text>
+      <text y="170" font-size="17" fill="#e98aa0">「さみしかった」</text>
+    </g>
+    <g transform="translate(480 70)">
+      <rect x="-130" y="0" width="260" height="210" rx="14" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+      <text y="44" font-size="30" font-family="serif" fill="#D4B26C">2</text>
+      <text y="84" font-size="18" fill="#EEE7D7">理由を一つ添える</text>
+      <text y="118" font-size="14" fill="#A9A190">責めずに、事実だけ</text>
+      <text y="170" font-size="17" fill="#e98aa0">「最近会えてなかったから」</text>
+    </g>
+    <g transform="translate(790 70)">
+      <rect x="-130" y="0" width="260" height="210" rx="14" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+      <text y="44" font-size="30" font-family="serif" fill="#D4B26C">3</text>
+      <text y="84" font-size="18" fill="#EEE7D7">お願いの形にする</text>
+      <text y="118" font-size="14" fill="#A9A190">「〜してほしい」より「〜したいな」</text>
+      <text y="170" font-size="17" fill="#e98aa0">「今度ゆっくり話したいな」</text>
+    </g>
+  </g>
+  <g stroke="#D4B26C" stroke-width="2" fill="#D4B26C"><path d="M305 175 H335"/><polygon points="345,175 333,169 333,181"/><path d="M615 175 H645"/><polygon points="655,175 643,169 643,181"/></g>
+  <text x="920" y="340" text-anchor="end" font-family="sans-serif" font-size="12" fill="#8a7a5a">運営者作成</text>
+</svg>
