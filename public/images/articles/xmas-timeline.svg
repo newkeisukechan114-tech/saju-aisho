@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" role="img" aria-label="クリスマスまでの逆算スケジュール。11月前半 出会いの場に行く、11月後半 ふたりで短く会う、12月上旬 2回目のデートと予定を聞く、12月中旬 誘う・気持ちを伝える、12月24日・25日 クリスマス">
+  <rect width="960" height="330" fill="#0b0a08"/>
+  <text x="480" y="42" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#D4B26C">クリスマスまでの逆算スケジュール</text>
+  <line x1="90" y1="140" x2="880" y2="140" stroke="#8a7a5a" stroke-width="2"/>
+  <g font-family="sans-serif" text-anchor="middle">
+    <g transform="translate(110 0)"><circle cy="140" r="14" fill="#D4B26C"/><text y="104" font-size="16" fill="#D4B26C">11月前半</text><text y="186" font-size="16" fill="#EEE7D7">出会いの場に</text><text y="208" font-size="16" fill="#EEE7D7">行く</text><text y="236" font-size="13" fill="#A9A190">自分に合う場所を1つ</text></g>
+    <g transform="translate(300 0)"><circle cy="140" r="14" fill="#D4B26C"/><text y="104" font-size="16" fill="#D4B26C">11月後半</text><text y="186" font-size="16" fill="#EEE7D7">ふたりで</text><text y="208" font-size="16" fill="#EEE7D7">短く会う</text><text y="236" font-size="13" fill="#A9A190">お茶やランチで1時間</text></g>
+    <g transform="translate(490 0)"><circle cy="140" r="14" fill="#D4B26C"/><text y="104" font-size="16" fill="#D4B26C">12月上旬</text><text y="186" font-size="16" fill="#EEE7D7">2回目のデート</text><text y="208" font-size="16" fill="#EEE7D7">予定を聞く</text><text y="236" font-size="13" fill="#A9A190">「年末は忙しい？」</text></g>
+    <g transform="translate(680 0)"><circle cy="140" r="14" fill="#D4B26C"/><text y="104" font-size="16" fill="#D4B26C">12月中旬</text><text y="186" font-size="16" fill="#EEE7D7">誘う・</text><text y="208" font-size="16" fill="#EEE7D7">気持ちを伝える</text><text y="236" font-size="13" fill="#A9A190">はっきり、短く</text></g>
+    <g transform="translate(860 0)"><circle cy="140" r="18" fill="#e98aa0"/><path d="M0 132 l3 6 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" fill="#fff6dc"/><text y="104" font-size="16" fill="#e98aa0">12/24・25</text><text y="186" font-size="16" fill="#EEE7D7">クリスマス</text></g>
+  </g>
+  <text x="920" y="312" text-anchor="end" font-family="sans-serif" font-size="12" fill="#8a7a5a">運営者作成</text>
+</svg>

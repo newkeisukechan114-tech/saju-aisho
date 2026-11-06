@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="冬の夜、灯りがともる並木道を歩くふたりのイメージイラスト">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101428"/><stop offset="1" stop-color="#1f2140"/></linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F6D27A" stop-opacity=".9"/><stop offset="1" stop-color="#F6D27A" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#sky)"/>
+  <g fill="#ffffff" opacity=".75"><circle cx="90" cy="60" r="2"/><circle cx="260" cy="40" r="1.6"/><circle cx="480" cy="70" r="1.8"/><circle cx="700" cy="45" r="1.6"/><circle cx="880" cy="80" r="2"/></g>
+  <!-- trees with lights -->
+  <g>
+    <g transform="translate(140 0)"><rect x="-6" y="250" width="12" height="130" fill="#2a2030"/><path d="M0 120 L-70 260 H70Z" fill="#20334a"/></g>
+    <g transform="translate(820 0)"><rect x="-6" y="250" width="12" height="130" fill="#2a2030"/><path d="M0 120 L-70 260 H70Z" fill="#20334a"/></g>
+    <g transform="translate(310 0) scale(.8) translate(0 90)"><rect x="-6" y="250" width="12" height="130" fill="#2a2030"/><path d="M0 120 L-70 260 H70Z" fill="#20334a"/></g>
+    <g transform="translate(650 0) scale(.8) translate(0 90)"><rect x="-6" y="250" width="12" height="130" fill="#2a2030"/><path d="M0 120 L-70 260 H70Z" fill="#20334a"/></g>
+  </g>
+  <g id="lights">
+    <g fill="url(#glow)">
+      <circle cx="120" cy="170" r="12"/><circle cx="160" cy="200" r="12"/><circle cx="110" cy="230" r="12"/><circle cx="175" cy="240" r="12"/><circle cx="140" cy="140" r="10"/>
+      <circle cx="800" cy="170" r="12"/><circle cx="840" cy="200" r="12"/><circle cx="790" cy="230" r="12"/><circle cx="855" cy="240" r="12"/><circle cx="820" cy="140" r="10"/>
+      <circle cx="300" cy="230" r="10"/><circle cx="325" cy="262" r="10"/><circle cx="292" cy="290" r="10"/><circle cx="640" cy="230" r="10"/><circle cx="665" cy="262" r="10"/><circle cx="632" cy="290" r="10"/>
+    </g>
+    <g fill="#ffe7a6"><circle cx="120" cy="170" r="3"/><circle cx="160" cy="200" r="3"/><circle cx="110" cy="230" r="3"/><circle cx="175" cy="240" r="3"/><circle cx="140" cy="140" r="3"/><circle cx="800" cy="170" r="3"/><circle cx="840" cy="200" r="3"/><circle cx="790" cy="230" r="3"/><circle cx="855" cy="240" r="3"/><circle cx="820" cy="140" r="3"/><circle cx="300" cy="230" r="3"/><circle cx="325" cy="262" r="3"/><circle cx="292" cy="290" r="3"/><circle cx="640" cy="230" r="3"/><circle cx="665" cy="262" r="3"/><circle cx="632" cy="290" r="3"/></g>
+  </g>
+  <!-- ground -->
+  <path d="M0 380 H960 V480 H0Z" fill="#171a30"/>
+  <path d="M380 480 L450 380 H510 L580 480Z" fill="#232742"/>
+  <!-- two figures from behind -->
+  <g fill="#5c5288">
+    <circle cx="455" cy="300" r="18"/><path d="M430 382 Q430 322 455 320 Q480 322 482 382Z"/>
+    <circle cx="505" cy="296" r="19" fill="#8a5a6e"/><path d="M480 382 Q480 320 505 318 Q530 320 532 382Z" fill="#8a5a6e"/>
+  </g>
+  <path d="M476 345 Q480 352 486 345" stroke="#f3e6c8" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <g fill="#ffffff" opacity=".6"><circle cx="220" cy="110" r="2.5"/><circle cx="420" cy="150" r="2"/><circle cx="560" cy="120" r="2.5"/><circle cx="740" cy="330" r="2"/><circle cx="240" cy="330" r="2"/></g>
+  <text x="480" y="456" text-anchor="middle" font-family="serif" font-size="21" fill="#F6D27A" letter-spacing="5">クリスマスまで、あと少し（イメージ）</text>
+</svg>
