@@ -18,6 +18,7 @@ export const SITE = {
   sns: {
     x: '', // 例: https://x.com/seoul_saju
     instagram: '', // 例: https://www.instagram.com/seoul_saju/
+    threads: 'https://www.threads.com/@saju_aisho',
   },
   // A8.net で提携が承認されたら、ココナラ電話占いの広告リンクを入れる
   affiliate: {
