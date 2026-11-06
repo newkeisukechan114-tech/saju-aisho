@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="手紙の書き方の3ステップ。1 最近のできごと、2 そのときの気持ち、3 これからのひとこと">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="360" fill="url(#bg)"/>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#D4B26C"/></marker></defs><rect x="45" y="70" width="270" height="230" rx="12" fill="#15120d" stroke="rgba(212,178,108,.35)"/>
+  <circle cx="180" cy="120" r="28" fill="none" stroke="#D4B26C" stroke-width="3"/><text x="180" y="131" text-anchor="middle" font-family="serif" font-size="30" fill="#D4B26C">1</text>
+  <text x="180" y="190" text-anchor="middle" font-family="serif" font-size="22" fill="#EEE7D7">最近のできごと</text>
+  <text x="180" y="232" text-anchor="middle" font-family="sans-serif" font-size="16" fill="rgba(238,231,215,.8)">「薬を買ってきて</text><text x="180" y="260" text-anchor="middle" font-family="sans-serif" font-size="16" fill="rgba(238,231,215,.8)">くれたね」</text><rect x="345" y="70" width="270" height="230" rx="12" fill="#15120d" stroke="rgba(212,178,108,.35)"/>
+  <circle cx="480" cy="120" r="28" fill="none" stroke="#D4B26C" stroke-width="3"/><text x="480" y="131" text-anchor="middle" font-family="serif" font-size="30" fill="#D4B26C">2</text>
+  <text x="480" y="190" text-anchor="middle" font-family="serif" font-size="22" fill="#EEE7D7">そのときの気持ち</text>
+  <text x="480" y="232" text-anchor="middle" font-family="sans-serif" font-size="16" fill="rgba(238,231,215,.8)">「すごく</text><text x="480" y="260" text-anchor="middle" font-family="sans-serif" font-size="16" fill="rgba(238,231,215,.8)">安心したよ」</text><rect x="645" y="70" width="270" height="230" rx="12" fill="#15120d" stroke="rgba(212,178,108,.35)"/>
+  <circle cx="780" cy="120" r="28" fill="none" stroke="#D4B26C" stroke-width="3"/><text x="780" y="131" text-anchor="middle" font-family="serif" font-size="30" fill="#D4B26C">3</text>
+  <text x="780" y="190" text-anchor="middle" font-family="serif" font-size="22" fill="#EEE7D7">これからのひとこと</text>
+  <text x="780" y="232" text-anchor="middle" font-family="sans-serif" font-size="16" fill="rgba(238,231,215,.8)">「これからも</text><text x="780" y="260" text-anchor="middle" font-family="sans-serif" font-size="16" fill="rgba(238,231,215,.8)">よろしくね」</text><path d="M318 185 H338" stroke="#D4B26C" stroke-width="3" marker-end="url(#ar)"/><path d="M618 185 H638" stroke="#D4B26C" stroke-width="3" marker-end="url(#ar)"/><text x="480.0" y="340" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">「ありがとう」の手紙の3ステップ</text>
+</svg>

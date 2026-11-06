@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="癸水（雨露タイプ）のイメージイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient>
+    <radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#6178AE" stop-opacity=".35"/><stop offset="1" stop-color="#6178AE" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <circle cx="480" cy="250" r="240" fill="url(#g)"/>
+  <g><path d="M420 120 C398 160 400 182 420 182 C440 182 442 160 420 120Z" fill="#6178AE" opacity="0.7"/><path d="M520 170 C498 210 500 232 520 232 C540 232 542 210 520 170Z" fill="#6178AE" opacity="1"/><path d="M470 250 C448 290 450 312 470 312 C490 312 492 290 470 250Z" fill="#6178AE" opacity="0.85"/><ellipse cx="480" cy="390" rx="150" ry="14" stroke="#6178AE" stroke-width="3" fill="none"/><ellipse cx="480" cy="390" rx="80" ry="7" stroke="#6178AE" stroke-width="3" fill="none"/></g>
+  <text x="120" y="150" font-family="serif" font-size="96" fill="#D4B26C" opacity=".9">癸</text>
+  <text x="128" y="190" font-family="serif" font-size="20" fill="#EEE7D7" opacity=".8" letter-spacing="4">きすい</text>
+  <text x="840" y="150" text-anchor="end" font-family="serif" font-size="22" fill="#EEE7D7" opacity=".75" letter-spacing="4">五行：水・陰</text>
+  <text x="480" y="452" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">癸水｜雨露タイプ（イメージ）</text>
+</svg>

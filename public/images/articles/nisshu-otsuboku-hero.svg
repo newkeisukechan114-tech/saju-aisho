@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="乙木（草花タイプ）のイメージイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient>
+    <radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5E9C80" stop-opacity=".35"/><stop offset="1" stop-color="#5E9C80" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <circle cx="480" cy="250" r="240" fill="url(#g)"/>
+  <g><path d="M400 400 Q360 300 400 230" stroke="#5E9C80" stroke-width="6" fill="none"/><g fill="#e9a6b8"><circle cx="400" cy="214" r="15"/><circle cx="415" cy="226" r="15"/><circle cx="409" cy="244" r="15"/><circle cx="391" cy="244" r="15"/><circle cx="385" cy="226" r="15"/></g><circle cx="400" cy="230" r="9" fill="#D3A64A"/><path d="M480 400 Q510 300 480 180" stroke="#5E9C80" stroke-width="6" fill="none"/><g fill="#e9a6b8"><circle cx="480" cy="164" r="15"/><circle cx="495" cy="176" r="15"/><circle cx="489" cy="194" r="15"/><circle cx="471" cy="194" r="15"/><circle cx="465" cy="176" r="15"/></g><circle cx="480" cy="180" r="9" fill="#D3A64A"/><path d="M560 400 Q530 300 560 250" stroke="#5E9C80" stroke-width="6" fill="none"/><g fill="#e9a6b8"><circle cx="560" cy="234" r="15"/><circle cx="575" cy="246" r="15"/><circle cx="569" cy="264" r="15"/><circle cx="551" cy="264" r="15"/><circle cx="545" cy="246" r="15"/></g><circle cx="560" cy="250" r="9" fill="#D3A64A"/><path d="M430 400 Q445 350 470 345 M520 400 Q510 360 530 340" stroke="#5E9C80" stroke-width="5" fill="none"/></g>
+  <text x="120" y="150" font-family="serif" font-size="96" fill="#D4B26C" opacity=".9">乙</text>
+  <text x="128" y="190" font-family="serif" font-size="20" fill="#EEE7D7" opacity=".8" letter-spacing="4">おつぼく</text>
+  <text x="840" y="150" text-anchor="end" font-family="serif" font-size="22" fill="#EEE7D7" opacity=".75" letter-spacing="4">五行：木・陰</text>
+  <text x="480" y="452" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">乙木｜草花タイプ（イメージ）</text>
+</svg>

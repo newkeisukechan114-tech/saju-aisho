@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="テーブルの上に並んだふたつのマグカップと、ハートの封がされた小さな手紙のイメージイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="250" r="250" fill="url(#g)"/>
+  <rect x="0" y="360" width="960" height="120" fill="#2a2230"/>
+  <g><path d="M300 230 h110 v120 q0 20 -20 20 h-70 q-20 0 -20 -20Z" fill="#6178AE"/><path d="M410 255 q40 0 40 35 t-40 35" stroke="#6178AE" stroke-width="12" fill="none"/><path d="M330 210 q10 -20 0 -40 M360 210 q10 -20 0 -40" stroke="#EEE7D7" stroke-width="4" fill="none" opacity=".5" stroke-linecap="round"/></g>
+  <g><path d="M530 230 h110 v120 q0 20 -20 20 h-70 q-20 0 -20 -20Z" fill="#e98aa0"/><path d="M640 255 q40 0 40 35 t-40 35" stroke="#e98aa0" stroke-width="12" fill="none"/><path d="M560 210 q10 -20 0 -40 M590 210 q10 -20 0 -40" stroke="#EEE7D7" stroke-width="4" fill="none" opacity=".5" stroke-linecap="round"/></g>
+  <g transform="translate(405 372) rotate(-5)"><rect width="150" height="62" rx="4" fill="#EEE7D7"/><path d="M0 0 L75 40 L150 0" stroke="#cfc6b2" stroke-width="2" fill="none"/><path d="M75 38 c-8 -12 -24 -6 -20 6 c3 9 20 16 20 22 c0 -6 17 -13 20 -22 c4 -12 -12 -18 -20 -6Z" fill="#C9665B"/></g>
+  <text x="480.0" y="468" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">11月22日、いい夫婦の日（イメージ）</text>
+</svg>

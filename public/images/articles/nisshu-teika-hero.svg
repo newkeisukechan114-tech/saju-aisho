@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="丁火（灯火タイプ）のイメージイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient>
+    <radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#C9665B" stop-opacity=".35"/><stop offset="1" stop-color="#C9665B" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <circle cx="480" cy="250" r="240" fill="url(#g)"/>
+  <g><rect x="440" y="250" width="80" height="150" rx="8" fill="#EEE7D7"/><path d="M440 262 Q480 280 520 262" stroke="#cfc6b2" stroke-width="3" fill="none"/><line x1="480" y1="250" x2="480" y2="232" stroke="#333" stroke-width="3"/><path d="M480 130 C450 175 455 220 480 232 C505 220 510 175 480 130Z" fill="#C9665B"/><path d="M480 170 C468 195 470 220 480 226 C490 220 492 195 480 170Z" fill="#f2c46b"/></g>
+  <text x="120" y="150" font-family="serif" font-size="96" fill="#D4B26C" opacity=".9">丁</text>
+  <text x="128" y="190" font-family="serif" font-size="20" fill="#EEE7D7" opacity=".8" letter-spacing="4">ていか</text>
+  <text x="840" y="150" text-anchor="end" font-family="serif" font-size="22" fill="#EEE7D7" opacity=".75" letter-spacing="4">五行：火・陰</text>
+  <text x="480" y="452" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">丁火｜灯火タイプ（イメージ）</text>
+</svg>

@@ -25,3 +25,7 @@ export const STEM_INFO = [
   ['大海', '自由で器の大きい人。束縛を嫌い、深い愛で相手を包みます。気まぐれに見られないよう、連絡のリズムを決めておくと安心です。'],
   ['雨露', '感受性豊かで聡明な人。相手の心の機微にすぐ気づきます。考えすぎて不安になったら、直接たずねるのがいちばんの近道です。']
 ];
+
+// 日主ごとの解説記事のURL（/articles/<slug>/）
+export const STEM_SLUG = ['koboku','otsuboku','heika','teika','bodo','kido','koukin','shinkin','jinsui','kisui'];
+export const STEM_FULL = ['甲木','乙木','丙火','丁火','戊土','己土','庚金','辛金','壬水','癸水'];

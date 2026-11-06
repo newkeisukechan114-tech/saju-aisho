@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="朝の校門の前で、応援の言葉が書かれたのぼりと、合格祈願のアメの箱のイメージイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="760" cy="110" r="150" fill="url(#g)"/><circle cx="760" cy="110" r="44" fill="#f2c46b" opacity=".85"/>
+  <rect x="0" y="400" width="960" height="80" fill="#14111a"/>
+  <g fill="#3a3346"><rect x="160" y="170" width="40" height="230"/><rect x="460" y="170" width="40" height="230"/><rect x="150" y="160" width="360" height="26" rx="4"/></g>
+  <text x="330" y="180" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#EEE7D7" letter-spacing="3">試験会場</text>
+  <g><rect x="560" y="150" width="8" height="250" fill="#8a7aa8"/><rect x="568" y="160" width="70" height="200" fill="#e98aa0"/><text x="603" y="205" text-anchor="middle" font-family="sans-serif" font-size="26" fill="#15120d" writing-mode="tb">수능대박</text></g>
+  <g transform="translate(700 300)"><rect width="150" height="100" rx="8" fill="#D4B26C"/><rect x="0" y="36" width="150" height="16" fill="#C9665B"/><text x="75" y="84" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#15120d">엿</text><path d="M60 0 q15 -30 30 0" stroke="#C9665B" stroke-width="6" fill="none"/></g>
+  <g fill="#5c5288"><circle cx="300" cy="300" r="22"/><path d="M268 400 Q268 330 300 322 Q332 330 332 400Z"/></g>
+  <text x="480.0" y="455" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">11月19日、スヌンの朝（イメージ）</text>
+</svg>

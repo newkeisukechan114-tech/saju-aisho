@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="壬水（大海タイプ）のイメージイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient>
+    <radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#6178AE" stop-opacity=".35"/><stop offset="1" stop-color="#6178AE" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <circle cx="480" cy="250" r="240" fill="url(#g)"/>
+  <g><path d="M160 230 q40 -30 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0" stroke="#6178AE" stroke-width="6" fill="none" opacity="0.5"/><path d="M160 290 q40 -30 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0" stroke="#6178AE" stroke-width="8" fill="none" opacity="0.75"/><path d="M160 350 q40 -30 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0" stroke="#6178AE" stroke-width="10" fill="none" opacity="1"/><circle cx="620" cy="140" r="34" fill="#EEE7D7" opacity=".85"/></g>
+  <text x="120" y="150" font-family="serif" font-size="96" fill="#D4B26C" opacity=".9">壬</text>
+  <text x="128" y="190" font-family="serif" font-size="20" fill="#EEE7D7" opacity=".8" letter-spacing="4">じんすい</text>
+  <text x="840" y="150" text-anchor="end" font-family="serif" font-size="22" fill="#EEE7D7" opacity=".75" letter-spacing="4">五行：水・陽</text>
+  <text x="480" y="452" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">壬水｜大海タイプ（イメージ）</text>
+</svg>

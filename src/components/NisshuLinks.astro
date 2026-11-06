@@ -1,0 +1,14 @@
+---
+// 記事の下に出す「10の日主」へのリンク
+import { STEMS, STEM_FULL, STEM_SLUG, EL_VAR, stemEl } from '../data/saju-data.js';
+const { current } = Astro.props;
+---
+<nav class="nisshu-links reveal" aria-label="10の日主">
+  <p>自分の日主をくわしく読む</p>
+  <ul>
+    {STEMS.map((s, i) => (
+      <li><a href={`/articles/${STEM_SLUG[i]}/`} aria-current={current === STEM_SLUG[i] ? 'page' : undefined}><span class="dot" style={`background:var(${EL_VAR[stemEl(i)]})`}></span>{STEM_FULL[i]}</a></li>
+    ))}
+  </ul>
+  <a class="all" href="/nisshu/">10の日主の一覧へ</a>
+</nav>

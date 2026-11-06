@@ -386,3 +386,14 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 
 /* 関連記事 */
 .related { margin-top: 40px; }
+
+/* 10の日主リンク */
+.stems details .more { display: inline-block; margin-top: 10px; font-size: 12px; color: var(--gold); }
+.nisshu-links { margin-top: 40px; text-align: center; }
+.nisshu-links p { margin: 0 0 12px; color: var(--muted); font-size: 13px; letter-spacing: .1em; }
+.nisshu-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.nisshu-links li a { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid rgba(201,165,92,.35); border-radius: 999px; color: var(--ivory); text-decoration: none; font-size: 13px; transition: border-color .3s; }
+.nisshu-links li a:hover, .nisshu-links li a[aria-current] { border-color: var(--gold); }
+.nisshu-links .dot { width: 6px; height: 6px; border-radius: 50%; }
+.nisshu-links .all { display: inline-block; margin-top: 12px; font-size: 12px; color: var(--gold); }
+.panel .dm-link { display: block; margin-top: 12px; font-size: 12px; color: var(--gold); text-align: center; }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="庚金（鋼タイプ）のイメージイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient>
+    <radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#DCD8CC" stop-opacity=".35"/><stop offset="1" stop-color="#DCD8CC" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <circle cx="480" cy="250" r="240" fill="url(#g)"/>
+  <g><path d="M380 400 L340 300 L400 190 L520 150 L600 230 L620 340 L560 400Z" fill="#8f8b84"/><path d="M400 190 L470 260 L520 150 M470 260 L600 230 M470 260 L560 400 M470 260 L340 300" stroke="#DCD8CC" stroke-width="3" fill="none"/><path d="M520 150 L600 230 L470 260Z" fill="#DCD8CC" opacity=".6"/></g>
+  <text x="120" y="150" font-family="serif" font-size="96" fill="#D4B26C" opacity=".9">庚</text>
+  <text x="128" y="190" font-family="serif" font-size="20" fill="#EEE7D7" opacity=".8" letter-spacing="4">こうきん</text>
+  <text x="840" y="150" text-anchor="end" font-family="serif" font-size="22" fill="#EEE7D7" opacity=".75" letter-spacing="4">五行：金・陽</text>
+  <text x="480" y="452" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">庚金｜鋼タイプ（イメージ）</text>
+</svg>

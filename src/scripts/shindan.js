@@ -1,5 +1,5 @@
 // 相性診断（クンハプ）のページ用スクリプト
-import { STEMS, STEM_KO, BRANCHES, BRANCH_KO, ANIMALS, EL, EL_VAR, stemEl, BRANCH_EL, STEM_INFO } from '../data/saju-data.js';
+import { STEMS, STEM_KO, BRANCHES, BRANCH_KO, ANIMALS, EL, EL_VAR, stemEl, BRANCH_EL, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const AFF = document.getElementById('result')?.dataset.aff || '';
@@ -98,7 +98,7 @@ function barsHTML(count) {
   return `<div class="bars">${count.map((n, i) => `<div class="bar"><span>${EL[i]}</span><span class="track"><span class="fill" style="width:${n / max * 100}%;background:var(${EL_VAR[i]})"></span></span><span class="n">${n}</span></div>`).join('')}</div>`;
 }
 function panel(name, p) {
-  return `<div class="panel frame">${CORNERS}<h3>${name}の四柱</h3>${pillarHTML(p)}<div class="dm">日主は <b>${STEMS[p.day.s]}（${STEM_KO[p.day.s]}）</b>　${STEM_INFO[p.day.s][0]}の${EL[stemEl(p.day.s)]}</div>${barsHTML(p.count)}</div>`;
+  return `<div class="panel frame">${CORNERS}<h3>${name}の四柱</h3>${pillarHTML(p)}<div class="dm">日主は <b>${STEMS[p.day.s]}（${STEM_KO[p.day.s]}）</b>　${STEM_INFO[p.day.s][0]}の${EL[stemEl(p.day.s)]}</div>${barsHTML(p.count)}<a class="dm-link" href="/articles/${STEM_SLUG[p.day.s]}/">${STEM_FULL[p.day.s]}の性格と恋愛傾向を読む →</a></div>`;
 }
 let lastText = '';
 const MEANING = {
@@ -220,11 +220,12 @@ function render() {
       ${AFF ? `<a class="btn-cta" href="${AFF}" rel="sponsored nofollow noopener" target="_blank">ココナラ電話占いで相談する</a>${PX ? `<img class="a8px" src="${PX}" width="1" height="1" alt="">` : ''}` : '<span class="btn-cta is-disabled">ご案内の準備中です</span>'}
       <span class="note">ココナラ電話占いは、初回は最大30分無料で試せます（条件は公式サイトでご確認ください）。</span>
     </div>
-    <div class="copy-row"><button class="btn-ghost" type="button" id="copy">結果をコピーしてシェア</button><button class="btn-ghost" type="button" id="again">もう一度占う</button><span class="note" id="copied" aria-live="polite"></span></div>`;
+    <div class="copy-row"><button class="btn-ghost" type="button" id="save-img">結果を画像で保存</button><button class="btn-ghost" type="button" id="copy">結果をコピーしてシェア</button><button class="btn-ghost" type="button" id="again">もう一度占う</button><span class="note" id="copied" aria-live="polite"></span></div>`;
   $('copy').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(lastText); $('copied').textContent = 'コピーしました。SNSに貼り付けてシェアできます。'; }
     catch (e) { $('copied').textContent = 'この画面ではコピーできませんでした。結果を長押しして選択してください。'; }
   });
+  $('save-img').addEventListener('click', () => saveImage({ score: c.score, t, A, B, items: c.items }));
   $('again').addEventListener('click', () => { $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); });
   return true;
 }
@@ -348,3 +349,67 @@ $('form').addEventListener('submit', e => {
 
 
 setDate('a', ''); setDate('b', ''); setHour('a', ''); setHour('b', '');
+
+/* ---------- 結果を画像で保存（生年月日は画像に入れない） ---------- */
+const ELC = ['#5E9C80', '#C9665B', '#D3A64A', '#DCD8CC', '#6178AE'];
+function wrapLines(ctx, text, maxW) {
+  const out = []; let line = '';
+  for (const ch of text) { if (ctx.measureText(line + ch).width > maxW && line) { out.push(line); line = ch; } else line += ch; }
+  if (line) out.push(line); return out;
+}
+async function makeCard({ score, t, A, B, items }) {
+  const W = 1080, H = 1350, cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+  const x = cv.getContext('2d');
+  const SERIF = '"Shippori Mincho", "Hiragino Mincho ProN", serif', SANS = '"Zen Kaku Gothic New", "Hiragino Sans", sans-serif';
+  try { await Promise.all(['700 64px "Shippori Mincho"', '500 32px "Zen Kaku Gothic New"'].map(f => document.fonts.load(f, '相性')));} catch (e) {}
+  const g = x.createLinearGradient(0, 0, W, H); g.addColorStop(0, '#1b1622'); g.addColorStop(1, '#0c0b10');
+  x.fillStyle = g; x.fillRect(0, 0, W, H);
+  const rg = x.createRadialGradient(W / 2, 420, 0, W / 2, 420, 420); rg.addColorStop(0, 'rgba(212,178,108,.22)'); rg.addColorStop(1, 'rgba(212,178,108,0)');
+  x.fillStyle = rg; x.fillRect(0, 0, W, H);
+  x.strokeStyle = 'rgba(201,165,92,.55)'; x.lineWidth = 2; x.strokeRect(40, 40, W - 80, H - 80);
+  x.strokeStyle = 'rgba(201,165,92,.25)'; x.strokeRect(56, 56, W - 112, H - 112);
+  x.textAlign = 'center'; x.fillStyle = '#C9A55C';
+  x.font = `500 30px ${SANS}`; x.fillText('韓国式 恋愛相性占い「クンハプ」', W / 2, 150);
+  x.fillStyle = '#EEE7D7'; x.font = `500 34px ${SERIF}`; x.fillText('ふたりの相性', W / 2, 250);
+  x.fillStyle = '#D4B26C'; x.font = `700 230px ${SERIF}`;
+  const sw = x.measureText(String(score)).width; x.font = `700 70px ${SERIF}`; const uw = x.measureText('点').width;
+  const left = W / 2 - (sw + 12 + uw) / 2; x.textAlign = 'left';
+  x.font = `700 230px ${SERIF}`; x.fillText(String(score), left, 490);
+  x.font = `700 70px ${SERIF}`; x.fillText('点', left + sw + 12, 490); x.textAlign = 'center';
+  x.font = `700 64px ${SERIF}`; x.fillStyle = '#EEE7D7'; x.fillText(t[0], W / 2, 600);
+  x.font = `400 30px ${SANS}`; x.fillStyle = 'rgba(238,231,215,.8)';
+  wrapLines(x, t[1], 820).slice(0, 3).forEach((l, i) => x.fillText(l, W / 2, 670 + i * 46));
+  // ふたりの日主
+  const box = (cx, label, p) => {
+    const s = p.day.s, c = ELC[stemEl(s)];
+    x.strokeStyle = 'rgba(201,165,92,.5)'; x.lineWidth = 2; x.strokeRect(cx - 200, 830, 400, 250);
+    x.fillStyle = '#C9A55C'; x.font = `500 28px ${SANS}`; x.fillText(label + 'の日主', cx, 880);
+    x.fillStyle = c; x.font = `700 110px ${SERIF}`; x.fillText(STEMS[s], cx, 1000);
+    x.fillStyle = '#EEE7D7'; x.font = `500 30px ${SERIF}`; x.fillText(`${STEM_INFO[s][0]}の${EL[stemEl(s)]}`, cx, 1052);
+  };
+  box(W / 2 - 220, 'あなた', A); box(W / 2 + 220, 'お相手', B);
+  x.fillStyle = '#D4B26C'; x.font = `700 40px ${SERIF}`; x.fillText('×', W / 2, 970);
+  // 4つの観点
+  x.font = `500 22px ${SANS}`;
+  const SHORT = { '日主の結びつき': '日主', '暮らしのリズム': '暮らし', '干支（띠）の相性': '干支', '五行の補い合い': '五行' };
+  const pills = items.map(i => `${SHORT[i.h] ?? ''}：${i.pill[1]}`); const pw = 200, gap = 16, sx = W / 2 - (pills.length * pw + (pills.length - 1) * gap) / 2;
+  pills.forEach((p, i) => { const px = sx + i * (pw + gap); x.strokeStyle = 'rgba(201,165,92,.6)'; x.beginPath(); x.roundRect ? x.roundRect(px, 1120, pw, 52, 26) : x.rect(px, 1120, pw, 52); x.stroke(); x.fillStyle = '#EEE7D7'; x.fillText(p, px + pw / 2, 1155); });
+  x.fillStyle = 'rgba(238,231,215,.85)'; x.font = `500 28px ${SANS}`; x.fillText('誕生日を入れるだけで、無料で相性診断', W / 2, 1232);
+  x.fillStyle = '#C9A55C'; x.font = `500 30px ${SERIF}`; x.fillText('ソウルのサジュ恋愛相性占い　saju-aisho.com', W / 2, 1280);
+  return new Promise(r => cv.toBlob(r, 'image/png'));
+}
+async function saveImage(data) {
+  const msg = $('copied'); msg.textContent = '画像を作っています…';
+  try {
+    const blob = await makeCard(data);
+    const file = new File([blob], 'saju-aisho-kekka.png', { type: 'image/png' });
+    if (navigator.canShare && navigator.canShare({ files: [file] }) && matchMedia('(pointer: coarse)').matches) {
+      try { await navigator.share({ files: [file], text: '誕生日を入れるだけで、ふたりの相性を無料で占えます👇\nhttps://saju-aisho.com/shindan/' }); msg.textContent = ''; return; }
+      catch (e) { if (e.name === 'AbortError') { msg.textContent = ''; return; } }
+    }
+    const url = URL.createObjectURL(blob), a = document.createElement('a');
+    a.href = url; a.download = 'saju-aisho-kekka.png'; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    msg.textContent = '画像を保存しました。SNSに投稿してシェアできます。';
+  } catch (e) { msg.textContent = 'この画面では画像を作れませんでした。スクリーンショットをご利用ください。'; }
+}

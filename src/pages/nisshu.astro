@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Corners from '../components/Corners.astro';
-import { STEMS, STEM_KO, STEM_INFO, EL, EL_VAR, stemEl } from '../data/saju-data.js';
+import { STEMS, STEM_KO, STEM_INFO, EL, EL_VAR, stemEl, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
 ---
 <Base title="10の日主（イルガン）でわかる性格と恋愛傾向｜四柱推命・サジュ" description="生まれた日の天干「日主」は、四柱推命（サジュ）でその人の本質を表します。甲木から癸水まで、10の日主の性格と恋愛の傾向を紹介します。">
     <div class="page-head">
@@ -17,6 +17,7 @@ import { STEMS, STEM_KO, STEM_INFO, EL, EL_VAR, stemEl } from '../data/saju-data
             <span class="img">{STEM_INFO[i][0]}の{EL[stemEl(i)]}</span>
           </summary>
           <p>{STEM_INFO[i][1]}</p>
+          <a class="more" href={`/articles/${STEM_SLUG[i]}/`}>{STEM_FULL[i]}の性格と恋愛傾向を読む →</a>
         </details>
       ))}
     </div>

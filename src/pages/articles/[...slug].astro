@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Corners from '../../components/Corners.astro';
 import PRNotice from '../../components/PRNotice.astro';
 import AffiliateCTA from '../../components/AffiliateCTA.astro';
+import NisshuLinks from '../../components/NisshuLinks.astro';
 import { getCollection } from 'astro:content';
 import fs from 'node:fs';
 
@@ -65,6 +66,7 @@ const jsonLd = [
     {entry.data.pr && <PRNotice />}
     <div class="prose frame"><Corners /><Content /></div>
     {entry.data.pr && <AffiliateCTA />}
+    <NisshuLinks current={entry.slug} />
     {related.length > 0 && (
       <section class="related">
         <h2 class="cat-title reveal">関連記事</h2>

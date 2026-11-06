@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="鳥居の前で、千歳飴を持った子どもと手をつなぐ親子の後ろ姿のイメージイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="230" r="260" fill="url(#g)"/>
+  <g fill="#C9665B"><rect x="250" y="110" width="460" height="22" rx="6"/><rect x="280" y="150" width="400" height="14"/><rect x="315" y="130" width="26" height="290"/><rect x="619" y="130" width="26" height="290"/></g>
+  <path d="M230 108 Q480 80 730 108 L730 116 Q480 92 230 116Z" fill="#a84f46"/>
+  <rect x="0" y="420" width="960" height="60" fill="#14111a"/>
+  <g fill="#5c5288"><circle cx="420" cy="250" r="26"/><path d="M380 420 Q380 300 420 288 Q460 300 460 420Z"/></g>
+  <g fill="#7a6aa8"><circle cx="540" cy="232" r="28"/><path d="M498 420 Q498 290 540 276 Q582 290 582 420Z"/></g>
+  <g><circle cx="480" cy="318" r="17" fill="#e9a6b8"/><path d="M456 420 L462 345 Q480 334 498 345 L504 420Z" fill="#e98aa0"/><path d="M462 360 L498 360" stroke="#D4B26C" stroke-width="4"/></g>
+  <path d="M452 352 L436 330 M508 352 L520 326" stroke="#7a6aa8" stroke-width="8" stroke-linecap="round"/>
+  <rect x="507" y="300" width="14" height="60" rx="3" fill="#EEE7D7" transform="rotate(12 514 330)"/><path d="M511 312 l8 4 M510 326 l8 4 M509 340 l8 4" stroke="#C9665B" stroke-width="3" transform="rotate(12 514 330)"/>
+  <text x="480.0" y="462" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">七五三のお参り（イメージ）</text>
+</svg>

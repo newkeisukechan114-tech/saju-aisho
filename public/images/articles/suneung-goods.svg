@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-label="韓国の合格祈願グッズ。アメ（くっつく＝合格）、フォーク（正解を刺す）、ティッシュ（問題を解く）、鏡（よく見る）">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="400" fill="url(#bg)"/>
+  <rect x="30" y="60" width="210" height="280" rx="12" fill="#15120d" stroke="rgba(212,178,108,.35)"/>
+  <g transform="translate(135 150)"><rect x="-60" y="-14" width="120" height="28" rx="14" fill="#D4B26C"/><path d="M-60 0 h-16 M60 0 h16" stroke="#D4B26C" stroke-width="6" stroke-linecap="round"/></g>
+  <text x="135" y="250" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C">アメ（엿）</text>
+  <text x="135" y="285" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#EEE7D7">くっつく＝合格</text><rect x="260" y="60" width="210" height="280" rx="12" fill="#15120d" stroke="rgba(212,178,108,.35)"/>
+  <g transform="translate(365 150)"><rect x="-6" y="-10" width="12" height="70" rx="5" fill="#DCD8CC"/><path d="M-22 -60 v40 q22 20 44 0 v-40 M-7 -60 v36 M7 -60 v36" stroke="#DCD8CC" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+  <text x="365" y="250" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C">フォーク</text>
+  <text x="365" y="285" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#EEE7D7">正解を刺す</text><rect x="490" y="60" width="210" height="280" rx="12" fill="#15120d" stroke="rgba(212,178,108,.35)"/>
+  <g transform="translate(595 150)"><rect x="-50" y="-30" width="100" height="70" rx="8" fill="#EEE7D7"/><path d="M-20 -30 q20 -40 40 0" fill="#fff" stroke="#cfc6b2" stroke-width="2"/></g>
+  <text x="595" y="250" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C">ティッシュ</text>
+  <text x="595" y="285" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#EEE7D7">問題を解く</text><rect x="720" y="60" width="210" height="280" rx="12" fill="#15120d" stroke="rgba(212,178,108,.35)"/>
+  <g transform="translate(825 150)"><circle r="46" fill="#9aa6c4"/><circle r="38" fill="#c9d3ea"/><path d="M-16 -18 l22 -10" stroke="#fff" stroke-width="5" stroke-linecap="round"/><rect x="-6" y="44" width="12" height="26" fill="#9aa6c4"/></g>
+  <text x="825" y="250" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C">鏡</text>
+  <text x="825" y="285" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#EEE7D7">よく見る＝よくできる</text><text x="480.0" y="380" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">韓国の合格祈願グッズ（イメージ）</text>
+</svg>
