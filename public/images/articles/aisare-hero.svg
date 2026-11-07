@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="夜空から降ってくる小さな光を、両手で受け止める人の後ろ姿のイメージイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="200" r="230" fill="url(#g)"/>
+  <circle cx="760" cy="90" r="36" fill="#EEE7D7" opacity=".85"/><circle cx="776" cy="80" r="32" fill="#1b1622"/>
+  <circle cx="380" cy="90" r="4" fill="#D4B26C" opacity="0.9"/><circle cx="450" cy="140" r="5" fill="#D4B26C" opacity="1"/><circle cx="520" cy="70" r="3" fill="#D4B26C" opacity="0.8"/><circle cx="560" cy="150" r="4" fill="#D4B26C" opacity="0.9"/><circle cx="420" cy="200" r="3" fill="#D4B26C" opacity="0.7"/><circle cx="500" cy="210" r="6" fill="#D4B26C" opacity="1"/><circle cx="600" cy="100" r="3" fill="#D4B26C" opacity="0.6"/><circle cx="340" cy="160" r="3" fill="#D4B26C" opacity="0.6"/><circle cx="440" cy="250" r="3" fill="#D4B26C" opacity="0.8"/><circle cx="525" cy="255" r="3" fill="#D4B26C" opacity="0.8"/><path transform="translate(410 120) scale(1)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity=".9"/><path transform="translate(560 200) scale(1.2)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity=".9"/><path transform="translate(480 170) scale(0.9)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity=".9"/>
+  <rect x="0" y="420" width="960" height="60" fill="#14111a"/>
+  <g fill="#7a6aa8"><circle cx="480" cy="300" r="30"/><path d="M430 420 Q430 340 480 328 Q530 340 530 420Z"/></g>
+  <path d="M446 348 Q418 318 410 278 M514 348 Q542 318 550 278" stroke="#7a6aa8" stroke-width="13" fill="none" stroke-linecap="round"/>
+  <circle cx="409" cy="272" r="10" fill="#8f80bd"/><circle cx="551" cy="272" r="10" fill="#8f80bd"/>
+  <circle cx="480" cy="238" r="16" fill="#D4B26C" opacity=".9"/><circle cx="480" cy="238" r="34" fill="#D4B26C" opacity=".18"/>
+  <text x="480.0" y="462" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">受けとる愛（イメージ）</text>
+</svg>
