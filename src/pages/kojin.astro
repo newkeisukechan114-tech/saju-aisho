@@ -7,14 +7,14 @@ const jsonLd = [{
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'トップ', item: 'https://saju-aisho.com/' },
-    { '@type': 'ListItem', position: 2, name: '無料サジュ占い', item: 'https://saju-aisho.com/kojin/' },
+    { '@type': 'ListItem', position: 2, name: '個人占い', item: 'https://saju-aisho.com/kojin/' },
   ],
 }];
 ---
-<Base title="無料サジュ占い｜生年月日でわかる性格・恋愛傾向・2027年の運勢（韓国の四柱推命）" description="生年月日を入れるだけで、韓国の四柱推命「サジュ」をひとりで無料で占えます。あなたの日主（イルガン）、五行のバランス、生まれ持った星、相性のいい日主、今月と2027年のキーワードがわかります。" ogImage="/og/_kojin.jpg" jsonLd={jsonLd}>
+<Base title="無料サジュ占い（個人）｜生年月日で性格・恋愛傾向・今月の運勢がわかる" description="生年月日を入れるだけで、韓国の四柱推命「サジュ」をひとりで無料で占えます。あなたの日主（イルガン）、五行のバランス、生まれ持った星、相性のいい日主、今月と2027年のキーワードがわかります。" ogImage="/og/_kojin.jpg" jsonLd={jsonLd}>
     <div class="page-head">
-      <div class="crumb"><a href="/">トップ</a><span>／</span>無料サジュ占い</div>
-      <div class="block-head"><span class="en">Saju</span><h1>無料サジュ占い（ひとり用）</h1><p>生年月日から、あなたのサジュ（四柱）を出して読み解きます。日主（イルガン）、五行のバランス、生まれ持った星、相性のいい日主、今月と2027年のキーワードがわかります。</p></div>
+      <div class="crumb"><a href="/">トップ</a><span>／</span>個人占い</div>
+      <div class="block-head"><span class="en">Saju</span><h1>個人占い｜あなたのサジュを占う</h1><p><b>ひとり用・無料・生年月日だけでOK。</b>生年月日から、あなたのサジュ（四柱）を出して読み解きます。日主（イルガン）、五行のバランス、生まれ持った星、相性のいい日主、今月と2027年のキーワードがわかります。</p></div>
     </div>
     <form class="tool frame" id="form" novalidate>
       <Corners />
@@ -36,7 +36,7 @@ const jsonLd = [{
         </div>
       </div>
       <div class="actions">
-        <button class="btn" type="submit" id="run">サジュを占う</button>
+        <button class="btn" type="submit" id="run">自分のサジュを占う</button>
         <span class="note">生年月日はこの画面の中だけで計算し、保存も送信もしません。</span>
       </div>
       <div class="err" id="err" role="alert"></div>

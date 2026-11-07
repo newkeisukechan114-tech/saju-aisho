@@ -407,3 +407,5 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .next-box p { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
 .glossary dt a { color: var(--gold); }
 .next .sub-link { display: block; margin-top: 12px; font-size: 13px; color: var(--gold); }
+.solo-link { margin-top: 10px; font-size: 13px; }
+.solo-link a { color: var(--gold); }
