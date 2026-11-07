@@ -397,3 +397,13 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .nisshu-links .dot { width: 6px; height: 6px; border-radius: 50%; }
 .nisshu-links .all { display: inline-block; margin-top: 12px; font-size: 12px; color: var(--gold); }
 .panel .dm-link { display: block; margin-top: 12px; font-size: 12px; color: var(--gold); text-align: center; }
+
+/* 個人鑑定 */
+.people.solo { grid-template-columns: minmax(0, 420px); justify-content: center; }
+.charts.one { grid-template-columns: minmax(0, 560px); justify-content: center; }
+.menu .menu-card.wide { grid-column: 1 / -1; }
+.next-box { text-align: center; padding: 28px 24px; margin: 18px 0; }
+.next-box h3 { margin: 0 0 8px; }
+.next-box p { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+.glossary dt a { color: var(--gold); }
+.next .sub-link { display: block; margin-top: 12px; font-size: 13px; color: var(--gold); }

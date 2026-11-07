@@ -1,31 +1,11 @@
 // 相性診断（クンハプ）のページ用スクリプト
+import { saju, mod, CORNERS, pillarHTML, barsHTML } from './saju-calc.js';
+import { initBirthInputs } from './birth-input.js';
 import { STEMS, STEM_KO, BRANCHES, BRANCH_KO, ANIMALS, EL, EL_VAR, stemEl, BRANCH_EL, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const AFF = document.getElementById('result')?.dataset.aff || '';
 const PX = document.getElementById('result')?.dataset.px || '';
-const mod = (a, n) => ((a % n) + n) % n;
-function jdn(y, m, d) {
-  const a = Math.floor((14 - m) / 12), yy = y + 4800 - a, mm = m + 12 * a - 3;
-  return d + Math.floor((153 * mm + 2) / 5) + 365 * yy + Math.floor(yy / 4) - Math.floor(yy / 100) + Math.floor(yy / 400) - 32045;
-}
-// 節入りの概算日（月, 日, 寅月を0とした順番）
-const TERMS = [[1,6,11],[2,4,0],[3,6,1],[4,5,2],[5,6,3],[6,6,4],[7,7,5],[8,8,6],[9,8,7],[10,8,8],[11,7,9],[12,7,10]];
-function saju(y, m, d, hour) {
-  const sy = (m < 2 || (m === 2 && d < 4)) ? y - 1 : y;
-  const yi = mod(sy - 4, 60);
-  let ord = 10;
-  for (const [tm, td, o] of TERMS) if (m > tm || (m === tm && d >= td)) ord = o;
-  const ys = yi % 10, yb = yi % 12;
-  const ms = mod(ys * 2 + 2 + ord, 10), mb = (ord + 2) % 12;
-  const di = mod(jdn(y, m, d) - 11, 60), ds = di % 10, db = di % 12;
-  const h = hour === null ? null : { s: mod(ds * 2 + hour, 10), b: hour };
-  const p = { year: { s: ys, b: yb }, month: { s: ms, b: mb }, day: { s: ds, b: db }, hour: h };
-  const count = [0,0,0,0,0];
-  for (const k of ['year','month','day','hour']) { if (!p[k]) continue; count[stemEl(p[k].s)]++; count[BRANCH_EL[p[k].b]]++; }
-  p.count = count;
-  return p;
-}
 function branchRel(a, b) {
   if (a === b) return 'same';
   if ((a + b) % 12 === 1) return 'rokugo';
@@ -86,17 +66,6 @@ function title(score) {
 
 /* ---------- 画面の組み立て ---------- */
 const $ = id => document.getElementById(id);
-const CORNERS = '<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>';
-function pillarHTML(p) {
-  const cols = [['時柱', p.hour], ['日柱', p.day], ['月柱', p.month], ['年柱', p.year]];
-  return `<div class="pillars">${cols.map(([l, c], i) => c
-    ? `<div class="pillar${i === 1 ? ' day' : ''}"><div class="lbl">${l}</div><div class="ch">${STEMS[c.s]}</div><div class="ko">${STEM_KO[c.s]}</div><div class="ch">${BRANCHES[c.b]}</div><div class="ko">${BRANCH_KO[c.b]}</div></div>`
-    : `<div class="pillar"><div class="lbl">${l}</div><div class="unk">時間<br>不明</div></div>`).join('')}</div>`;
-}
-function barsHTML(count) {
-  const max = Math.max(...count, 1);
-  return `<div class="bars">${count.map((n, i) => `<div class="bar"><span>${EL[i]}</span><span class="track"><span class="fill" style="width:${n / max * 100}%;background:var(${EL_VAR[i]})"></span></span><span class="n">${n}</span></div>`).join('')}</div>`;
-}
 function panel(name, p) {
   return `<div class="panel frame">${CORNERS}<h3>${name}の四柱</h3>${pillarHTML(p)}<div class="dm">日主は <b>${STEMS[p.day.s]}（${STEM_KO[p.day.s]}）</b>　${STEM_INFO[p.day.s][0]}の${EL[stemEl(p.day.s)]}</div>${barsHTML(p.count)}<a class="dm-link" href="/articles/${STEM_SLUG[p.day.s]}/">${STEM_FULL[p.day.s]}の性格と恋愛傾向を読む →</a></div>`;
 }
@@ -230,111 +199,7 @@ function render() {
   return true;
 }
 
-/* ---------- 生年月日のクリック選択パネル ---------- */
-const MIN_Y = 1930, MAX_Y = 2010, WD = ['日','月','火','水','木','金','土'];
-const pickers = {};
-const pad = n => String(n).padStart(2, '0');
-function labelOf(iso) { const [y, m, d] = iso.split('-').map(Number); return `${y}年${m}月${d}日（${WD[new Date(y, m - 1, d).getDay()]}）`; }
-function setDate(k, iso) {
-  $(k + '-date').value = iso;
-  const dv = $(k + '-date-btn').querySelector('.dv');
-  dv.textContent = iso ? labelOf(iso) : 'クリックして選ぶ';
-  dv.classList.toggle('empty', !iso);
-}
-function openPicker(k) {
-  for (const o of Object.keys(pickers)) if (o !== k && pickers[o].open) closePicker(o);
-  const v = $(k + '-date').value;
-  const st = pickers[k];
-  if (v) { const [y, m] = v.split('-').map(Number); Object.assign(st, { step: 'day', decade: Math.floor(y / 10) * 10, year: y, month: m }); }
-  else Object.assign(st, { step: 'decade', decade: null, year: null, month: null });
-  st.open = true;
-  $(k + '-picker').hidden = false;
-  $(k + '-date-btn').setAttribute('aria-expanded', 'true');
-  drawPicker(k, true);
-}
-function closePicker(k, focusBack) {
-  pickers[k].open = false;
-  $(k + '-picker').hidden = true;
-  $(k + '-date-btn').setAttribute('aria-expanded', 'false');
-  if (focusBack) $(k + '-date-btn').focus();
-}
-function drawPicker(k, focusFirst) {
-  const st = pickers[k], el = $(k + '-picker'), cur = $(k + '-date').value;
-  const steps = [['decade', '年代', true], ['year', st.decade ? `${st.decade}年代` : '年', !!st.decade], ['month', st.year ? `${st.year}年` : '月', !!st.year], ['day', st.month ? `${st.month}月` : '日', !!st.month]];
-  let h = `<div class="pk-steps">${steps.map(([s, t, ok], i) => `${i ? '<span class="sep">›</span>' : ''}<button type="button" data-step="${s}" ${ok ? '' : 'disabled'} ${st.step === s ? 'aria-current="step"' : ''}>${t}</button>`).join('')}</div>`;
-  if (st.step === 'decade') {
-    h += `<div class="pk-title">生まれた年代は？</div><div class="pk-grid c3">`;
-    for (let d = 1930; d <= 2010; d += 10) h += `<button type="button" data-decade="${d}" class="${st.decade === d ? 'sel' : ''}">${d}年代</button>`;
-    h += '</div>';
-  } else if (st.step === 'year') {
-    h += `<div class="pk-title">${st.decade}年代の何年？</div><div class="pk-grid c4">`;
-    for (let y = st.decade; y < st.decade + 10 && y <= MAX_Y; y++) h += `<button type="button" data-year="${y}" class="${st.year === y ? 'sel' : ''}">${y}</button>`;
-    h += '</div>';
-  } else if (st.step === 'month') {
-    h += `<div class="pk-title">${st.year}年の何月？</div><div class="pk-grid c4">`;
-    for (let m = 1; m <= 12; m++) h += `<button type="button" data-month="${m}" class="${st.month === m ? 'sel' : ''}">${m}月</button>`;
-    h += '</div>';
-  } else {
-    const y = st.year, m = st.month, days = new Date(y, m, 0).getDate(), off = new Date(y, m - 1, 1).getDay();
-    const prevOk = !(y === MIN_Y && m === 1), nextOk = !(y === MAX_Y && m === 12);
-    h += `<div class="pk-title"><span>${y}年${m}月</span><span class="pk-nav"><button type="button" data-shift="-1" aria-label="前の月" ${prevOk ? '' : 'disabled'}>‹</button><button type="button" data-shift="1" aria-label="次の月" ${nextOk ? '' : 'disabled'}>›</button></span></div><div class="pk-grid c7">`;
-    h += WD.map((w, i) => `<span class="wd${i === 0 ? ' sun' : i === 6 ? ' sat' : ''}">${w}</span>`).join('');
-    for (let i = 0; i < off; i++) h += '<span></span>';
-    for (let d = 1; d <= days; d++) {
-      const iso = `${y}-${pad(m)}-${pad(d)}`, wd = (off + d - 1) % 7;
-      h += `<button type="button" data-day="${iso}" class="${cur === iso ? 'sel ' : ''}${wd === 0 ? 'sun' : wd === 6 ? 'sat' : ''}" aria-label="${labelOf(iso)}">${d}</button>`;
-    }
-    h += '</div>';
-  }
-  el.innerHTML = h;
-  if (focusFirst !== false) { const f = el.querySelector('.pk-grid button.sel') || el.querySelector('.pk-grid button'); f && f.focus({ preventScroll: true }); }
-}
-for (const k of ['a', 'b']) {
-  pickers[k] = { open: false };
-  $(k + '-date-btn').addEventListener('click', () => pickers[k].open ? closePicker(k) : openPicker(k));
-  $(k + '-picker').addEventListener('click', e => {
-    e.stopPropagation();
-    const b = e.target.closest('button'); if (!b || b.disabled) return;
-    const st = pickers[k];
-    if (b.dataset.step) st.step = b.dataset.step;
-    else if (b.dataset.decade) { st.decade = +b.dataset.decade; st.step = 'year'; if (st.year && Math.floor(st.year / 10) * 10 !== st.decade) { st.year = null; st.month = null; } }
-    else if (b.dataset.year) { st.year = +b.dataset.year; st.step = 'month'; }
-    else if (b.dataset.month) { st.month = +b.dataset.month; st.step = 'day'; }
-    else if (b.dataset.shift) { let m = st.month + +b.dataset.shift, y = st.year; if (m < 1) { m = 12; y--; } if (m > 12) { m = 1; y++; } Object.assign(st, { year: y, month: m, decade: Math.floor(y / 10) * 10 }); }
-    else if (b.dataset.day) { setDate(k, b.dataset.day); $('err').textContent = ''; closePicker(k, true); return; }
-    drawPicker(k);
-  });
-  $(k + '-picker').addEventListener('keydown', e => { if (e.key === 'Escape') { e.preventDefault(); closePicker(k, true); } });
-}
-document.addEventListener('click', e => { for (const k of ['a', 'b']) if (pickers[k].open && !e.target.closest(`#${k}-picker, #${k}-date-btn`)) closePicker(k); });
-
-/* ---------- 生まれた時間の選択パネル ---------- */
-const HOUR_RANGE = ['23時〜1時','1時〜3時','3時〜5時','5時〜7時','7時〜9時','9時〜11時','11時〜13時','13時〜15時','15時〜17時','17時〜19時','19時〜21時','21時〜23時'];
-const hopen = { a: false, b: false };
-function setHour(k, v) {
-  $(k + '-hour').value = v;
-  $(k + '-hour-btn').querySelector('.dv').textContent = v === '' ? 'わからない' : `${HOUR_RANGE[+v]}（${BRANCHES[+v]}の刻）`;
-}
-function drawHour(k) {
-  const cur = $(k + '-hour').value;
-  let h = '<div class="pk-title">生まれた時間は？</div><div class="pk-grid c3 hours">';
-  for (let i = 0; i < 12; i++) h += `<button type="button" data-hour="${i}" class="${cur === String(i) ? 'sel' : ''}" aria-label="${HOUR_RANGE[i]}（${BRANCHES[i]}の刻）"><b>${BRANCHES[i]}</b><small>${HOUR_RANGE[i]}</small></button>`;
-  h += `</div><button type="button" class="pk-unknown${cur === '' ? ' sel' : ''}" data-hour="">わからない</button>`;
-  const el = $(k + '-hpicker'); el.innerHTML = h;
-  (el.querySelector('button.sel') || el.querySelector('button')).focus({ preventScroll: true });
-}
-function closeHour(k, focusBack) { hopen[k] = false; $(k + '-hpicker').hidden = true; $(k + '-hour-btn').setAttribute('aria-expanded', 'false'); if (focusBack) $(k + '-hour-btn').focus(); }
-function openHour(k) {
-  for (const o of ['a', 'b']) { if (pickers[o].open) closePicker(o); if (o !== k && hopen[o]) closeHour(o); }
-  hopen[k] = true; $(k + '-hpicker').hidden = false; $(k + '-hour-btn').setAttribute('aria-expanded', 'true'); drawHour(k);
-}
-for (const k of ['a', 'b']) {
-  $(k + '-hour-btn').addEventListener('click', e => { e.stopPropagation(); hopen[k] ? closeHour(k) : openHour(k); });
-  $(k + '-date-btn').addEventListener('click', () => { for (const o of ['a', 'b']) if (hopen[o]) closeHour(o); });
-  $(k + '-hpicker').addEventListener('click', e => { e.stopPropagation(); const b = e.target.closest('button[data-hour]'); if (!b) return; setHour(k, b.dataset.hour); closeHour(k, true); });
-  $(k + '-hpicker').addEventListener('keydown', e => { if (e.key === 'Escape') { e.preventDefault(); closeHour(k, true); } });
-}
-document.addEventListener('click', e => { for (const k of ['a', 'b']) if (hopen[k] && !e.target.closest(`#${k}-hpicker, #${k}-hour-btn`)) closeHour(k); });
+initBirthInputs(['a', 'b'], () => { $('err').textContent = ''; });
 let busy = false;
 $('form').addEventListener('submit', e => {
   e.preventDefault();
@@ -348,7 +213,7 @@ $('form').addEventListener('submit', e => {
 });
 
 
-setDate('a', ''); setDate('b', ''); setHour('a', ''); setHour('b', '');
+
 
 /* ---------- 結果を画像で保存（生年月日は画像に入れない） ---------- */
 const ELC = ['#5E9C80', '#C9665B', '#D3A64A', '#DCD8CC', '#6178AE'];
