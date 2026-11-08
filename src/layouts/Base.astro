@@ -19,7 +19,7 @@ const ogImageUrl = new URL(ogImage, Astro.site ?? SITE.url).href;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="google-site-verification" content="aq42UDSAm0fEfpKZwa1Gx_ut7u-01ghm7ORIvMiP8NU" />
-    {noindex && <meta name="robots" content="noindex" />}
+    {noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="max-image-preview:large" />}
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={fullTitle} />
