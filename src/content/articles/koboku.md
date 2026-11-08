@@ -4,7 +4,7 @@ description: 四柱推命（サジュ）で日主が甲木の人の性格と恋�
 category: 日主
 publishedAt: 2026-10-30
 updatedAt: 2026-11-06
-pr: false
+pr: true
 draft: false
 ---
 

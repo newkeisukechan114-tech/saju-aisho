@@ -265,7 +265,7 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .asks-h { display: block; font-size: 12px; color: var(--gold); letter-spacing: .12em; margin-bottom: 6px; }
 .asks ul { margin: 0; padding-left: 1.1em; font-size: 14px; }
 .asks li { padding: 3px 0; }
-.loader { padding: 56px 24px; display: grid; justify-items: center; gap: 18px; text-align: center; }
+.loader { padding: 56px 24px; display: grid; justify-items: center; align-content: center; gap: 18px; text-align: center; min-height: 100vh; } /* 結果表示時のレイアウトずれ（CLS）を防ぐため、読み込み中は画面いっぱいの高さを確保 */
 .loader p { margin: 0; color: var(--gold); letter-spacing: .2em; font-size: 14px; }
 .loader .ring { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--gold-faint); border-top-color: var(--gold); animation: spin 1.1s linear infinite; position: relative; }
 .loader .ring i { position: absolute; inset: 9px; border-radius: 50%; border: 1px solid var(--gold-faint); border-bottom-color: var(--gold); animation: spin 1.6s linear infinite reverse; }
