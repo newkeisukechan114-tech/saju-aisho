@@ -15,7 +15,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/gengoka-hero.svg" alt="胸のモヤモヤが、ことばの吹き出しに変わっていくイメージイラスト" width="960" height="480" loading="lazy">
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## 「言語化」が注目される理由

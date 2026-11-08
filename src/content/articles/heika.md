@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-heika-hero.svg" alt="丙火（太陽タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>丙火は「太陽」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>丙火は「太陽」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 丙火の人の性格

@@ -14,7 +14,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-koboku-hero.svg" alt="甲木（大樹タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>甲木は「大樹」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>甲木は「大樹」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 甲木の人の性格

@@ -14,7 +14,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/frenemy-hero.svg" alt="笑顔で握手するふたりと、その後ろで向かい合う影のイメージイラスト" width="960" height="480" loading="lazy">
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## フレネミーとは

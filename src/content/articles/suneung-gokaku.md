@@ -15,7 +15,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/suneung-hero.svg" alt="朝の校門の前で、応援の言葉が書かれたのぼりと、合格祈願のアメの箱のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## スヌンの日の韓国はこんな感じ

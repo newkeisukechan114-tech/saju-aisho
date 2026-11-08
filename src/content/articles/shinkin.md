@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-shinkin-hero.svg" alt="辛金（宝石タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>辛金は「宝石」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>辛金は「宝石」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 辛金の人の性格

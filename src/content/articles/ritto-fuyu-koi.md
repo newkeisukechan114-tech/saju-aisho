@@ -15,7 +15,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/ritto-hero.svg" alt="立冬の夜のイメージイラスト。月と山茶花、静かな水面" width="960" height="480" loading="lazy">
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## 立冬とは

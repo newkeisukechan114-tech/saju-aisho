@@ -15,7 +15,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/aisare-hero.svg" alt="夜空から降ってくる小さな光を、両手で受け止める人の後ろ姿のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## 「愛されている」と感じにくいのは、なぜ？

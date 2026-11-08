@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-otsuboku-hero.svg" alt="乙木（草花タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>乙木は「草花」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>乙木は「草花」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 乙木の人の性格

@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-koukin-hero.svg" alt="庚金（鋼タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>庚金は「鋼」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>庚金は「鋼」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 庚金の人の性格

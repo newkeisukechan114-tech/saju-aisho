@@ -21,7 +21,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/2027-hero.svg" alt="ろうそくの灯りと羊のイラスト。2027年 丁未、赤い未年のイメージ" width="960" height="480" loading="lazy">
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## 2027年の干支「丁未」とは

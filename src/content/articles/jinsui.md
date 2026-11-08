@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-jinsui-hero.svg" alt="壬水（大海タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>壬水は「大海」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>壬水は「大海」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 壬水の人の性格

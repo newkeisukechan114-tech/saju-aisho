@@ -11,5 +11,5 @@
   <g><circle cx="480" cy="318" r="17" fill="#e9a6b8"/><path d="M456 420 L462 345 Q480 334 498 345 L504 420Z" fill="#e98aa0"/><path d="M462 360 L498 360" stroke="#D4B26C" stroke-width="4"/></g>
   <path d="M452 352 L436 330 M508 352 L520 326" stroke="#7a6aa8" stroke-width="8" stroke-linecap="round"/>
   <rect x="507" y="300" width="14" height="60" rx="3" fill="#EEE7D7" transform="rotate(12 514 330)"/><path d="M511 312 l8 4 M510 326 l8 4 M509 340 l8 4" stroke="#C9665B" stroke-width="3" transform="rotate(12 514 330)"/>
-  <text x="480.0" y="462" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">七五三のお参り（イメージ）</text>
+  <text x="480.0" y="462" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">七五三のお参り</text>
 </svg>

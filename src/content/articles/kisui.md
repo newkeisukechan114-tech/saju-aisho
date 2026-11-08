@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-kisui-hero.svg" alt="癸水（雨露タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>癸水は「雨露」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>癸水は「雨露」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 癸水の人の性格

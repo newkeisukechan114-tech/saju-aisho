@@ -15,7 +15,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/fufu-hero.svg" alt="テーブルの上に並んだふたつのマグカップと、ハートの封がされた小さな手紙のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## 「ありがとう」が届きにくいのは、なぜ？

@@ -30,5 +30,5 @@
   </g>
   <path d="M476 345 Q480 352 486 345" stroke="#f3e6c8" stroke-width="5" fill="none" stroke-linecap="round"/>
   <g fill="#ffffff" opacity=".6"><circle cx="220" cy="110" r="2.5"/><circle cx="420" cy="150" r="2"/><circle cx="560" cy="120" r="2.5"/><circle cx="740" cy="330" r="2"/><circle cx="240" cy="330" r="2"/></g>
-  <text x="480" y="456" text-anchor="middle" font-family="serif" font-size="21" fill="#F6D27A" letter-spacing="5">クリスマスまで、あと少し（イメージ）</text>
+  <text x="480" y="456" text-anchor="middle" font-family="serif" font-size="21" fill="#F6D27A" letter-spacing="5">クリスマスまで、あと少し</text>
 </svg>

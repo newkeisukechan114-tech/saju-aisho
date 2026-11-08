@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/xmas-hero.svg" alt="冬の夜、灯りがともる並木道を歩くふたりのイメージイラスト" width="960" height="480" loading="lazy">
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## クリスマスまでの逆算スケジュール

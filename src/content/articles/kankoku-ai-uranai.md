@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/ai-uranai-hero.svg" alt="韓屋の路地にあるAI占いブースのイメージイラスト" width="960" height="480" loading="lazy">
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## ソウルのAI占いカフェ「ビナイダ」とは
@@ -56,7 +56,7 @@ AI巫女は「アミ（AMI）」、人相を読むロボットは「タングン
 
 <figure>
   <img src="/images/articles/ai-uranai-price.svg?v=2" alt="料金の比較。AIのサジュ占い約7000ウォン（約800円）、AIの人相占い約8000ウォン（約900円）、対面の相談は約10万ウォン（約1万1000円）" width="960" height="300" loading="lazy">
-  <figcaption>料金のイメージ（2026年春の報道をもとに運営者が作成）</figcaption>
+  <figcaption>料金の目安（2026年春の報道をもとに運営者が作成）</figcaption>
 </figure>
 
 ### お店の情報

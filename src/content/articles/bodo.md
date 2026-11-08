@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-bodo-hero.svg" alt="戊土（山タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>戊土は「山」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>戊土は「山」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 戊土の人の性格

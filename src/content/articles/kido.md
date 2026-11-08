@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-kido-hero.svg" alt="己土（田畑タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>己土は「田畑」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>己土は「田畑」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 己土の人の性格

@@ -15,7 +15,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/shichigosan-hero.svg" alt="鳥居の前で、千歳飴を持った子どもと手をつなぐ親子の後ろ姿のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>イメージイラスト（運営者作成）</figcaption>
+  <figcaption>イラスト：運営者作成</figcaption>
 </figure>
 
 ## 子どもの日主の調べ方

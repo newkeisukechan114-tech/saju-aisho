@@ -13,7 +13,7 @@ draft: false
 
 <figure>
   <img src="/images/articles/nisshu-teika-hero.svg" alt="丁火（灯火タイプ）のイメージイラスト" width="960" height="480" loading="lazy" />
-  <figcaption>丁火は「灯火」のイメージ（イラスト：運営者作成）</figcaption>
+  <figcaption>丁火は「灯火」タイプ（イラスト：運営者作成）</figcaption>
 </figure>
 
 ## 丁火の人の性格
