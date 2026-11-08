@@ -171,6 +171,8 @@ footer { margin-top: 110px; border-top: 1px solid var(--gold-faint); padding: 36
 footer .wrap { display: grid; gap: 12px; }
 footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
 footer nav a { color: var(--muted); }
+footer .credit { font-size: 11px; opacity: .7; }
+footer .credit a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
 .demo-flag { border: 1px solid var(--gold-faint); padding: 10px 14px; }
 
 
