@@ -1,16 +1,39 @@
 ---
 import Base from '../layouts/Base.astro';
+import Corners from '../components/Corners.astro';
 import AffiliateCTA from '../components/AffiliateCTA.astro';
+import PRNotice from '../components/PRNotice.astro';
 ---
-<Base title="はじめての電話占い｜怖い・高い・何を話す？の不安に答えます" description="はじめて電話占いを使う人のよくある不安（怖くない？料金が高くならない？何を話せばいい？）に答えます。">
+<Base title="はじめての電話占い｜怖い・高い・何を話す？の不安に答えます" description="はじめて電話占いを使う人のよくある不安（怖くない？料金が高くならない？何を話せばいい？）に答えます。無料クーポンで話せる時間の目安、相談の流れ、聞き方の例文もまとめました。">
     <div class="page-head">
       <div class="crumb"><a href="/">トップ</a><span>／</span>はじめての電話占い</div>
-      <div class="block-head"><span class="en">First Reading</span><h1>はじめての電話占い</h1><p>相性の数字だけでは分からない「相手の今の気持ち」は、占い師に直接聞くのが近道です。よくある不安にお答えします。</p></div>
+      <div class="block-head"><span class="en">First Reading</span><h1>はじめての電話占い</h1><p>相性の数字や生まれ持った気質だけでは分からない「相手の今の気持ち」や「これからどう動けばいいか」は、占い師に直接聞くのが近道です。はじめての人のよくある不安にお答えします。</p></div>
     </div>
+    <PRNotice />
+
+    <section class="howto">
+      <div class="block-head reveal"><span class="en">Steps</span><h2>相談までの3ステップ</h2></div>
+      <ol class="steps">
+        <li class="frame reveal"><Corners /><span class="num">壹</span><h3>聞きたいことを決める</h3><p>「今日いちばん聞きたいこと」をひとつに絞ります。<a href="/shindan/">相性占い</a>や<a href="/kojin/">個人占い</a>の結果をメモしておくと、状況が伝わりやすくなります。</p></li>
+        <li class="frame reveal"><Corners /><span class="num">貳</span><h3>占い師を選ぶ</h3><p>恋愛や相性が得意か、口コミの雰囲気、1分の料金を見て選びます。最初は1分100〜200円くらいの占い師だと、無料の範囲で長めに話せます。</p></li>
+        <li class="frame reveal"><Corners /><span class="num">參</span><h3>時間を決めて電話する</h3><p>「今日は◯分まで」と決めて、タイマーをかけてから電話します。最初に「はじめてです」と伝えると、ゆっくり進めてもらえます。</p></li>
+      </ol>
+    </section>
+
     <div class="faq">
-      <details class="frame reveal" open><summary>電話占いって、怖くないですか？</summary><p>顔は見えず、ニックネームで相談できます。話したくないことは話さなくて大丈夫です。最初は「相性診断の結果をどう思うか」を聞くだけでも十分です。</p></details>
-      <details class="frame reveal"><summary>料金が高くならないか心配です</summary><p>多くのサービスは1分ごとの料金制です。始める前に「今日は◯分まで」と決め、初回の無料分の範囲で試すと安心です。</p></details>
-      <details class="frame reveal"><summary>何を話せばいいか分かりません</summary><p>ふたりの生年月日、出会った時期、今いちばん知りたいこと（相手の気持ち・連絡の頻度・この先の可能性など）を1つ決めておくと、短い時間でも深く見てもらえます。</p></details>
+      <details class="frame reveal" open><summary>電話占いって、怖くないですか？</summary><p>顔は見えず、ニックネームで相談できます。本名や住所を伝える必要はありません。話したくないことは話さなくて大丈夫ですし、合わないと感じたら途中で切ってもかまいません。</p></details>
+      <details class="frame reveal"><summary>料金が高くならないか心配です</summary><p>多くのサービスは「1分の料金×話した時間」で決まります。ココナラ電話占いは、専用のバナーから新規登録すると3,000円分の無料クーポンがもらえるので、1分100円の占い師なら約30分、1分200円なら約15分を無料で試せます。始める前に時間を決めておくと安心です。</p></details>
+      <details class="frame reveal"><summary>何を話せばいいか分かりません</summary><p>「相手が私をどう思っているか知りたい」「この関係を続けていいか迷っている」など、聞きたいことをひとつ決めておけば十分です。ふたりの生年月日と、出会った時期・今の関係をメモしておくと、短い時間でも深く見てもらえます。</p></details>
+      <details class="frame reveal"><summary>通話料はかかりますか？</summary><p>ココナラ電話占いは、アプリから電話すれば通話料はかかりません。サービスによって違うので、公式サイトで確かめてください。</p></details>
+      <details class="frame reveal"><summary>どんな占い師を選べばいいですか？</summary><p>恋愛・相性・復縁など、自分の悩みが得意分野に入っている人を選びましょう。生年月日から見てほしいなら、四柱推命が得意な占い師がおすすめです。口コミは良い点だけでなく、話し方など気になる点も読んでおくと、イメージ違いを防げます。</p></details>
+      <details class="frame reveal"><summary>悪い結果を言われたらどうしよう…</summary><p>占いの結果は、これからを考えるためのヒントです。未来が決まったわけではありません。強い言葉で不安をあおられたり、高額な追加の鑑定をすすめられたりしたら、相談をやめて大丈夫です。</p></details>
     </div>
+
+    <div class="limits frame reveal"><Corners />
+      <h3>もっとくわしく知りたい人へ</h3>
+      <p>料金のしくみや相談の例文は「<a href="/articles/denwa-hajimete/">はじめての電話占い｜料金・流れ・準備のガイド</a>」、よくある不安への答えは「<a href="/articles/denwa-kowai/">電話占いは怖い？6つの不安と答え</a>」にまとめています。</p>
+      <p>※料金や特典の条件は変わることがあります。使う前に公式サイトで最新の情報をご確認ください。</p>
+    </div>
+
     <AffiliateCTA />
 </Base>
