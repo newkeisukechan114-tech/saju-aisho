@@ -2,6 +2,7 @@
 import { saju, tengod, CORNERS, pillarHTML, barsHTML } from './saju-calc.js';
 import { initBirthInputs } from './birth-input.js';
 import { STEMS, STEM_KO, EL, stemEl, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
+import { pairSlug } from '../data/pair-data.js';
 
 const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -81,8 +82,8 @@ function render() {
         ${stars.length > 1 ? `<p class="mean">ほかにある星：${stars.slice(1).map(([l, t]) => `${l}柱に「${t}」`).join('、')}${P.hour ? '' : '（生まれた時間を入れると、時柱の星もわかります）'}</p>` : ''}
       </div></section>
       <section><h4>相性のいい日主</h4><div class="rd">
-        <p class="lead">${slink(gou)}とは「干合（かんごう）」の関係で、自然と引き合う組み合わせです。</p>
-        <p>あなたを支えてくれるのは、${sup.map(slink).join('と')}。一緒にいると安心できる相手です。</p>
+        <p class="lead">${slink(gou)}とは「干合（かんごう）」の関係で、自然と引き合う組み合わせです（<a href="/aisho/${pairSlug(s, gou)}/">ふたりの相性をくわしく</a>）。</p>
+        <p>あなたを支えてくれるのは、${sup.map(slink).join('と')}。一緒にいると安心できる相手です。ほかの日主との相性は<a href="/aisho/">日主どうしの相性一覧</a>で見られます。</p>
         <p class="mean">相性は日主だけでは決まりません。気になる人がいるなら、<a href="/shindan/">ふたりの相性診断</a>で4つの観点から見てみてください。</p>
       </div></section>
       <section><h4>今月と2027年のキーワード</h4><div class="rd">

@@ -4,6 +4,8 @@ import Corners from '../../components/Corners.astro';
 import PRNotice from '../../components/PRNotice.astro';
 import AffiliateCTA from '../../components/AffiliateCTA.astro';
 import NisshuLinks from '../../components/NisshuLinks.astro';
+import { pairSlug, STEM_FULL as SF } from '../../data/pair-data.js';
+import { STEM_SLUG as SS } from '../../data/saju-data.js';
 import { getCollection } from 'astro:content';
 import fs from 'node:fs';
 
@@ -68,6 +70,12 @@ const jsonLd = [
     {entry.data.pr && (entry.data.category === '日主'
       ? <AffiliateCTA heading="自分のサジュを、もっと詳しく知りたいときは" text="日主でわかるのは、生まれ持った基本の気質です。恋愛のタイミングや、気になる人の気持ちなど、具体的なことは占い師に直接聞けます。ココナラ電話占いは新規登録で3,000円分の無料クーポンがあり、1分100円の占い師なら最大30分試せます。" />
       : <AffiliateCTA />)}
+    {SS.includes(entry.slug) && (() => { const me = SS.indexOf(entry.slug); return (
+      <nav class="pair-links reveal">
+        <h2 class="cat-title">{SF[me]}とほかの日主の相性</h2>
+        <ul>{SF.map((n, x) => <li><a href={`/aisho/${pairSlug(me, x)}/`}>{SF[me]}×{n}</a></li>)}</ul>
+        <a class="all" href="/aisho/">55通りの相性一覧へ</a>
+      </nav>); })()}
     <NisshuLinks current={entry.slug} />
     {related.length > 0 && (
       <section class="related">

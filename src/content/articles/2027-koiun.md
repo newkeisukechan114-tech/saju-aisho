@@ -3,7 +3,7 @@ title: 2027年は丁未（ひのとひつじ）の「赤い未年」。サジュ
 description: 2027年の干支「丁未」の意味と、60年ぶりの「赤い未年」と呼ばれる理由を解説。サジュ（韓国の四柱推命）の考え方で、10タイプの日主ごとに2027年の恋愛の流れとヒントをまとめます。
 category: 年運
 publishedAt: 2026-11-01
-updatedAt: 2026-11-03
+updatedAt: 2026-11-08
 pr: true
 draft: false
 ---
@@ -175,6 +175,12 @@ draft: false
 - **出会い・片思い中の人**：新しい集まりや紹介には気軽に参加しつつ、会うたびに話しやすい人を大切にする
 - **パートナーがいる人**：友人との予定が増えても、パートナーとの時間を先に予定に入れておく
 - **日常で**：人と会う予定が続いたら、ひとりで休む日もつくって、疲れをためない
+
+## 日主別・2027年の運勢をくわしく
+
+全体運・恋愛運・仕事運と、2月から翌年1月までの月ごとの流れを、日主ごとにまとめました。
+
+[甲木](/articles/2027-unsei-koboku/)／[乙木](/articles/2027-unsei-otsuboku/)／[丙火](/articles/2027-unsei-heika/)／[丁火](/articles/2027-unsei-teika/)／[戊土](/articles/2027-unsei-bodo/)／[己土](/articles/2027-unsei-kido/)／[庚金](/articles/2027-unsei-koukin/)／[辛金](/articles/2027-unsei-shinkin/)／[壬水](/articles/2027-unsei-jinsui/)／[癸水](/articles/2027-unsei-kisui/)
 
 ## 生まれ年の干支と「未」の関係
 

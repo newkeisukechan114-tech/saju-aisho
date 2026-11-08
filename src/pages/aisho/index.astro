@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import Corners from '../../components/Corners.astro';
+import { pairSlug, relation, label, STEMS, STEM_FULL, STEM_INFO, stemEl } from '../../data/pair-data.js';
+const MARK = { gou: '合', gen: '生', koku: '剋', hi: '比', same: '同' };
+const mark = (a, b) => { const r = relation(a, b); return r.gou ? 'gou' : r.type; };
+const jsonLd = [{
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'トップ', item: 'https://saju-aisho.com/' },
+    { '@type': 'ListItem', position: 2, name: '日主どうしの相性', item: 'https://saju-aisho.com/aisho/' },
+  ],
+}];
+---
+<Base title="日主どうしの相性一覧｜10タイプ×10タイプ・55通り【四柱推命・サジュ】" description="四柱推命（サジュ）の日主10タイプどうしの恋愛の相性を、55通りすべて一覧にしました。干合・相生・相剋・比和の関係が一目でわかる早見表から、組み合わせごとの解説ページへ進めます。" ogImage="/og/_aisho.jpg" jsonLd={jsonLd}>
+  <div class="page-head">
+    <div class="crumb"><a href="/">トップ</a><span>／</span>日主どうしの相性</div>
+    <div class="block-head"><span class="en">Pairs</span><h1>日主どうしの相性一覧</h1><p>あなたの日主（たて）と、お相手の日主（よこ）が交わるマスを選ぶと、ふたりの相性の解説ページに進めます。日主がわからないときは<a href="/kojin/">個人占い</a>で調べられます。</p></div>
+  </div>
+  <div class="pair-grid-wrap frame reveal"><Corners />
+    <table class="pair-grid">
+      <thead><tr><th></th>{STEMS.map((s, i) => <th style={`color:var(${['--ob-wood','--ob-fire','--ob-earth','--ob-metal','--ob-water'][stemEl(i)]})`}>{s}</th>)}</tr></thead>
+      <tbody>
+        {STEMS.map((s, a) => (
+          <tr>
+            <th style={`color:var(${['--ob-wood','--ob-fire','--ob-earth','--ob-metal','--ob-water'][stemEl(a)]})`}>{s}</th>
+            {STEMS.map((t, b) => <td class={`m-${mark(a, b)}`}><a href={`/aisho/${pairSlug(a, b)}/`} title={`${STEM_FULL[a]}と${STEM_FULL[b]}の相性：${label(relation(a, b))}`}>{MARK[mark(a, b)]}</a></td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="legend"><span class="m-gou">合</span>引き合う（干合）　<span class="m-gen">生</span>育て合う（相生）　<span class="m-koku">剋</span>刺激し合う（相剋）　<span class="m-hi">比</span>似た者どうし（比和）　<span class="m-same">同</span>同じ日主</p>
+  </div>
+  <section class="block">
+    <div class="block-head reveal"><span class="en">List</span><h2>組み合わせから探す</h2></div>
+    {STEMS.map((s, a) => (
+      <div class="pair-row reveal">
+        <h3><a href={`/articles/${['koboku','otsuboku','heika','teika','bodo','kido','koukin','shinkin','jinsui','kisui'][a]}/`}>{STEM_FULL[a]}（{STEM_INFO[a][0]}）</a></h3>
+        <ul>{STEMS.map((t, b) => <li><a href={`/aisho/${pairSlug(a, b)}/`}>{STEM_FULL[a]}×{STEM_FULL[b]}</a></li>)}</ul>
+      </div>
+    ))}
+  </section>
+  <div class="limits frame reveal"><Corners />
+    <h3>日主の相性は、入り口です</h3>
+    <p>相性は、日主どうしの関係だけでは決まりません。生まれた日の十二支（日支）や五行のバランスまで含めると、ふたりの関係がもっと具体的に見えてきます。ふたりの生年月日がわかるなら、<a href="/shindan/">相性占い</a>で確かめてみてください。</p>
+  </div>
+</Base>

@@ -27,7 +27,7 @@ function card(title, label) {
   <div class="brand"><div class="mark">合</div>ソウルのサジュ恋愛相性占い</div><div class="url">saju-aisho.com</div></body></html>`;
 }
 
-const items = [{ slug: '_default', title: '韓国の四柱推命「サジュ」で、ふたりの恋愛相性を無料診断', label: '韓国式 恋愛相性占い' }, { slug: '_kojin', title: '生年月日を入れるだけ。あなたのサジュ（四柱）を無料で占う', label: '無料サジュ占い' }];
+const items = [{ slug: '_aisho', title: '日主10タイプ×10タイプ。ふたりの相性を55通りで解説', label: '日主どうしの相性' }, { slug: '_default', title: '韓国の四柱推命「サジュ」で、ふたりの恋愛相性を無料診断', label: '韓国式 恋愛相性占い' }, { slug: '_kojin', title: '生年月日を入れるだけ。あなたのサジュ（四柱）を無料で占う', label: '無料サジュ占い' }];
 for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.md'))) {
   const src = fs.readFileSync(path.join(dir, f), 'utf8');
   const fm = src.split('---')[1] || '';

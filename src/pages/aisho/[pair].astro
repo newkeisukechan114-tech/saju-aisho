@@ -1,0 +1,112 @@
+---
+// 日主×日主の相性ページ（55通り）
+import Base from '../../layouts/Base.astro';
+import Corners from '../../components/Corners.astro';
+import PRNotice from '../../components/PRNotice.astro';
+import AffiliateCTA from '../../components/AffiliateCTA.astro';
+import { ALL_PAIRS, pairSlug, pairContent, label, nm, P, KW2027, STEMS, STEM_SLUG, STEM_FULL, STEM_INFO, EL, stemEl } from '../../data/pair-data.js';
+
+export function getStaticPaths() {
+  return ALL_PAIRS.map(([a, b]) => ({ params: { pair: pairSlug(a, b) }, props: { a, b } }));
+}
+const { a, b } = Astro.props;
+const c = pairContent(a, b);
+const A = STEM_FULL[a], B = STEM_FULL[b], mA = STEM_INFO[a][0], mB = STEM_INFO[b][0];
+const same = a === b;
+const title = same ? `${A}どうしの相性｜${mA}×${mA}の恋愛【四柱推命・サジュ】` : `${A}と${B}の相性｜${mA}×${mB}の恋愛【四柱推命・サジュ】`;
+const desc = same
+  ? `四柱推命（サジュ）で日主が${A}どうしのふたりの恋愛の相性を解説。似た者どうしの心地よさと、すれ違いやすいポイント、うまくいくコツ、おすすめのデートまで紹介します。`
+  : `四柱推命（サジュ）で、日主が${A}（${mA}）の人と${B}（${mB}）の人の恋愛の相性を解説。ふたりの関係は「${label(c.r)}」。惹かれ合うポイント、すれ違いやすいところ、うまくいくコツを紹介します。`;
+const url = `https://saju-aisho.com/aisho/${pairSlug(a, b)}/`;
+const COL = ['#5E9C80', '#C9665B', '#D3A64A', '#DCD8CC', '#6178AE'];
+// 図：ふたりの円と関係の矢印
+let arrow = '';
+if (c.r.type === 'gen') arrow = c.r.giver === a ? 'ltr' : 'rtl';
+if (c.r.type === 'koku') arrow = c.r.ctrl === a ? 'ltr' : 'rtl';
+const others = (s) => [0,1,2,3,4,5,6,7,8,9].filter((x) => x !== s || true).map((x) => ({ x, slug: pairSlug(s, x) }));
+const jsonLd = [{
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'トップ', item: 'https://saju-aisho.com/' },
+    { '@type': 'ListItem', position: 2, name: '日主どうしの相性', item: 'https://saju-aisho.com/aisho/' },
+    { '@type': 'ListItem', position: 3, name: same ? `${A}どうしの相性` : `${A}と${B}の相性`, item: url },
+  ],
+}];
+---
+<Base title={title} description={desc} ogImage="/og/_aisho.jpg" jsonLd={jsonLd}>
+  <article class="article">
+    <div class="page-head">
+      <div class="crumb"><a href="/">トップ</a><span>／</span><a href="/aisho/">日主どうしの相性</a><span>／</span>{same ? `${A}どうし` : `${A}と${B}`}</div>
+      <div class="article-head">
+        <span class="cat">日主どうしの相性</span>
+        <h1>{title.replace('【四柱推命・サジュ】', '')}</h1>
+      </div>
+    </div>
+    <PRNotice />
+    <div class="prose frame"><Corners />
+      <p>{same ? `日主（生まれた日のタイプ）が${A}どうしのふたりの、恋愛の相性を紹介します。` : `日主（生まれた日のタイプ）が${nm(a)}の人と、${nm(b)}の人の恋愛の相性を紹介します。`}ふたりの関係は<strong>「{label(c.r)}」</strong>です。</p>
+      <figure>
+        <svg viewBox="0 0 960 300" role="img" aria-label={`${A}と${B}の関係を表した図：${label(c.r)}`} style="width:100%;height:auto;display:block;background:#121115;border-radius:12px">
+          <circle cx="280" cy="140" r="90" fill="none" stroke={COL[stemEl(a)]} stroke-width="4" />
+          <text x="280" y="160" text-anchor="middle" font-family="serif" font-size="72" fill={COL[stemEl(a)]}>{STEMS[a]}</text>
+          <text x="280" y="268" text-anchor="middle" font-family="serif" font-size="22" fill="#EEE7D7">{A}（{mA}）</text>
+          <circle cx="680" cy="140" r="90" fill="none" stroke={COL[stemEl(b)]} stroke-width="4" />
+          <text x="680" y="160" text-anchor="middle" font-family="serif" font-size="72" fill={COL[stemEl(b)]}>{STEMS[b]}</text>
+          <text x="680" y="268" text-anchor="middle" font-family="serif" font-size="22" fill="#EEE7D7">{B}（{mB}）</text>
+          {arrow === 'ltr' && <path d="M385 140 H565 M545 124 L572 140 L545 156" stroke="#D4B26C" stroke-width="4" fill="none" stroke-dasharray={c.r.type === 'koku' ? '10 8' : ''} />}
+          {arrow === 'rtl' && <path d="M575 140 H395 M415 124 L388 140 L415 156" stroke="#D4B26C" stroke-width="4" fill="none" stroke-dasharray={c.r.type === 'koku' ? '10 8' : ''} />}
+          {!arrow && <path d="M385 132 H575 M385 148 H575" stroke="#D4B26C" stroke-width="4" />}
+          {c.r.gou && <path transform="translate(480 70) scale(1.6)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" />}
+          <text x="480" y="210" text-anchor="middle" font-family="serif" font-size="24" fill="#D4B26C">{label(c.r)}</text>
+        </svg>
+        <figcaption>ふたりの関係（{EL[stemEl(a)]}と{EL[stemEl(b)]}）</figcaption>
+      </figure>
+
+      <h2>ふたりの関係：{label(c.r)}</h2>
+      <p>{c.rel}</p>
+      <p>ふたりの関係をたとえるなら、<strong>{c.meta}</strong>ような関係です。</p>
+
+      <h2>惹かれ合うポイント</h2>
+      <p>{c.attract}</p>
+      <ul>
+        <li><a href={`/articles/${STEM_SLUG[a]}/`}>{A}</a>の魅力：{P[a].offer}</li>
+        {!same && <li><a href={`/articles/${STEM_SLUG[b]}/`}>{B}</a>の魅力：{P[b].offer}</li>}
+      </ul>
+
+      <h2>すれ違いやすいポイント</h2>
+      <p>{c.gap}</p>
+
+      <h2>ふたりがうまくいくコツ</h2>
+      <ol>{c.tips.map((t) => <li>{t}</li>)}</ol>
+
+      <h2>連絡のとり方の違い</h2>
+      <table>
+        <thead><tr><th></th><th>連絡のスタイル</th></tr></thead>
+        <tbody>
+          <tr><td>{A}</td><td>{P[a].contact}</td></tr>
+          {!same && <tr><td>{B}</td><td>{P[b].contact}</td></tr>}
+        </tbody>
+      </table>
+      <p>{same ? 'スタイルが同じなので、連絡のペースは合わせやすいふたりです。' : 'スタイルの違いは、気持ちの違いではありません。「返事が遅い＝気持ちがない」と決めつけず、相手のペースを知っておくと安心です。'}</p>
+
+      <h2>ふたりにおすすめのデート</h2>
+      <p>{c.dates.length === 1 ? `ふたりの五行「${EL[stemEl(a)]}」に合うのは、${c.dates[0]}のデートです。` : `${A}の「${EL[stemEl(a)]}」には${c.dates[0]}、${B}の「${EL[stemEl(b)]}」には${c.dates[1]}が合います。交互に選ぶと、お互いの好きな時間を共有できます。`}</p>
+
+      <h2>2027年のふたり</h2>
+      <p>2027年（丁未年）のキーワードは、{same ? `${A}にとって「${KW2027[a]}」。同じ流れの中で、ふたりで歩みをそろえやすい年です。` : `${A}が「${KW2027[a]}」、${B}が「${KW2027[b]}」。それぞれの流れを知っておくと、相手の変化にやさしく気づけます。`}くわしくは<a href={`/articles/2027-unsei-${STEM_SLUG[a]}/`}>{A}の2027年の運勢</a>{!same && <>、<a href={`/articles/2027-unsei-${STEM_SLUG[b]}/`}>{B}の2027年の運勢</a></>}へ。</p>
+
+      <h2>ふたりの相性を、もっとくわしく見るには</h2>
+      <p>ここで紹介したのは、日主どうしの関係です。本当の相性は、生まれた日の十二支（日支）や、五行のバランスまで含めて見ると、ぐっと具体的になります。ふたりの生年月日がわかるなら、<a href="/shindan/">相性占い</a>で4つの観点から確かめてみてください。自分の日主がわからない人は、<a href="/kojin/">個人占い</a>で調べられます。</p>
+
+      <p class="note">※このページは、四柱推命（サジュ）の一般的な考え方をもとに、運営者がまとめたものです。</p>
+    </div>
+    <AffiliateCTA />
+    <nav class="pair-links reveal">
+      <h2 class="cat-title">{A}とほかの日主の相性</h2>
+      <ul>{others(a).filter((o) => !(same && o.x === a) && o.x !== b).map((o) => <li><a href={`/aisho/${o.slug}/`}>{A}×{STEM_FULL[o.x]}</a></li>)}</ul>
+      {!same && <><h2 class="cat-title">{B}とほかの日主の相性</h2>
+      <ul>{others(b).filter((o) => o.x !== a).map((o) => <li><a href={`/aisho/${o.slug}/`}>{B}×{STEM_FULL[o.x]}</a></li>)}</ul></>}
+      <a class="all" href="/aisho/">55通りの相性一覧へ</a>
+    </nav>
+  </article>
+</Base>

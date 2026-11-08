@@ -409,3 +409,24 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .next .sub-link { display: block; margin-top: 12px; font-size: 13px; color: var(--gold); }
 .solo-link { margin-top: 10px; font-size: 13px; }
 .solo-link a { color: var(--gold); }
+/* 日主どうしの相性 */
+.pair-grid-wrap { padding: 24px 16px; overflow-x: auto; }
+.pair-grid { border-collapse: collapse; margin: 0 auto; font-family: var(--display); }
+.pair-grid th, .pair-grid td { width: 44px; height: 40px; text-align: center; border: 1px solid var(--gold-faint); font-size: 17px; }
+.pair-grid td a { display: block; line-height: 40px; text-decoration: none; color: var(--ivory); }
+.pair-grid td a:hover { background: var(--gold-faint); }
+.m-gou, .pair-grid td.m-gou a { color: #e98aa0; font-weight: 700; }
+.m-gen, .pair-grid td.m-gen a { color: #7fb89c; }
+.m-koku, .pair-grid td.m-koku a { color: #8a7aa8; }
+.m-hi, .pair-grid td.m-hi a { color: #9aa6c4; }
+.m-same, .pair-grid td.m-same a { color: var(--muted); }
+.legend { text-align: center; font-size: 13px; color: var(--muted); margin: 16px 0 0; line-height: 2; }
+.legend span { font-family: var(--display); font-weight: 700; margin-right: 4px; }
+.pair-row { margin: 18px 0; }
+.pair-row h3 { font-size: 16px; margin-bottom: 8px; }
+.pair-row h3 a { color: var(--gold); text-decoration: none; }
+.pair-row ul, .pair-links ul { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+.pair-row li a, .pair-links li a { display: inline-block; padding: 5px 12px; border: 1px solid rgba(201,165,92,.35); border-radius: 999px; font-size: 13px; color: var(--ivory); text-decoration: none; }
+.pair-row li a:hover, .pair-links li a:hover { border-color: var(--gold); }
+.pair-links { margin-top: 40px; }
+.pair-links .all { display: inline-block; font-size: 13px; color: var(--gold); }
