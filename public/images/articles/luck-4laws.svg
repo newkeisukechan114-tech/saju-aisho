@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-label="運がいい人に共通する4つの特徴。チャンスを広げる、直感を聞き逃さない、幸運を期待する、不運を幸運に変える">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="400" fill="url(#bg)"/>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#D4B26C"/></marker></defs><text x="480" y="50" text-anchor="middle" font-family="serif" font-size="24" fill="#D4B26C" letter-spacing="4">運がいい人の4つの特徴</text><rect x="40" y="80" width="205" height="250" rx="12" fill="#15120d" stroke="rgba(212,178,108,.4)"/>
+  <text x="56" y="104" font-family="serif" font-size="18" fill="#D4B26C">1</text><rect x="116" y="112" width="52" height="44" rx="4" fill="none" stroke="#D4B26C" stroke-width="3"/><path d="M142 112 V156 M116 134 H168" stroke="#D4B26C" stroke-width="3"/><path d="M102 108 L116 112 M182 108 L168 112" stroke="#D4B26C" stroke-width="2"/>
+  <text x="142" y="210" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#EEE7D7">チャンスを広げる</text>
+  <text x="142" y="254" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#EEE7D7" opacity=".85">人との出会いや</text>
+  <text x="142" y="278" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#EEE7D7" opacity=".85">新しいことに開いている</text><rect x="265" y="80" width="205" height="250" rx="12" fill="#15120d" stroke="rgba(212,178,108,.4)"/>
+  <text x="281" y="104" font-family="serif" font-size="18" fill="#D4B26C">2</text><path d="M361 156 C337 156 337 112 367 112 C393 112 393 140 375 148 C367 152 371 160 361 160" fill="none" stroke="#D4B26C" stroke-width="3"/><path d="M397 120 q8 14 0 28 M407 112 q14 22 0 44" fill="none" stroke="#D4B26C" stroke-width="2"/>
+  <text x="367" y="210" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#EEE7D7">直感を聞き逃さない</text>
+  <text x="367" y="254" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#EEE7D7" opacity=".85">「なんとなく」を</text>
+  <text x="367" y="278" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#EEE7D7" opacity=".85">大切にする</text><rect x="490" y="80" width="205" height="250" rx="12" fill="#15120d" stroke="rgba(212,178,108,.4)"/>
+  <text x="506" y="104" font-family="serif" font-size="18" fill="#D4B26C">3</text><path d="M592 108 L600 128 L622 129 L605 142 L611 163 L592 151 L573 163 L579 142 L562 129 L584 128Z" fill="none" stroke="#D4B26C" stroke-width="3"/>
+  <text x="592" y="210" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#EEE7D7">幸運を期待する</text>
+  <text x="592" y="254" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#EEE7D7" opacity=".85">「きっとうまくいく」と</text>
+  <text x="592" y="278" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#EEE7D7" opacity=".85">思って続ける</text><rect x="715" y="80" width="205" height="250" rx="12" fill="#15120d" stroke="rgba(212,178,108,.4)"/>
+  <text x="731" y="104" font-family="serif" font-size="18" fill="#D4B26C">4</text><path d="M793 146 A26 26 0 1 1 839 150" fill="none" stroke="#D4B26C" stroke-width="3" marker-end="url(#ar)"/><circle cx="793" cy="146" r="4" fill="#6178AE"/>
+  <text x="817" y="210" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#EEE7D7">不運を幸運に変える</text>
+  <text x="817" y="254" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#EEE7D7" opacity=".85">失敗の中に</text>
+  <text x="817" y="278" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#EEE7D7" opacity=".85">いい面を見つける</text><text x="480.0" y="380" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">ワイズマン博士の研究より</text>
+</svg>

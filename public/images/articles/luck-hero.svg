@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="生まれ持った八字を表す4本の柱と、その下をゆったり流れる運の川のイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="200" r="250" fill="url(#g)"/><circle cx="120" cy="80" r="3" fill="#D4B26C" opacity="0.8"/><circle cx="170" cy="150" r="4" fill="#D4B26C" opacity="0.9"/><circle cx="820" cy="90" r="4" fill="#D4B26C" opacity="0.9"/><circle cx="870" cy="170" r="3" fill="#D4B26C" opacity="0.7"/><circle cx="780" cy="220" r="3" fill="#D4B26C" opacity="0.6"/><circle cx="150" cy="240" r="3" fill="#D4B26C" opacity="0.6"/>
+  <rect x="250" y="70" width="100" height="230" rx="12" fill="#15120d" stroke="rgba(212,178,108,.45)"/>
+  <text x="300" y="100" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#D4B26C">時</text>
+  <text x="300" y="170" text-anchor="middle" font-family="serif" font-size="52" fill="#D3A64A">戊</text>
+  <text x="300" y="260" text-anchor="middle" font-family="serif" font-size="52" fill="#C9665B">午</text><rect x="380" y="70" width="100" height="230" rx="12" fill="#15120d" stroke="rgba(212,178,108,.45)"/>
+  <text x="430" y="100" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#D4B26C">日</text>
+  <text x="430" y="170" text-anchor="middle" font-family="serif" font-size="52" fill="#D3A64A">戊</text>
+  <text x="430" y="260" text-anchor="middle" font-family="serif" font-size="52" fill="#D3A64A">辰</text><rect x="510" y="70" width="100" height="230" rx="12" fill="#15120d" stroke="rgba(212,178,108,.45)"/>
+  <text x="560" y="100" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#D4B26C">月</text>
+  <text x="560" y="170" text-anchor="middle" font-family="serif" font-size="52" fill="#C9665B">丙</text>
+  <text x="560" y="260" text-anchor="middle" font-family="serif" font-size="52" fill="#5E9C80">寅</text><rect x="640" y="70" width="100" height="230" rx="12" fill="#15120d" stroke="rgba(212,178,108,.45)"/>
+  <text x="690" y="100" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#D4B26C">年</text>
+  <text x="690" y="170" text-anchor="middle" font-family="serif" font-size="52" fill="#5E9C80">甲</text>
+  <text x="690" y="260" text-anchor="middle" font-family="serif" font-size="52" fill="#6178AE">子</text>
+  <text x="480" y="335" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#EEE7D7">生まれ持った8文字＝八字（パルチャ）</text>
+  <path d="M0 395 C160 360 300 430 480 395 S800 360 960 395 L960 440 C800 405 640 470 480 440 S160 405 0 440Z" fill="#6178AE" opacity=".55"/>
+  <path d="M0 410 C160 380 300 445 480 410 S800 380 960 410" stroke="#D4B26C" stroke-width="2" fill="none" opacity=".7"/>
+  <text x="120" y="385" font-family="sans-serif" font-size="15" fill="#D4B26C">めぐってくる運の流れ →</text>
+  <text x="480.0" y="468" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">八字と、運の流れ</text>
+</svg>
