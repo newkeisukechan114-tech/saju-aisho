@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="離れて向き合う緑と黄色の2つの光と、そのあいだに架かる赤い光の橋のイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="230" r="250" fill="url(#g)"/>
+  <circle cx="250" cy="270" r="78" fill="#15120d" stroke="#5E9C80" stroke-width="4"/>
+  <text x="250" y="292" text-anchor="middle" font-family="serif" font-size="64" fill="#5E9C80">木</text>
+  <circle cx="710" cy="270" r="78" fill="#15120d" stroke="#D3A64A" stroke-width="4"/>
+  <text x="710" y="292" text-anchor="middle" font-family="serif" font-size="64" fill="#D3A64A">土</text>
+  <path d="M320 225 Q480 60 640 225" stroke="#C9665B" stroke-width="10" fill="none" stroke-linecap="round" opacity=".9"/>
+  <path d="M320 225 Q480 60 640 225" stroke="#D4B26C" stroke-width="2" fill="none" opacity=".8"/>
+  <circle cx="480" cy="143" r="42" fill="#15120d" stroke="#C9665B" stroke-width="3"/>
+  <text x="480" y="160" text-anchor="middle" font-family="serif" font-size="44" fill="#C9665B">火</text>
+  <path d="M455 300 l18 -14 l-6 16 l20 -10 l-14 20 l18 -4" stroke="#D4B26C" stroke-width="3" fill="none" opacity=".6"/>
+  <rect x="0" y="400" width="960" height="80" fill="#14111a"/>
+  <text x="480" y="372" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#EEE7D7">ぶつかるふたりの間に、つなぐ五行を置く</text>
+  <text x="480.0" y="445" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">相剋は、橋をかければ力になる</text>
+</svg>
