@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="ハートがあふれるカップと、あふれた気持ちが小さな流れになって花の咲く庭へ流れていくイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="230" r="250" fill="url(#g)"/>
+  <path d="M380 220 L580 220 L560 340 Q480 370 400 340Z" fill="#15120d" stroke="#D4B26C" stroke-width="3"/>
+  <path d="M580 245 q40 5 30 45 q-8 25 -38 25" fill="none" stroke="#D4B26C" stroke-width="3"/>
+  <ellipse cx="480" cy="220" rx="100" ry="14" fill="#e98aa0" opacity=".85"/>
+  <path transform="translate(480 170) scale(3.2)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="1"/><path transform="translate(430 120) scale(1.1)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="0.9"/><path transform="translate(505 100) scale(1.3)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="1"/><path transform="translate(560 140) scale(0.9)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="0.8"/><path transform="translate(470 160) scale(0.8)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="0.7"/><path transform="translate(395 170) scale(0.7)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="0.6"/><path transform="translate(600 190) scale(0.7)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="0.6"/>
+  <path d="M560 300 Q610 320 640 340 T760 380 T880 395" stroke="#e98aa0" stroke-width="6" fill="none" opacity=".5" stroke-linecap="round"/><path transform="translate(640 330) scale(0.7)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="0.7"/><path transform="translate(700 352) scale(0.7)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="0.7"/><path transform="translate(760 368) scale(0.7)" d="M0 6 C-6 -2 -14 2 -10 9 C-7 14 0 18 0 20 C0 18 7 14 10 9 C14 2 6 -2 0 6Z" fill="#e98aa0" opacity="0.7"/>
+  <g><path d="M850 400 v-40" stroke="#5E9C80" stroke-width="3"/><circle cx="850" cy="352" r="10" fill="#D4B26C"/>
+  <path d="M890 400 v-30" stroke="#5E9C80" stroke-width="3"/><circle cx="890" cy="364" r="8" fill="#e98aa0"/></g>
+  <rect x="0" y="400" width="960" height="80" fill="#14111a"/>
+  <text x="480.0" y="445" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">あふれる気持ちに、流れる先を</text>
+</svg>
