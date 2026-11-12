@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-label="季節のイベントをキャンセルしたい理由のグラフ。混雑や人混みが苦手56.0%、お金がかかる45.5%、イベント自体に魅力を感じない29.5%、一緒に行く相手がいない27.5%">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <text x="480" y="52" text-anchor="middle" font-family="serif" font-size="24" fill="#D4B26C" letter-spacing="3">季節のイベントを「キャンセルしたい」理由</text><text x="364" y="125" text-anchor="end" font-family="sans-serif" font-size="17" fill="#EEE7D7">混雑や人混みが苦手</text>
+  <rect x="380" y="100" width="480" height="36" rx="4" fill="rgba(238,231,215,.06)"/>
+  <rect x="380" y="100" width="448" height="36" rx="4" fill="#8f80bd" opacity=".85"/>
+  <text x="840" y="125" font-family="sans-serif" font-size="18" font-weight="bold" fill="#EEE7D7">56.0%</text><text x="364" y="191" text-anchor="end" font-family="sans-serif" font-size="17" fill="#EEE7D7">お金がかかる（コスパが悪い）</text>
+  <rect x="380" y="166" width="480" height="36" rx="4" fill="rgba(238,231,215,.06)"/>
+  <rect x="380" y="166" width="364" height="36" rx="4" fill="#D4B26C" opacity=".85"/>
+  <text x="756" y="191" font-family="sans-serif" font-size="18" font-weight="bold" fill="#EEE7D7">45.5%</text><text x="364" y="257" text-anchor="end" font-family="sans-serif" font-size="17" fill="#EEE7D7">イベント自体に魅力を感じない</text>
+  <rect x="380" y="232" width="480" height="36" rx="4" fill="rgba(238,231,215,.06)"/>
+  <rect x="380" y="232" width="236" height="36" rx="4" fill="#8f80bd" opacity=".85"/>
+  <text x="628" y="257" font-family="sans-serif" font-size="18" font-weight="bold" fill="#EEE7D7">29.5%</text><text x="364" y="323" text-anchor="end" font-family="sans-serif" font-size="17" fill="#EEE7D7">一緒に行く相手がいない</text>
+  <rect x="380" y="298" width="480" height="36" rx="4" fill="rgba(238,231,215,.06)"/>
+  <rect x="380" y="298" width="220" height="36" rx="4" fill="#8f80bd" opacity=".85"/>
+  <text x="612" y="323" font-family="sans-serif" font-size="18" font-weight="bold" fill="#EEE7D7">27.5%</text><text x="480" y="390" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7" opacity=".7">20〜59歳の未婚男女2,465人への調査（パートナーエージェント、2025年12月）をもとに作成</text>
+</svg>
