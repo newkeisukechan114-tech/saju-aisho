@@ -432,3 +432,13 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .pair-row li a:hover, .pair-links li a:hover { border-color: var(--gold); }
 .pair-links { margin-top: 40px; }
 .pair-links .all { display: inline-block; font-size: 13px; color: var(--gold); }
+/* 案内ボックス：最大30分無料の強調 */
+.cta-free { display: grid; gap: 6px; justify-items: center; padding: 18px 22px 16px; border: 1px solid var(--gold-soft); background: rgba(201,165,92,.07); width: 100%; max-width: 30em; }
+.cta-free-lead { font-size: 13px; color: var(--muted); letter-spacing: .08em; }
+.cta-free-main { display: flex; align-items: baseline; gap: 4px; color: var(--gold); line-height: 1; }
+.cta-free-main small { font-size: 18px; letter-spacing: .1em; }
+.cta-free-main b { font-family: var(--serif, serif); font-size: 56px; font-weight: 600; letter-spacing: .02em; }
+.cta-free-main em { font-style: normal; font-size: 30px; font-weight: 700; margin-left: 6px; letter-spacing: .12em; }
+.cta-free-cond { font-size: 11.5px; color: var(--muted); line-height: 1.7; max-width: 30em; }
+.cta-points { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; font-size: 13px; }
+.cta-points li::before { content: '✓'; color: var(--gold); margin-right: 6px; }
