@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" role="img" aria-label="恋愛の季節イベントを避けたい理由の棒グラフ。クリスマスはお金がかかるが36.0%、バレンタイン・ホワイトデーは34.8%。20代では時間がとられるが25.3%、SNS疲れが16.6%">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="440" fill="url(#bg)"/>
+  <text x="480" y="48" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C" letter-spacing="3">恋愛の季節イベントを避けたい理由</text><text x="60" y="90" font-family="sans-serif" font-size="16" fill="#EEE7D7">クリスマスを避けたい理由「お金がかかる（コスパが悪い）」</text>
+  <text x="900" y="90" text-anchor="end" font-family="sans-serif" font-size="13" fill="#D4B26C">全体</text>
+  <rect x="60" y="102" width="560" height="22" rx="4" fill="rgba(238,231,215,.08)"/>
+  <rect x="60" y="102" width="504" height="22" rx="4" fill="#C9665B"/>
+  <text x="576" y="120" font-family="sans-serif" font-size="18" font-weight="bold" fill="#EEE7D7">36.0%</text><text x="60" y="168" font-family="sans-serif" font-size="16" fill="#EEE7D7">バレンタイン・ホワイトデーを避けたい理由「お金がかかる」</text>
+  <text x="900" y="168" text-anchor="end" font-family="sans-serif" font-size="13" fill="#D4B26C">全体</text>
+  <rect x="60" y="180" width="560" height="22" rx="4" fill="rgba(238,231,215,.08)"/>
+  <rect x="60" y="180" width="487" height="22" rx="4" fill="#C9665B"/>
+  <text x="559" y="198" font-family="sans-serif" font-size="18" font-weight="bold" fill="#EEE7D7">34.8%</text><text x="60" y="246" font-family="sans-serif" font-size="16" fill="#EEE7D7">「準備や人付き合いに時間がとられる（タイパが悪い）」</text>
+  <text x="900" y="246" text-anchor="end" font-family="sans-serif" font-size="13" fill="#D4B26C">20代</text>
+  <rect x="60" y="258" width="560" height="22" rx="4" fill="rgba(238,231,215,.08)"/>
+  <rect x="60" y="258" width="354" height="22" rx="4" fill="#6178AE"/>
+  <text x="426" y="276" font-family="sans-serif" font-size="18" font-weight="bold" fill="#EEE7D7">25.3%</text><text x="60" y="324" font-family="sans-serif" font-size="16" fill="#EEE7D7">「SNS疲れ」</text>
+  <text x="900" y="324" text-anchor="end" font-family="sans-serif" font-size="13" fill="#D4B26C">20代</text>
+  <rect x="60" y="336" width="560" height="22" rx="4" fill="rgba(238,231,215,.08)"/>
+  <rect x="60" y="336" width="232" height="22" rx="4" fill="#6178AE"/>
+  <text x="304" y="354" font-family="sans-serif" font-size="18" font-weight="bold" fill="#EEE7D7">16.6%</text><text x="60" y="412" font-family="sans-serif" font-size="13" fill="#EEE7D7" opacity=".7">出典：タメニー「2026年の季節イベント」に関する調査（20〜59歳の未婚男女2,465人、2025年12月）</text>
+</svg>
