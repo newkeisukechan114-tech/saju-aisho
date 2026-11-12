@@ -433,12 +433,21 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .pair-links { margin-top: 40px; }
 .pair-links .all { display: inline-block; font-size: 13px; color: var(--gold); }
 /* 案内ボックス：最大30分無料の強調 */
-.cta-free { display: grid; gap: 6px; justify-items: center; padding: 18px 22px 16px; border: 1px solid var(--gold-soft); background: rgba(201,165,92,.07); width: 100%; max-width: 30em; }
-.cta-free-lead { font-size: 13px; color: var(--muted); letter-spacing: .08em; }
-.cta-free-main { display: flex; align-items: baseline; gap: 4px; color: var(--gold); line-height: 1; }
-.cta-free-main small { font-size: 18px; letter-spacing: .1em; }
-.cta-free-main b { font-family: var(--serif, serif); font-size: 56px; font-weight: 600; letter-spacing: .02em; }
-.cta-free-main em { font-style: normal; font-size: 30px; font-weight: 700; margin-left: 6px; letter-spacing: .12em; }
-.cta-free-cond { font-size: 11.5px; color: var(--muted); line-height: 1.7; max-width: 30em; }
-.cta-points { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; font-size: 13px; }
+.cta h3 { font-size: 21px; }
+.cta-free { position: relative; display: grid; gap: 8px; justify-items: center; width: 100%; max-width: 30em; margin-top: 10px; padding: 26px 22px 18px; border: 1px solid var(--gold-soft); background: radial-gradient(120% 90% at 50% 0%, rgba(233,211,156,.16), rgba(201,165,92,.04) 60%, transparent); box-shadow: inset 0 0 40px rgba(201,165,92,.08); }
+.cta-tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: .2em; color: #17130A; background: var(--gold-grad); padding: 3px 16px; }
+.cta-free-lead { font-size: 13px; color: var(--ivory); opacity: .85; letter-spacing: .12em; }
+.cta-free-main { display: flex; align-items: baseline; gap: 6px; line-height: 1; }
+.cta-free-main small { font-family: var(--display); font-size: 19px; color: var(--ivory); letter-spacing: .08em; }
+.cta-free-main b { font-family: var(--latin); font-size: 78px; font-weight: 600; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 18px rgba(233,211,156,.25)); }
+.cta-free-main em { align-self: center; font-style: normal; font-family: var(--display); font-size: 26px; font-weight: 700; letter-spacing: .14em; color: #17130A; background: var(--gold-grad); padding: 6px 14px 6px 18px; margin-left: 6px; }
+.cta-free-cond { font-size: 11px; color: var(--muted); line-height: 1.7; }
+.cta-points { list-style: none; margin: 2px 0 4px; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.cta-points li { font-size: 12.5px; letter-spacing: .06em; padding: 5px 14px; border: 1px solid var(--gold-faint); border-radius: 999px; background: rgba(238,231,215,.03); }
 .cta-points li::before { content: '✓'; color: var(--gold); margin-right: 6px; }
+.cta .btn-cta { position: relative; font-family: var(--display); font-size: 16px; letter-spacing: .12em; padding: 18px 46px; box-shadow: 0 10px 28px rgba(201,165,92,.22), inset 0 1px 0 rgba(255,255,255,.35); animation: cta-shine 4.5s ease-in-out infinite; }
+.cta .btn-cta::after { content: '→'; display: inline-block; margin-left: 10px; transition: transform .3s; }
+.cta .btn-cta:hover::after { transform: translateX(4px); }
+@keyframes cta-shine { 0%, 70%, 100% { background-position: 0 0; } 85% { background-position: 100% 0; } }
+@media (prefers-reduced-motion: reduce) { .cta .btn-cta { animation: none; } }
+@media (max-width: 560px) { .cta { padding: 30px 18px; } .cta-free-main b { font-size: 64px; } .cta .btn-cta { width: 100%; padding: 17px 16px; } }
