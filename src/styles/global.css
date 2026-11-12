@@ -439,7 +439,7 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .cta-free-lead { font-size: 13px; color: var(--ivory); opacity: .85; letter-spacing: .12em; }
 .cta-free-main { display: flex; align-items: baseline; gap: 6px; line-height: 1; }
 .cta-free-main small { font-family: var(--display); font-size: 19px; color: var(--ivory); letter-spacing: .08em; }
-.cta-free-main b { font-family: var(--latin); font-size: 78px; font-weight: 600; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 18px rgba(233,211,156,.25)); }
+.cta-free-main b { display: inline-block; line-height: 1.25; padding: 0 4px .12em; font-family: var(--latin); font-size: 78px; font-weight: 600; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 18px rgba(233,211,156,.25)); }
 .cta-free-main em { align-self: center; font-style: normal; font-family: var(--display); font-size: 26px; font-weight: 700; letter-spacing: .14em; color: #17130A; background: var(--gold-grad); padding: 6px 14px 6px 18px; margin-left: 6px; }
 .cta-free-cond { font-size: 11px; color: var(--muted); line-height: 1.7; }
 .cta-points { list-style: none; margin: 2px 0 4px; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
