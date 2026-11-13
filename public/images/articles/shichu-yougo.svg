@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="日本の通変星と韓国の十神の名前の対応表。印綬は韓国では正印と呼ばれる">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <text x="480" y="50" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C" letter-spacing="3">日本の「通変星」と韓国の「十神」</text>
+  <text x="150" y="80" font-family="sans-serif" font-size="13" fill="#D4B26C">日本</text><text x="300" y="80" font-family="sans-serif" font-size="13" fill="#D4B26C">韓国</text>
+  <text x="560" y="80" font-family="sans-serif" font-size="13" fill="#D4B26C">日本</text><text x="710" y="80" font-family="sans-serif" font-size="13" fill="#D4B26C">韓国</text><text x="150" y="120" font-family="serif" font-size="22" fill="#EEE7D7">比肩</text>
+  <text x="260" y="120" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="300" y="120" font-family="sans-serif" font-size="20" fill="#EEE7D7">비견</text>
+  <text x="380" y="120" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（比肩）</text><text x="150" y="176" font-family="serif" font-size="22" fill="#EEE7D7">劫財</text>
+  <text x="260" y="176" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="300" y="176" font-family="sans-serif" font-size="20" fill="#EEE7D7">겁재</text>
+  <text x="380" y="176" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（劫財）</text><text x="150" y="232" font-family="serif" font-size="22" fill="#EEE7D7">食神</text>
+  <text x="260" y="232" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="300" y="232" font-family="sans-serif" font-size="20" fill="#EEE7D7">식신</text>
+  <text x="380" y="232" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（食神）</text><text x="150" y="288" font-family="serif" font-size="22" fill="#EEE7D7">傷官</text>
+  <text x="260" y="288" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="300" y="288" font-family="sans-serif" font-size="20" fill="#EEE7D7">상관</text>
+  <text x="380" y="288" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（傷官）</text><text x="150" y="344" font-family="serif" font-size="22" fill="#EEE7D7">偏財</text>
+  <text x="260" y="344" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="300" y="344" font-family="sans-serif" font-size="20" fill="#EEE7D7">편재</text>
+  <text x="380" y="344" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（偏財）</text><text x="560" y="120" font-family="serif" font-size="22" fill="#EEE7D7">正財</text>
+  <text x="670" y="120" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="710" y="120" font-family="sans-serif" font-size="20" fill="#EEE7D7">정재</text>
+  <text x="790" y="120" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（正財）</text><text x="560" y="176" font-family="serif" font-size="22" fill="#EEE7D7">偏官</text>
+  <text x="670" y="176" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="710" y="176" font-family="sans-serif" font-size="20" fill="#EEE7D7">편관</text>
+  <text x="790" y="176" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（偏官）</text><text x="560" y="232" font-family="serif" font-size="22" fill="#EEE7D7">正官</text>
+  <text x="670" y="232" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="710" y="232" font-family="sans-serif" font-size="20" fill="#EEE7D7">정관</text>
+  <text x="790" y="232" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（正官）</text><text x="560" y="288" font-family="serif" font-size="22" fill="#EEE7D7">偏印</text>
+  <text x="670" y="288" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="710" y="288" font-family="sans-serif" font-size="20" fill="#EEE7D7">편인</text>
+  <text x="790" y="288" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（偏印）</text><text x="560" y="344" font-family="serif" font-size="22" fill="#EEE7D7">印綬</text>
+  <text x="670" y="344" font-family="sans-serif" font-size="18" fill="#D4B26C">→</text>
+  <text x="710" y="344" font-family="sans-serif" font-size="20" fill="#EEE7D7">정인</text>
+  <text x="790" y="344" font-family="serif" font-size="16" fill="#EEE7D7" opacity=".7">（正印）</text>
+  <rect x="540" y="388" width="360" height="36" rx="6" fill="none" stroke="#D4B26C" stroke-dasharray="4 4"/>
+  <text x="720" y="412" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">「印綬」は韓国では「正印」と呼ぶ</text>
+  <text x="480.0" y="466" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">中身は同じ、呼び名が少し違う</text>
+</svg>

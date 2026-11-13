@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="左に自分を映す鏡、右に星と五行の円が描かれた図があり、ふたつが重なるところに光が灯るイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="220" r="250" fill="url(#g)"/>
+  <ellipse cx="300" cy="210" rx="95" ry="125" fill="#1d2236" stroke="#D4B26C" stroke-width="5"/>
+  <ellipse cx="300" cy="210" rx="78" ry="106" fill="#2a3352"/>
+  <path d="M260 150 q20 -20 40 0" stroke="#EEE7D7" stroke-width="3" fill="none" opacity=".5"/>
+  <text x="300" y="220" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#EEE7D7" letter-spacing="4">E / I</text>
+  <path d="M300 335 v40 M260 375 h80" stroke="#D4B26C" stroke-width="5"/>
+  <circle cx="665" cy="205" r="120" fill="#15120d" stroke="#D4B26C" stroke-width="3"/><circle cx="620" cy="140" r="4" fill="#D4B26C"/><circle cx="660" cy="180" r="3" fill="#D4B26C"/><circle cx="700" cy="150" r="4" fill="#D4B26C"/><circle cx="720" cy="210" r="3" fill="#D4B26C"/><circle cx="650" cy="240" r="3" fill="#D4B26C"/><circle cx="690" cy="270" r="4" fill="#D4B26C"/>
+  <path d="M620 140 L660 180 L700 150 M660 180 L720 210 L690 270 L650 240" stroke="#D4B26C" stroke-width="1.5" fill="none" opacity=".7"/>
+  <circle cx="665" cy="105" r="9" fill="#5E9C80"/><circle cx="760" cy="174" r="9" fill="#C9665B"/><circle cx="724" cy="286" r="9" fill="#D3A64A"/><circle cx="606" cy="286" r="9" fill="#DCD8CC"/><circle cx="570" cy="174" r="9" fill="#6178AE"/>
+  <circle cx="483" cy="210" r="16" fill="#D4B26C" opacity=".9"/><circle cx="483" cy="210" r="34" fill="#D4B26C" opacity=".18"/>
+  <text x="300" y="410" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#EEE7D7">MBTI：いまの自分の心の使い方</text>
+  <text x="665" y="410" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#EEE7D7">サジュ：生まれ持った気質と、時期</text>
+  <text x="480.0" y="462" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">ふたつを重ねると、見えてくるもの</text>
+</svg>

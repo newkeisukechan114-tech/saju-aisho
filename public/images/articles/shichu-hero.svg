@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="中国の古い占いを根に、韓国のサジュと日本の四柱推命の2本の枝が伸びる木のイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="220" r="250" fill="url(#g)"/>
+  <path d="M480 380 C480 300 470 250 480 200" stroke="#8a6a3a" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M478 250 C420 210 360 190 300 150" stroke="#8a6a3a" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M482 240 C540 200 600 180 660 140" stroke="#8a6a3a" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M480 380 q-60 10 -110 30 M480 380 q60 10 110 30 M480 380 v35" stroke="#8a6a3a" stroke-width="5" fill="none" opacity=".7"/>
+  <circle cx="290" cy="140" r="62" fill="#5E9C80" opacity=".35"/><circle cx="670" cy="130" r="62" fill="#5E9C80" opacity=".35"/>
+  <circle cx="290" cy="140" r="46" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+  <text x="290" y="135" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#D4B26C">韓国</text>
+  <text x="290" y="160" text-anchor="middle" font-family="serif" font-size="20" fill="#EEE7D7">サジュ</text>
+  <circle cx="670" cy="130" r="46" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+  <text x="670" y="125" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#D4B26C">日本</text>
+  <text x="670" y="150" text-anchor="middle" font-family="serif" font-size="17" fill="#EEE7D7">四柱推命</text>
+  <text x="480" y="440" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#EEE7D7">根は同じ、中国生まれの「四柱八字」</text>
+  <text x="480.0" y="468" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">同じ根から伸びた2本の枝</text>
+</svg>
