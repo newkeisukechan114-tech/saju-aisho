@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-label="天秤の片方に満足、もう片方に罪悪感がのっていて、ルールを決めると満足の側に傾く図">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="430" fill="url(#bg)"/>
+  
+  <text x="480" y="48" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C" letter-spacing="3">ルールを決めると、満足のほうに傾く</text>
+  <path d="M480 100 V330" stroke="#D4B26C" stroke-width="5"/><path d="M420 330 h120" stroke="#D4B26C" stroke-width="6"/>
+  <g transform="rotate(-10 480 120)"><path d="M250 120 H710" stroke="#D4B26C" stroke-width="5"/>
+  <path d="M250 120 L200 210 M250 120 L300 210" stroke="#D4B26C" stroke-width="2"/><path d="M180 210 h140 q-70 40 -140 0Z" fill="#15120d" stroke="#D4B26C" stroke-width="2"/>
+  <path d="M710 120 L660 210 M710 120 L760 210" stroke="#D4B26C" stroke-width="2"/><path d="M640 210 h140 q-70 40 -140 0Z" fill="#15120d" stroke="#D4B26C" stroke-width="2"/></g>
+  <circle cx="480" cy="120" r="10" fill="#D4B26C"/>
+  <text x="268" y="300" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e9d39c">満足</text>
+  <text x="722" y="222" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#EEE7D7" opacity=".7">罪悪感</text>
+  <g font-family="sans-serif" font-size="15" fill="#EEE7D7"><text x="120" y="350">・量と時間を先に決める</text><text x="120" y="376">・「ご褒美」と名前をつける</text>
+  <text x="600" y="350">・ひとつだけ選ぶ</text><text x="600" y="376">・翌日に整える</text></g>
+  <text x="480.0" y="412" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">罪悪感なく楽しむ4つのルール</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="月が見える夜の窓辺のテーブルに、泡の立つグラスと小さなケーキが置かれているイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="220" r="250" fill="url(#g)"/>
+  <circle cx="700" cy="120" r="46" fill="#EEE7D7" opacity=".9"/><circle cx="720" cy="108" r="40" fill="#14111a"/>
+  <rect x="200" y="320" width="560" height="14" rx="4" fill="#5a4a36"/>
+  <path d="M380 200 L400 318 L450 318 L470 200Z" fill="rgba(238,231,215,.12)" stroke="#D4B26C" stroke-width="3"/>
+  <path d="M386 236 L464 236 L452 316 L398 316Z" fill="#6178AE" opacity=".6"/>
+  <circle cx="410" cy="290" r="4" fill="#EEE7D7" opacity=".7"/><circle cx="430" cy="270" r="3" fill="#EEE7D7" opacity=".7"/><circle cx="418" cy="250" r="3" fill="#EEE7D7" opacity=".7"/><circle cx="440" cy="300" r="3" fill="#EEE7D7" opacity=".7"/><circle cx="426" cy="226" r="2" fill="#EEE7D7" opacity=".7"/>
+  <rect x="520" y="262" width="110" height="56" rx="6" fill="#e9d39c"/><rect x="520" y="262" width="110" height="16" rx="6" fill="#EEE7D7"/>
+  <path d="M520 290 h110" stroke="#c9a55c" stroke-width="4"/><circle cx="575" cy="252" r="10" fill="#e98aa0"/>
+  <text x="480" y="390" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#EEE7D7">ちょっとの罪悪感と、たしかな満足</text>
+  <text x="480.0" y="445" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">ギルティな夜の、ささやかな楽しみ</text>
+</svg>
