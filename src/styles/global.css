@@ -462,3 +462,6 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .sb-line { background: #06C755; }
 .share-box .copy-row { margin-top: 4px; }
 @media (max-width: 560px) { .share-btn { min-width: 0; flex: 1 1 28%; padding: 12px 10px; } }
+.howto .faq-head { margin-top: 56px; }
+.howto .faq { max-width: 860px; margin: 0 auto; }
+.howto .faq p { margin: 12px 0 0; line-height: 1.9; }

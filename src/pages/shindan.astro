@@ -2,8 +2,9 @@
 import Base from '../layouts/Base.astro';
 import Corners from '../components/Corners.astro';
 import { SITE } from '../data/site';
+const jsonLd = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料で占えますか？登録は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無料で、会員登録も必要ありません。ふたりの生年月日はこの画面の中だけで計算し、どこにも保存・送信しません。"}}, {"@type": "Question", "name": "相手の生まれた時間がわからなくても大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "大丈夫です。相性の中心となる日主どうしの関係は、生年月日だけでわかります。生まれた時間がわかると、より細かく読み解けます。"}}, {"@type": "Question", "name": "クンハプとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "「相性」という意味の韓国語で、ふたりのサジュを並べて比べる占いのことです。韓国では、結婚の前にクンハプを見る習慣もあります。くわしくはクンハプとはをご覧ください。"}}, {"@type": "Question", "name": "点数が低いと、相性が悪いということですか？", "acceptedAnswer": {"@type": "Answer", "text": "点数は、ふたりの気質の重なり方の目安です。点数が低めでも、刺激し合える関係ということもあります。サジュでいう「相性が悪い」の本当の意味は、相性が悪いと言われたら？で紹介しています。"}}, {"@type": "Question", "name": "恋人以外の相性も占えますか？", "acceptedAnswer": {"@type": "Answer", "text": "占えます。友だちや家族、職場の人など、気になる人との相性を見るのにも使えます。日主どうしの相性は日主どうしの相性一覧でも読めます。"}}, {"@type": "Question", "name": "もっとくわしく、ふたりの相性を知るには？", "acceptedAnswer": {"@type": "Answer", "text": "本格的なクンハプでは、ふたりの運の流れがいつ重なるかや、相手が自分にとってどんな役割の人かまで読み解きます。結婚や復縁のタイミングなどは、占い師への相談がおすすめです。"}}]}, { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'トップ', item: 'https://saju-aisho.com/' }, { '@type': 'ListItem', position: 2, name: '相性占い', item: 'https://saju-aisho.com/shindan/' } ] }];
 ---
-<Base title="四柱推命で恋愛の相性を無料診断（韓国式サジュ・クンハプ）" description="ふたりの生年月日と生まれた時間から、韓国の四柱推命「サジュ」で恋愛の相性を無料で診断します。相性の点数、4つの観点の読み解き、ふたりが気をつけたい3つのポイントがわかります。">
+<Base title="四柱推命で恋愛の相性を無料診断（韓国式サジュ・クンハプ）" description="ふたりの生年月日と生まれた時間から、韓国の四柱推命「サジュ」で恋愛の相性を無料で診断します。相性の点数、4つの観点の読み解き、ふたりが気をつけたい3つのポイントがわかります。" jsonLd={jsonLd}>
     <div class="page-head">
       <div class="crumb"><a href="/">トップ</a><span>／</span>相性占い</div>
       <div class="block-head"><span class="en">Gunghap</span><h1>サジュで占う韓国式 相性診断</h1><p>ふたりの生年月日から、それぞれのサジュ（四柱）を出して比べるクンハプ（相性占い）です。日主の結びつき・暮らしのリズム・干支・五行の補い合いから相性を読み解きます。</p><p class="solo-link">ひとりで占いたい方は → <a href="/kojin/">個人占い（自分のサジュを見る）</a></p></div>
@@ -71,6 +72,15 @@ import { SITE } from '../data/site';
       <div class="limits frame reveal"><Corners />
         <h3>この診断でわからないこと</h3>
         <p>本格的なクンハプでは、ふたりの運気の流れ（大運・年運）がいつ重なるか、相手が自分にとってどんな役割の人か（十神）まで読み解きます。結婚や復縁のタイミングなど、より踏み込んだことを知りたいときは、<a href="/guide/">占い師への相談</a>がおすすめです。</p>
+      </div>
+      <div class="block-head reveal faq-head"><span class="en">FAQ</span><h2>相性占いのよくある質問</h2></div>
+      <div class="faq">
+        <details class="frame reveal" open><summary>無料で占えますか？登録は必要ですか？</summary><p set:html={"無料で、会員登録も必要ありません。ふたりの生年月日はこの画面の中だけで計算し、どこにも保存・送信しません。"} /></details>
+        <details class="frame reveal"><summary>相手の生まれた時間がわからなくても大丈夫ですか？</summary><p set:html={"大丈夫です。相性の中心となる日主どうしの関係は、生年月日だけでわかります。生まれた時間がわかると、より細かく読み解けます。"} /></details>
+        <details class="frame reveal"><summary>クンハプとは何ですか？</summary><p set:html={"「相性」という意味の韓国語で、ふたりのサジュを並べて比べる占いのことです。韓国では、結婚の前にクンハプを見る習慣もあります。くわしくは<a href=\"/articles/gunghap-towa/\">クンハプとは</a>をご覧ください。"} /></details>
+        <details class="frame reveal"><summary>点数が低いと、相性が悪いということですか？</summary><p set:html={"点数は、ふたりの気質の重なり方の目安です。点数が低めでも、刺激し合える関係ということもあります。サジュでいう「相性が悪い」の本当の意味は、<a href=\"/articles/aisho-warui/\">相性が悪いと言われたら？</a>で紹介しています。"} /></details>
+        <details class="frame reveal"><summary>恋人以外の相性も占えますか？</summary><p set:html={"占えます。友だちや家族、職場の人など、気になる人との相性を見るのにも使えます。日主どうしの相性は<a href=\"/aisho/\">日主どうしの相性一覧</a>でも読めます。"} /></details>
+        <details class="frame reveal"><summary>もっとくわしく、ふたりの相性を知るには？</summary><p set:html={"本格的なクンハプでは、ふたりの運の流れがいつ重なるかや、相手が自分にとってどんな役割の人かまで読み解きます。結婚や復縁のタイミングなどは、<a href=\"/guide/\">占い師への相談</a>がおすすめです。"} /></details>
       </div>
     </section>
 </Base>
