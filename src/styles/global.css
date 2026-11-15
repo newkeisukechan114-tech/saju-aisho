@@ -465,3 +465,8 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 .howto .faq-head { margin-top: 56px; }
 .howto .faq { max-width: 860px; margin: 0 auto; }
 .howto .faq p { margin: 12px 0 0; line-height: 1.9; }
+/* 列の多い表は、スマホでは横にスクロール */
+@media (max-width: 720px) {
+  .prose table:has(th:nth-child(5)) { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .prose table:has(th:nth-child(5)) th, .prose table:has(th:nth-child(5)) td { white-space: nowrap; }
+}
