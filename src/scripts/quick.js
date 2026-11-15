@@ -20,3 +20,11 @@ function show() {
   card.classList.remove('flip'); void card.offsetWidth; card.classList.add('flip', 'done');
 }
 initBirthInputs(['q'], show);
+// ロゴ画面：タップ・キーで飛ばす／終わったら取り除く
+const intro = $('intro');
+if (intro) {
+  const skip = () => intro.classList.add('skip');
+  intro.addEventListener('click', skip);
+  addEventListener('keydown', skip, { once: true });
+  intro.addEventListener('animationend', e => { if (e.animationName === 'intro-out') intro.remove(); });
+}
