@@ -508,3 +508,4 @@ html.intro-seen .intro { display: none; }
 .qc-more { font-size: 13px; color: var(--gold); }
 @media (prefers-reduced-motion: reduce) { .qc-inner { transition: none; } }
 @media (max-width: 720px) { .quick { padding: 24px 16px 26px; margin-bottom: 40px; } }
+.qc-links .btn { white-space: nowrap; letter-spacing: .1em; padding-left: 26px; padding-right: 26px; font-size: 15px; }
