@@ -472,7 +472,7 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 }
 
 /* ===== トップの演出：ロゴがふわっと出て、消えるとページが現れる（約1.6秒・タップで飛ばせる） ===== */
-.intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: var(--night); animation: intro-out .5s ease 1.1s forwards; cursor: pointer; }
+.intro { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: var(--night); animation: intro-out .5s ease 1.1s forwards; cursor: pointer; }
 .intro-logo { display: grid; justify-items: center; gap: 16px; animation: fade-in .7s ease both; }
 .intro-seal { width: 88px; height: 88px; }
 .intro-words { display: grid; justify-items: center; line-height: 1.3; color: #D4B26C; font-family: var(--display); }

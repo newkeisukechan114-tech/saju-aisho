@@ -8,7 +8,7 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
   .slice(0, 3);
 ---
 <Base>
-    <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro" id="intro" slot="intro" aria-hidden="true">
       <div class="intro-logo">
         <div class="intro-mark">
           <svg class="intro-seal" viewBox="0 0 42 42">
