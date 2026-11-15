@@ -37,6 +37,7 @@ const ogImageUrl = new URL(ogImage, Astro.site ?? SITE.url).href;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script is:inline>try{var d=document.documentElement;if(sessionStorage.getItem("intro"))d.classList.add("intro-seen");if(location.pathname==="/")sessionStorage.setItem("intro","1")}catch(e){}</script>
   </head>
   <body>
     <canvas id="sky" aria-hidden="true"></canvas>
