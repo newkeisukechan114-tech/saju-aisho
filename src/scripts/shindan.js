@@ -2,6 +2,7 @@
 import { saju, mod, CORNERS, pillarHTML, barsHTML } from './saju-calc.js';
 import { initBirthInputs } from './birth-input.js';
 import { STEMS, STEM_KO, BRANCHES, BRANCH_KO, ANIMALS, EL, EL_VAR, stemEl, BRANCH_EL, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
+import { ctaHTML, shareRowHTML, initShare } from './result-cta.js';
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const AFF = document.getElementById('result')?.dataset.aff || '';
@@ -181,19 +182,13 @@ function render() {
       <div class="sec-head"><span class="en">Caution</span><h3>このふたりが気をつけたい3つのポイント</h3><p>相性に良い悪いはありません。つまずきやすい場所を先に知っておくと、ふたりの関係は長続きします。</p></div>
       <ol class="points">${pts.map((p, i) => `<li><span class="num">${['壹', '貳', '參'][i]}</span><div><h4>${p[0]}</h4><p>${p[1]}</p><p class="tip"><b>ふたりでできること</b>${p[2]}</p></div></li>`).join('')}</ol>
     </div>
-    <div class="cta frame">${CORNERS}
-      <span class="pr">PR</span>
-      <h3>このポイント、お相手の本当の気持ちは<br>占い師に直接聞けます</h3>
-      <p>クンハプで分かるのは、ふたりが生まれ持った気質です。お相手が今どう感じているか、この先どう動けばいいかは、あなたたちの状況を聞いたうえで占い師が具体的に答えてくれます。</p>
-      <div class="asks"><span class="asks-h">相談するときは、こう聞いてみてください</span><ul>${pts.map(p => `<li>「${p[3]}」</li>`).join('')}</ul></div>
-      ${AFF ? `<a class="btn-cta" href="${AFF}" rel="sponsored nofollow noopener" target="_blank">ココナラ電話占いで相談する</a>${PX ? `<img class="a8px" src="${PX}" width="1" height="1" alt="">` : ''}` : '<span class="btn-cta is-disabled">ご案内の準備中です</span>'}
-      <span class="note">ココナラ電話占いは、初回は最大30分無料で試せます（条件は公式サイトでご確認ください）。</span>
-    </div>
-    <div class="copy-row"><button class="btn-ghost" type="button" id="save-img">結果を画像で保存</button><button class="btn-ghost" type="button" id="copy">結果をコピーしてシェア</button><button class="btn-ghost" type="button" id="again">もう一度占う</button><span class="note" id="copied" aria-live="polite"></span></div>`;
+    ${ctaHTML({ aff: AFF, px: PX, corners: CORNERS, heading: 'このポイント、お相手の本当の気持ちは<br>占い師に直接聞けます', text: 'クンハプで分かるのは、ふたりが生まれ持った気質です。お相手が今どう感じているか、この先どう動けばいいかは、あなたたちの状況を聞いたうえで占い師が具体的に答えてくれます。', asks: pts.map(p => p[3]) })}
+    ${shareRowHTML()}`;
   $('copy').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(lastText); $('copied').textContent = 'コピーしました。SNSに貼り付けてシェアできます。'; }
     catch (e) { $('copied').textContent = 'この画面ではコピーできませんでした。結果を長押しして選択してください。'; }
   });
+  initShare(`ふたりの相性は${c.score}点「${t[0]}」でした。誕生日を入れるだけで、韓国式の相性占いが無料でできます👇\nhttps://saju-aisho.com/shindan/\n#サジュ #韓国占い`);
   $('save-img').addEventListener('click', () => saveImage({ score: c.score, t, A, B, items: c.items }));
   $('again').addEventListener('click', () => { $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); });
   return true;

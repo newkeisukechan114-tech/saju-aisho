@@ -451,3 +451,14 @@ nav.main a[aria-current="page"] { color: var(--gold); }
 @keyframes cta-shine { 0%, 70%, 100% { background-position: 0 0; } 85% { background-position: 100% 0; } }
 @media (prefers-reduced-motion: reduce) { .cta .btn-cta { animation: none; } }
 @media (max-width: 560px) { .cta { padding: 30px 18px; } .cta-free-main b { font-size: 64px; } .cta .btn-cta { width: 100%; padding: 17px 16px; } }
+/* 結果のシェアボタン */
+.share-box { display: grid; gap: 12px; justify-items: center; margin: 28px auto 0; text-align: center; }
+.share-h { margin: 0; font-family: var(--display); font-size: 15px; letter-spacing: .14em; color: var(--gold); }
+.share-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.share-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 120px; padding: 12px 22px; border-radius: 999px; font-size: 14px; font-weight: 700; letter-spacing: .06em; text-decoration: none; color: #fff; transition: transform .2s, opacity .2s; }
+.share-btn:hover { transform: translateY(-2px); opacity: .92; }
+.sb-threads { background: #101010; border: 1px solid rgba(238,231,215,.35); }
+.sb-x { background: #000; border: 1px solid rgba(238,231,215,.35); }
+.sb-line { background: #06C755; }
+.share-box .copy-row { margin-top: 4px; }
+@media (max-width: 560px) { .share-btn { min-width: 0; flex: 1 1 28%; padding: 12px 10px; } }

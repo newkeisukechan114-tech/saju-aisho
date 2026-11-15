@@ -3,6 +3,7 @@ import { saju, tengod, CORNERS, pillarHTML, barsHTML } from './saju-calc.js';
 import { initBirthInputs } from './birth-input.js';
 import { STEMS, STEM_KO, EL, stemEl, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
 import { pairSlug } from '../data/pair-data.js';
+import { ctaHTML, shareRowHTML, initShare } from './result-cta.js';
 
 const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -44,7 +45,7 @@ const TG_MONTH = {
 const KW2027 = ['自分らしさを表現する', '楽しさとゆとり', '仲間とのつながり', '自分のペースを大切に', '支え、支えられる', '直感とひとりの時間', '誠実さと、けじめ', '強く惹かれる縁', '縁が結ばれやすい', '出会いの広がり'];
 const slink = s => `<a href="/articles/${STEM_SLUG[s]}/">${STEM_FULL[s]}（${STEM_INFO[s][0]}）</a>`;
 
-let last = null, lastText = '';
+let last = null, lastText = '', shareText = '';
 function render() {
   const [y, m, d] = $('k-date').value.split('-').map(Number);
   const hr = $('k-hour').value === '' ? null : Number($('k-hour').value);
@@ -60,6 +61,11 @@ function render() {
   const now = new Date(), T = saju(now.getFullYear(), now.getMonth() + 1, now.getDate(), null);
   const mtg = tengod(s, T.month.s), ytg = tengod(s, 3);
   last = { P, s, strong, weak, main };
+  shareText = `わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}タイプ）」でした。生年月日だけで、韓国のサジュを無料で占えます👇\nhttps://saju-aisho.com/kojin/\n#サジュ #韓国占い`;
+  const cta = ctaHTML({ aff: AFF, px: PX, corners: CORNERS,
+    heading: `${STEM_FULL[s]}（${STEM_INFO[s][0]}タイプ）のあなたが、<br>この先どう動くといいか`,
+    text: `この占いでわかるのは、生まれ持った気質と、今月・2027年の流れの入口です。今月は「${mtg}」の星がめぐる時期。恋愛や仕事でいま迷っていることを、あなたの状況に合わせて占い師が具体的に読み解いてくれます。`,
+    asks: [`${STEM_FULL[s]}の私が、今月（${mtg}の時期）に恋愛で意識するといいことは？`, `2027年は「${ytg}」の年。どの時期に動くといいですか？`, `足りない「${weak.map(i => EL[i]).join('・')}」の五行を補うには、どう過ごすといいですか？`] });
   lastText = `【無料サジュ占い】わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}）」でした。いちばん強い五行は「${strong.map(i => EL[i]).join('・')}」\n\n生年月日を入れるだけで、自分のサジュを無料で占えます👇\nhttps://saju-aisho.com/kojin/\n\n#サジュ #韓国占い #ソウルのサジュ恋愛相性占い`;
   $('result').innerHTML = `
     <div class="score-card frame">${CORNERS}
@@ -91,24 +97,19 @@ function render() {
         <p>2027年（丁未年）は、あなたにとって「${ytg}」の年。恋愛のキーワードは「<b>${KW2027[s]}</b>」です。<a href="/articles/2027-koiun/">2027年の恋愛運</a>もあわせてどうぞ。</p>
       </div></section>
     </div>
+    ${cta}
     <div class="next-box frame">${CORNERS}
       <h3>気になる人との相性も占ってみませんか</h3>
       <p>あなたの生年月日と、お相手の生年月日を入れるだけ。ふたりの相性を点数と4つの観点で読み解きます。</p>
       <a class="btn" href="/shindan/">相性診断へ進む</a>
     </div>
-    <div class="cta frame">${CORNERS}
-      <span class="pr">PR</span>
-      <h3>この先の流れは、<br>占い師に直接聞けます</h3>
-      <p>この占いでわかるのは、生まれ持った気質です。いま悩んでいることや、これからどう動けばいいかは、状況を聞いたうえで占い師が具体的に答えてくれます。</p>
-      ${AFF ? `<a class="btn-cta" href="${AFF}" rel="sponsored nofollow noopener" target="_blank">ココナラ電話占いで相談する</a>${PX ? `<img class="a8px" src="${PX}" width="1" height="1" alt="">` : ''}` : '<span class="btn-cta is-disabled">ご案内の準備中です</span>'}
-      <span class="note">ココナラ電話占いは、初回は最大30分無料で試せます（条件は公式サイトでご確認ください）。</span>
-    </div>
-    <div class="copy-row"><button class="btn-ghost" type="button" id="save-img">結果を画像で保存</button><button class="btn-ghost" type="button" id="copy">結果をコピーしてシェア</button><button class="btn-ghost" type="button" id="again">もう一度占う</button><span class="note" id="copied" aria-live="polite"></span></div>`;
+    ${shareRowHTML()}`;
   $('copy').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(lastText); $('copied').textContent = 'コピーしました。SNSに貼り付けてシェアできます。'; }
     catch (err) { $('copied').textContent = 'この画面ではコピーできませんでした。'; }
   });
   $('save-img').addEventListener('click', saveImage);
+  initShare(shareText);
   $('again').addEventListener('click', () => $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }));
 }
 
