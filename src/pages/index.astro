@@ -2,11 +2,25 @@
 import Base from '../layouts/Base.astro';
 import Corners from '../components/Corners.astro';
 import { getCollection } from 'astro:content';
+import { SITE } from '../data/site';
 const latest = (await getCollection('articles', ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .slice(0, 3);
 ---
 <Base>
+    <div class="intro" id="intro" aria-hidden="true">
+      <div class="intro-logo">
+        <div class="intro-mark">
+          <svg class="intro-seal" viewBox="0 0 42 42">
+            <defs><linearGradient id="intro-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8E6B2E" /><stop offset=".45" stop-color="#F4E4B6" /><stop offset=".7" stop-color="#B38C45" /><stop offset="1" stop-color="#E9D39C" /></linearGradient></defs>
+            <circle cx="21" cy="21" r="20.2" fill="none" stroke="url(#intro-gold)" stroke-width=".6" />
+            <circle cx="21" cy="21" r="17.4" fill="none" stroke="#C9A55C" stroke-opacity=".45" stroke-width=".4" />
+            <text x="21" y="27.6" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="19" font-weight="700" fill="url(#intro-gold)">合</text>
+          </svg>
+        </div>
+        <div class="intro-words"><small>{SITE.nameSmall}</small><b>{SITE.nameMain}</b></div>
+      </div>
+    </div>
     <div class="hero">
       <div class="seal"><span class="gold-text">合</span></div>
       <div class="eyebrow">Gunghap · Seoul</div>
@@ -16,6 +30,23 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
       <a class="btn" href="/shindan/">相性を占う</a>
       <span class="note">無料・登録なし・生年月日は保存しません</span>
     </div>
+    <section class="quick frame" aria-labelledby="q-title">
+      <Corners />
+      <div class="quick-head"><span class="en">Your Day Master</span><h2 id="q-title">まずは、あなたの「日主」だけ見てみる</h2><p>生年月日を選ぶと、その場で生まれた日の天干（日主）がわかります。</p></div>
+      <div class="field quick-field">
+        <span class="flabel" id="q-date-l">あなたの生年月日</span>
+        <button type="button" class="date-btn" id="q-date-btn" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="q-date-l q-date-btn"><span class="dv">クリックして選ぶ</span><span class="ic" aria-hidden="true"></span></button>
+        <input type="hidden" id="q-date">
+        <div class="picker frame" id="q-picker" role="dialog" aria-label="生年月日を選ぶ" hidden></div>
+      </div>
+      <div hidden><button type="button" id="q-hour-btn"><span class="dv"></span></button><input type="hidden" id="q-hour" value=""><div id="q-hpicker" hidden></div></div>
+      <div class="quick-card" id="q-card" aria-live="polite">
+        <div class="qc-inner">
+          <div class="qc-face qc-front"><span class="qc-mark">?</span><span class="qc-hint">ここにあなたの日主が出ます</span></div>
+          <div class="qc-face qc-back" id="q-result"></div>
+        </div>
+      </div>
+    </section>
     <nav class="menu" aria-label="コンテンツ">
       <a class="menu-card frame reveal" href="/shindan/"><span class="en">Gunghap</span><b>相性占い（ふたり用）</b><span class="desc">ふたりの四柱から、相性の点数と4つの読み解きを出します。</span><span class="go">占う</span></a>
       <a class="menu-card frame reveal" href="/kojin/"><span class="en">Saju</span><b>個人占い（ひとり用）</b><span class="desc">自分の生年月日だけで、性格・恋愛傾向・今月の運がわかります。</span><span class="go">占う</span></a>
@@ -33,4 +64,5 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
       </div>
     </section>
   )}
+  <script>import '../scripts/quick.js';</script>
 </Base>
