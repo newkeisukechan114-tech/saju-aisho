@@ -471,46 +471,30 @@ nav.main a[aria-current="page"] { color: var(--gold); }
   .prose table:has(th:nth-child(5)) th, .prose table:has(th:nth-child(5)) td { white-space: nowrap; }
 }
 
-/* ===== トップの演出：命盤が回り「合」が灯る（2秒以内・操作は止めない） ===== */
-.seal-wrap { position: relative; width: 120px; height: 120px; display: grid; place-items: center; }
-.seal-ring { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--gold-faint); stroke-width: .6; }
-.seal-ring .br text { fill: var(--gold); stroke: none; font-family: var(--display); font-size: 7px; text-anchor: middle; dominant-baseline: middle; opacity: .55; }
-.seal-ring .tk line { stroke: var(--gold-soft); }
-.hero > .eyebrow, .hero > h1, .hero > .ornament, .hero > p, .hero > .btn, .hero > .note { animation: hero-up .7s cubic-bezier(.2,.7,.2,1) both; }
-.hero > .eyebrow { animation-delay: 1.75s; } .hero > h1 { animation-delay: 1.85s; } .hero > .ornament { animation-delay: 1.95s; }
+/* ===== トップの演出：最初はロゴだけ → 「合」が灯ってから、ページが現れる（約2秒・タップで飛ばせる） ===== */
+.hero > .seal, .hero > .eyebrow, .hero > h1, .hero > .ornament, .hero > p, .hero > .btn, .hero > .note { animation: hero-up .7s cubic-bezier(.2,.7,.2,1) both; }
+.hero > .seal { animation-delay: 1.65s; } .hero > .eyebrow { animation-delay: 1.75s; } .hero > h1 { animation-delay: 1.85s; } .hero > .ornament { animation-delay: 1.95s; }
 .hero > p { animation-delay: 2.05s; } .hero > .btn { animation-delay: 2.15s; } .hero > .note { animation-delay: 2.2s; }
-.seal-ring { animation: ring-in 1.2s cubic-bezier(.2,.7,.2,1) 1.6s both, ring-spin 90s linear 2.8s infinite; }
-.seal-wrap .seal { animation: seal-glow 1.4s ease-out 1.6s both; }
-.seal-wrap .seal span { animation: none; }
 @keyframes hero-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-
-/* 最初はロゴだけ → ロゴが灯ってから、ページが現れる（約2秒・タップで飛ばせる） */
 .intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 46%, #17151d 0%, var(--night) 70%); animation: intro-out .55s ease-in 1.55s forwards; cursor: pointer; }
 .intro-logo { display: grid; justify-items: center; gap: 18px; animation: logo-away .55s ease-in 1.55s forwards; }
-.intro-mark { position: relative; width: 168px; height: 168px; display: grid; place-items: center; }
-.intro-ring { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--gold-faint); stroke-width: .6; animation: ring-in 1.3s cubic-bezier(.2,.7,.2,1) both; }
-.intro-ring .br text { fill: var(--gold); stroke: none; font-family: var(--display); font-size: 7px; text-anchor: middle; dominant-baseline: middle; opacity: .6; }
-.intro-ring .tk line { stroke: var(--gold-soft); }
-.intro-seal { width: 92px; height: 92px; border-radius: 50%; animation: seal-glow 1.5s ease-out .3s both; }
+.intro-seal { width: 96px; height: 96px; border-radius: 50%; animation: logo-in .8s cubic-bezier(.2,.7,.2,1) both, seal-glow 1.5s ease-out .3s both; }
+.intro-line { stroke-dasharray: 100; animation: line-draw 1s cubic-bezier(.4,.1,.2,1) .1s both; }
 .intro-char { animation: char-lit 1.1s ease-out .45s both; }
 .intro-words { display: grid; justify-items: center; line-height: 1.3; color: #D4B26C; font-family: var(--display); animation: hero-up .6s ease-out .75s both; }
 .intro-words small { font-size: 11px; letter-spacing: .4em; }
 .intro-words b { font-size: 22px; font-weight: 700; letter-spacing: .1em; }
 .intro.skip, .intro.skip .intro-logo { animation-duration: .3s; animation-delay: 0s; }
 @keyframes intro-out { to { opacity: 0; visibility: hidden; pointer-events: none; } }
-@keyframes logo-away { to { transform: scale(.86) translateY(-14px); opacity: 0; } }
-@keyframes ring-in { from { transform: rotate(-200deg) scale(.7); opacity: 0; } to { transform: rotate(0) scale(1); opacity: 1; } }
-@keyframes ring-spin { to { transform: rotate(360deg); } }
-@keyframes seal-glow { 0% { box-shadow: 0 0 0 rgba(201,165,92,0); } 55% { box-shadow: 0 0 34px 6px rgba(233,211,156,.45), inset 0 0 18px rgba(233,211,156,.35); } 100% { box-shadow: 0 0 14px rgba(201,165,92,.18); } }
+@keyframes logo-in { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
+@keyframes logo-away { to { transform: scale(.9) translateY(-12px); opacity: 0; } }
+@keyframes line-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+@keyframes seal-glow { 0% { box-shadow: 0 0 0 rgba(201,165,92,0); } 55% { box-shadow: 0 0 34px 6px rgba(233,211,156,.4); } 100% { box-shadow: 0 0 12px rgba(201,165,92,.15); } }
 @keyframes char-lit { 0% { opacity: .1; filter: blur(3px); } 60% { opacity: 1; filter: blur(0) drop-shadow(0 0 4px rgba(244,228,182,.9)); } 100% { opacity: 1; filter: drop-shadow(0 0 1px rgba(244,228,182,.5)); } }
 /* 2回目以降（同じタブ内）・動きを減らす設定では、ロゴ画面を出さない */
 html.intro-seen .intro { display: none; }
-html.intro-seen .seal-ring { animation: ring-spin 90s linear infinite; }
-html.intro-seen .seal-wrap .seal, html.intro-seen .hero > * { animation: none; }
-@media (prefers-reduced-motion: reduce) {
-  .intro { display: none; }
-  .seal-ring, .seal-wrap .seal, .hero > * { animation: none !important; }
-}
+html.intro-seen .hero > * { animation: none; }
+@media (prefers-reduced-motion: reduce) { .intro { display: none; } .hero > * { animation: none !important; } }
 
 /* ===== トップ：その場で日主がわかる ===== */
 .quick { max-width: 640px; margin: 0 auto 56px; padding: 30px 28px 32px; display: grid; gap: 18px; }
@@ -535,4 +519,4 @@ html.intro-seen .seal-wrap .seal, html.intro-seen .hero > * { animation: none; }
 .qc-links { display: grid; gap: 12px; justify-items: center; margin-top: 6px; }
 .qc-more { font-size: 13px; color: var(--gold); }
 @media (prefers-reduced-motion: reduce) { .qc-inner { transition: none; } }
-@media (max-width: 720px) { .quick { padding: 24px 16px 26px; margin-bottom: 40px; } .seal-wrap { width: 108px; height: 108px; } }
+@media (max-width: 720px) { .quick { padding: 24px 16px 26px; margin-bottom: 40px; } }
