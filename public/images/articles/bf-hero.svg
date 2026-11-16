@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="金色の取っ手のショッピングバッグと値札、その横で五色の玉がめぐる輪のイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <circle cx="480" cy="225" r="250" fill="url(#g)"/>
+  <path d="M330 170 H530 L548 400 H312Z" fill="#221c2c" stroke="#D4B26C" stroke-width="2.5"/>
+  <path d="M385 170 V140 Q430 92 475 140 V170" fill="none" stroke="#D4B26C" stroke-width="5" stroke-linecap="round"/>
+  <text x="430" y="300" text-anchor="middle" font-family="serif" font-size="40" fill="#D4B26C" letter-spacing="6">SALE</text>
+  <g transform="rotate(-14 560 230)"><path d="M540 196 H640 V262 H540 L516 229Z" fill="#15120d" stroke="#D4B26C" stroke-width="2"/><circle cx="534" cy="229" r="5" fill="#D4B26C"/><text x="592" y="238" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#EEE7D7">−30%</text></g>
+  <circle cx="730" cy="310" r="74" fill="none" stroke="#D4B26C" stroke-width="1.2" stroke-dasharray="3 7" opacity=".8"/>
+  <circle cx="730" cy="236" r="11" fill="#5E9C80"/><circle cx="800" cy="287" r="11" fill="#C9665B"/><circle cx="773" cy="370" r="11" fill="#D3A64A"/><circle cx="687" cy="370" r="11" fill="#DCD8CC"/><circle cx="660" cy="287" r="11" fill="#6178AE"/>
+  <text x="730" y="316" text-anchor="middle" font-family="serif" font-size="20" fill="#EEE7D7">五行</text>
+  <text x="480.0" y="462" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">買う前に、ひと呼吸</text>
+</svg>
