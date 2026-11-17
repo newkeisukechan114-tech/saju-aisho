@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="左側には雨が降り、右側は雨が上がって地平線が明るくなり、小さな芽が出ている。真ん中で閉じた傘を持つ人の後ろ姿のイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  
+  <rect x="480" y="0" width="480" height="480" fill="url(#g)" opacity=".9"/>
+  <circle cx="760" cy="400" r="120" fill="#D4B26C" opacity=".18"/><circle cx="760" cy="400" r="60" fill="#D4B26C" opacity=".25"/>
+  <path d="M150 60 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M230 120 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M300 40 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M380 150 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M110 180 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M260 220 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M200 300 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M340 260 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M420 80 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/><path d="M90 320 l-6 18" stroke="#9aa6c4" stroke-width="2" opacity=".45"/>
+  <rect x="0" y="400" width="960" height="80" fill="#14111a"/>
+  <path d="M0 400 H960" stroke="#D4B26C" stroke-opacity=".4"/>
+  <g fill="#5c5288"><circle cx="470" cy="250" r="24"/><path d="M436 400 Q434 300 470 284 Q506 300 504 400Z"/></g>
+  <path d="M510 300 L540 398" stroke="#EEE7D7" stroke-width="4" stroke-linecap="round"/><path d="M506 300 q-6 -6 0 -12" stroke="#EEE7D7" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M512 312 l20 64 l10 -4 l-22 -62Z" fill="#7a6aa8"/>
+  <path d="M700 400 V368" stroke="#6fae90" stroke-width="4"/><path d="M700 380 q-22 -4 -26 -22 q20 0 26 22Z M700 372 q20 -8 30 -26 q-24 2 -30 26Z" fill="#6fae90"/>
+  <text x="480.0" y="456" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">雨のあとに、芽が出る</text>
+</svg>
