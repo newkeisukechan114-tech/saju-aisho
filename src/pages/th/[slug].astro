@@ -1,0 +1,44 @@
+---
+// Threadsの投稿から来た人を数えるための中継ページ。
+// Cloudflare Web Analytics の「Paths」に /th/... として残り、そのまま記事へ移動する。
+// 検索には載せない（noindex・サイトマップ対象外）。個人情報は扱わない。
+import { getCollection } from 'astro:content';
+import fs from 'node:fs';
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => !data.draft);
+  const pages = articles.map((e) => ({ params: { slug: e.slug }, props: { title: e.data.title, description: e.data.description, path: `/articles/${e.slug}/`, og: fs.existsSync(`public/og/${e.slug}.jpg`) ? `/og/${e.slug}.jpg` : '/og/_default.jpg' } }));
+  const tools = [
+    { slug: 'top', title: 'ソウルのサジュ恋愛相性占い', path: '/' },
+    { slug: 'kojin', title: '無料のサジュ占い（個人）', path: '/kojin/' },
+    { slug: 'shindan', title: '無料のサジュ相性占い', path: '/shindan/' },
+  ].map((t) => ({ params: { slug: t.slug }, props: { title: t.title, description: '生年月日だけで、韓国の四柱推命「サジュ」を無料で占えます。', path: t.path, og: '/og/_default.jpg' } }));
+  return [...pages, ...tools];
+}
+const { title, description, path, og } = Astro.props;
+const site = 'https://saju-aisho.com';
+const dest = site + path;
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href={dest} />
+  <meta name="description" content={description} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={dest} />
+  <meta property="og:image" content={site + og} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b0a0e;color:#EEE7D7;font-family:"Hiragino Mincho ProN","Noto Serif JP",serif;text-align:center}a{color:#D4B26C}</style>
+</head>
+<body>
+  <p>記事へ移動しています…<br /><a href={path}>移動しない場合はこちら</a></p>
+  <script is:inline define:vars={{ path }}>
+    addEventListener('load', function () { setTimeout(function () { location.replace(path); }, 700); });
+  </script>
+</body>
+</html>

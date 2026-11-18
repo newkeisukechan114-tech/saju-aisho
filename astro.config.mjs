@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 // ドメインを取得したら site を書き換えてください（sitemap と canonical に使われます）
 export default defineConfig({
   site: 'https://saju-aisho.com',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/th/') })],
   trailingSlash: 'ignore',
 });
