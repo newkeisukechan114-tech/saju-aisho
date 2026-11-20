@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+import { NAYAMI } from '../data/nayami';
+const all = await getCollection('articles', ({ data }) => !data.draft);
+const bySlug = new Map(all.map((a) => [a.slug, a]));
+const groups = NAYAMI.map((n) => ({ ...n, items: n.slugs.map((s) => bySlug.get(s)).filter(Boolean) }));
+---
+<Base title="お悩みから探す｜恋愛・相性・人間関係・運勢" description="片思い、出会い、相性、失恋・復縁、人間関係、これからの運勢。いまの悩みから、韓国の占いサジュ（四柱推命）の読みものと無料占いを探せます。">
+  <div class="page-head">
+    <div class="crumb"><a href="/">トップ</a><span>／</span>お悩みから探す</div>
+    <div class="block-head"><span class="en">Your Worries</span><h1>お悩みから探す</h1><p>いまの気持ちに近いものを選んでください。</p></div>
+  </div>
+  <nav class="nayami-tiles" aria-label="お悩みの種類">
+    {groups.map((n) => (
+      <a class="nayami-tile" href={`#${n.id}`}><span class="nayami-mark">{n.mark}</span><span class="nayami-txt"><b class="nayami-s">{n.short}</b><span class="nayami-t">{n.title}</span></span></a>
+    ))}
+  </nav>
+  {groups.map((n) => (
+    <section class="nayami-group" id={n.id}>
+      <div class="nayami-head reveal">
+        <span class="nayami-mark lg">{n.mark}</span>
+        <div><h2>{n.title}</h2><p>{n.lead}</p></div>
+      </div>
+      {n.tool && <a class="nayami-tool" href={n.tool.href}>{n.tool.label}<span aria-hidden="true">→</span></a>}
+      <div class="pcards">{n.items.map((a) => <PostCard entry={a} />)}</div>
+    </section>
+  ))}
+  <section class="nayami-group" id="soudan">
+    <div class="nayami-head reveal">
+      <span class="nayami-mark lg">話</span>
+      <div><h2>ひとりで抱えきれないとき</h2><p>占いの結果をもとに、誰かに話を聞いてほしいときは、電話占いという方法もあります。はじめての人向けのガイドです。</p></div>
+    </div>
+    <div class="pcards">{['denwa-hajimete', 'denwa-kowai'].map((s) => bySlug.get(s)).filter(Boolean).map((a) => <PostCard entry={a} />)}</div>
+  </section>
+</Base>

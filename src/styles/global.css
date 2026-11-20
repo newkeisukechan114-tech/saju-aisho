@@ -538,3 +538,29 @@ html.intro-seen .intro { display: none; }
   .pcard-title { font-size: 14px; line-height: 1.55; }
   .pcard-desc { display: none; }
 }
+
+/* ===== お悩みから探す ===== */
+.nayami-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.nayami-tile { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--gold-faint); background: rgba(0,0,0,.28); color: var(--ivory); text-decoration: none; transition: border-color .3s, transform .3s; }
+.nayami-tile:hover { border-color: var(--gold); transform: translateY(-2px); }
+.nayami-mark { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--gold); display: grid; place-items: center; font-family: var(--display); font-size: 21px; color: var(--gold); background: radial-gradient(circle, rgba(201,165,92,.14), transparent 70%); }
+.nayami-mark.lg { width: 58px; height: 58px; font-size: 28px; }
+.nayami-txt { display: grid; gap: 2px; }
+.nayami-s { font-family: var(--display); font-size: 15px; color: var(--gold); letter-spacing: .06em; }
+.nayami-t { font-size: 12.5px; line-height: 1.5; color: var(--muted); }
+.nayami-group { padding-top: 48px; display: grid; gap: 16px; scroll-margin-top: 90px; }
+.nayami-head { display: flex; gap: 16px; align-items: center; }
+.nayami-head h2 { margin: 0 0 4px; font-size: clamp(18px, 3.4vw, 22px); }
+.nayami-head p { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.8; }
+.nayami-tool { justify-self: start; display: inline-flex; gap: 8px; align-items: center; padding: 10px 18px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 14px; letter-spacing: .06em; transition: background .3s; }
+.nayami-tool:hover { background: rgba(201,165,92,.1); }
+.cat-chips a.chip-nayami { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 900px) { .nayami-tiles { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .nayami-tiles { gap: 8px; }
+  .nayami-tile { padding: 10px; gap: 8px; }
+  .nayami-mark { width: 36px; height: 36px; font-size: 17px; }
+  .nayami-t { display: none; }
+  .nayami-s { font-size: 14px; color: var(--ivory); }
+  .nayami-head { align-items: flex-start; }
+}

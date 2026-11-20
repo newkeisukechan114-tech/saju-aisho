@@ -17,6 +17,7 @@ const fmt = (d: Date) => `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate
   ) : (
     <>
     <nav class="cat-chips" aria-label="カテゴリ">
+      <a class="chip-nayami" href="/nayami/">お悩みから探す →</a>
       {CATEGORIES.filter((c) => articles.some((a) => a.data.category === c)).map((c, i) => (
         <a href={`#cat-${i}`}>{c}<span>{articles.filter((a) => a.data.category === c).length}</span></a>
       ))}
