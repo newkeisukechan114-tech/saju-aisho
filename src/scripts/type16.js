@@ -32,7 +32,7 @@ export function type16HTML() {
     <p class="t16-note">MBTIは自分で答える性格の分類で、サジュとは別の考え方です。自分を知るヒントとしてお楽しみください。つらい気持ちが長く続くときは、ひとりで抱えこまず、身近な人や専門の相談窓口も頼ってください。※MBTIは一般社団法人日本MBTI協会の登録商標です。</p>
   </div>`;
 }
-export function initType16(s, stemFull, stemName) {
+export function initType16(s, stemFull, stemName, onPick) {
   const box = document.getElementById('t16'); if (!box) return;
   const pick = n => (box.querySelector(`input[name="t16-${n}"]:checked`) || {}).value;
   box.addEventListener('change', () => {
@@ -48,5 +48,6 @@ export function initType16(s, stemFull, stemName) {
         <dt>恋愛でのすれ違い</dt><dd>${d.lv}${TF[tf]}</dd>
         <dt>楽になるコツ</dt><dd>${d.tp}${SN[sn]}</dd>
       </dl>`;
+    if (onPick) onPick(t, `${EI[ei][0]}${stemName}タイプ`);
   });
 }

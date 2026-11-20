@@ -62,7 +62,8 @@ function render() {
   const now = new Date(), T = saju(now.getFullYear(), now.getMonth() + 1, now.getDate(), null);
   const mtg = tengod(s, T.month.s), ytg = tengod(s, 3);
   last = { P, s, strong, weak, main };
-  shareText = `わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}タイプ）」でした。生年月日だけで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #韓国占い`;
+  const me = STEM_INFO[s][1].split('。')[0];
+  shareText = `わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}タイプ）」。\nひと言でいうと「${me}」だそうです。\n\n生年月日だけで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #韓国占い`;
   const cta = ctaHTML({ aff: AFF, px: PX, corners: CORNERS,
     heading: `${STEM_FULL[s]}のあなたが、<br>この先どう動くといいか`,
     text: `この占いでわかるのは、生まれ持った気質と、今月・2027年の流れの入口です。今月は「${mtg}」の星がめぐる時期。恋愛や仕事でいま迷っていることを、あなたの状況に合わせて占い師が具体的に読み解いてくれます。`,
@@ -112,7 +113,7 @@ function render() {
   });
   $('save-img').addEventListener('click', saveImage);
   initShare(shareText);
-  initType16(s, STEM_FULL[s], STEM_INFO[s][0]);
+  initType16(s, STEM_FULL[s], STEM_INFO[s][0], (t, label) => initShare(`わたしは「${STEM_FULL[s]} × ${t}」の${label}。\nひと言でいうと「${me}」だそうです。\n\n生年月日とMBTIで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #MBTI #韓国占い`));
   $('again').addEventListener('click', () => $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }));
 }
 
