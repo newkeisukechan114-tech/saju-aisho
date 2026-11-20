@@ -668,3 +668,22 @@ html.intro-seen .intro { display: none; }
 .iibi-legend b { color: var(--ivory); margin-right: 6px; font-weight: 500; }
 .iibi-m { display: inline-block; width: 1.6em; color: var(--gold); }
 @media (max-width: 600px) { .iibi { padding: 20px 12px; } .iibi-d { font-size: 13px; } }
+
+/* ===== トップ：今日のひとこと ===== */
+.today { position: relative; max-width: 640px; margin: 0 auto 56px; padding: 30px 28px 28px; display: grid; gap: 16px; }
+.td-pick { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; }
+.td-pick button { font-family: var(--display); font-size: 18px; padding: 8px 0; background: rgba(0,0,0,.3); color: var(--ivory); border: 1px solid var(--gold-faint); cursor: pointer; transition: background .25s, border-color .25s, color .25s; }
+.td-pick button:hover { border-color: var(--gold); }
+.td-pick button.on { background: rgba(201,165,92,.2); border-color: var(--gold); color: var(--gold); }
+.td-out:empty { display: none; }
+.td-out { display: grid; gap: 8px; padding-top: 12px; border-top: 1px solid var(--gold-faint); animation: hero-up .5s ease both; }
+.td-date { font-size: 12px; color: var(--gold); letter-spacing: .1em; }
+.td-who { font-family: var(--display); font-size: 18px; }
+.td-gou { margin: 0; padding: 8px 12px; background: rgba(201,165,92,.15); border-left: 2px solid var(--gold); font-size: 14px; }
+.td-msg { margin: 0; font-size: 14.5px; line-height: 1.85; }
+.td-star { display: inline-block; margin-right: 8px; font-size: 12px; color: var(--gold); border: 1px solid var(--gold-faint); padding: 1px 8px; border-radius: 999px; }
+.td-act { margin: 0; font-size: 13.5px; color: var(--muted); }
+.td-act b { color: var(--ivory); font-weight: 500; }
+.td-more { font-size: 13px; color: var(--gold); }
+.td-keep { font-size: 12px; color: var(--muted); display: flex; gap: 6px; align-items: center; justify-content: center; }
+@media (max-width: 600px) { .today { padding: 22px 14px; margin-bottom: 40px; } .td-pick { grid-template-columns: repeat(5, 1fr); } }

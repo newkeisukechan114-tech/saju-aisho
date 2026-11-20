@@ -50,6 +50,15 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
       </div>
       <a class="quick-alt" href="/kaiwai/">生年月日を入れる前に、<b>「界隈」でのぞいてみる →</b></a>
     </section>
+    <section class="today frame" id="today" aria-labelledby="today-title">
+      <Corners />
+      <div class="quick-head"><span class="en">Today</span><h2 id="today-title">日主別・今日のひとこと</h2><p>自分の日主を選ぶと、今日の干支から、あなたへのひとことが届きます。</p></div>
+      <div class="td-pick" role="group" aria-label="日主を選ぶ">
+        {['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'].map((k, i) => <button type="button" data-s={i}>{k}</button>)}
+      </div>
+      <div class="td-out" id="today-out" aria-live="polite"></div>
+      <label class="td-keep"><input type="checkbox" id="today-keep" /> この端末に日主だけ覚えておく（生年月日は保存しません）</label>
+    </section>
     <nav class="menu" aria-label="コンテンツ">
       <a class="menu-card frame reveal" href="/shindan/"><span class="en">Gunghap</span><b>相性占い（ふたり用）</b><span class="desc">ふたりの四柱から、相性の点数と4つの読み解きを出します。</span><span class="go">占う</span></a>
       <a class="menu-card frame reveal" href="/kojin/"><span class="en">Saju</span><b>個人占い（ひとり用）</b><span class="desc">自分の生年月日だけで、性格・恋愛傾向・今月の運がわかります。</span><span class="go">占う</span></a>
