@@ -7,10 +7,10 @@ const articles = (await getCollection('articles', ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 const fmt = (d: Date) => `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
 ---
-<Base title="コラム一覧｜サジュ・クンハプ・恋愛の相性" description="韓国の四柱推命（サジュ）と相性占い（クンハプ）の基本、日主の解説、恋愛の悩み、電話占いの使い方などのコラム一覧です。">
+<Base title="記事一覧｜サジュ・クンハプ・恋愛の相性" description="韓国の四柱推命（サジュ）と相性占い（クンハプ）の基本、日主の解説、恋愛の悩み、電話占いの使い方などの記事一覧です。">
   <div class="page-head">
-    <div class="crumb"><a href="/">トップ</a><span>／</span>コラム</div>
-    <div class="block-head"><span class="en">Column</span><h1>コラム</h1><p>サジュとクンハプの基本から、恋愛の悩み、電話占いの使い方まで。</p></div>
+    <div class="crumb"><a href="/">トップ</a><span>／</span>記事</div>
+    <div class="block-head"><span class="en">Articles</span><h1>記事</h1><p>サジュとクンハプの基本から、恋愛の悩み、電話占いの使い方まで。</p></div>
   </div>
   {articles.length === 0 ? (
     <p class="note center">記事は準備中です。</p>

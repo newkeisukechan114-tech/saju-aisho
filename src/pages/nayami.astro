@@ -7,7 +7,7 @@ const all = await getCollection('articles', ({ data }) => !data.draft);
 const bySlug = new Map(all.map((a) => [a.slug, a]));
 const groups = NAYAMI.map((n) => ({ ...n, items: n.slugs.map((s) => bySlug.get(s)).filter(Boolean) }));
 ---
-<Base title="お悩みから探す｜恋愛・相性・人間関係・運勢" description="片思い、出会い、相性、失恋・復縁、人間関係、これからの運勢。いまの悩みから、韓国の占いサジュ（四柱推命）の読みものと無料占いを探せます。">
+<Base title="お悩みから探す｜恋愛・相性・人間関係・運勢" description="片思い、出会い、相性、失恋・復縁、人間関係、これからの運勢。いまの悩みから、韓国の占いサジュ（四柱推命）の記事と無料占いを探せます。">
   <div class="page-head">
     <div class="crumb"><a href="/">トップ</a><span>／</span>お悩みから探す</div>
     <div class="block-head"><span class="en">Your Worries</span><h1>お悩みから探す</h1><p>いまの気持ちに近いものを選んでください。</p></div>
