@@ -4,6 +4,7 @@ import { initBirthInputs } from './birth-input.js';
 import { STEMS, STEM_KO, EL, stemEl, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
 import { pairSlug } from '../data/pair-data.js';
 import { ctaHTML, shareRowHTML, initShare } from './result-cta.js';
+import { type16HTML, initType16 } from './type16.js';
 
 const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -97,6 +98,7 @@ function render() {
         <p>2027年（丁未年）は、あなたにとって「${ytg}」の年。恋愛のキーワードは「<b>${KW2027[s]}</b>」です。<a href="/articles/2027-koiun/">2027年の恋愛運</a>もあわせてどうぞ。</p>
       </div></section>
     </div>
+    ${type16HTML()}
     ${cta}
     <div class="next-box frame">${CORNERS}
       <h3>気になる人との相性も占ってみませんか</h3>
@@ -110,6 +112,7 @@ function render() {
   });
   $('save-img').addEventListener('click', saveImage);
   initShare(shareText);
+  initType16(s, STEM_FULL[s], STEM_INFO[s][0]);
   $('again').addEventListener('click', () => $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }));
 }
 
