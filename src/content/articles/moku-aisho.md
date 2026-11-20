@@ -12,6 +12,12 @@ draft: false
 
 五行そのものの考え方は「[五行でわかる恋愛の相性](/articles/gogyo-aisho/)」で解説しています。自分やお相手の日主は、[個人占い](/kojin/)で調べられます。
 
+
+<figure>
+  <img src="/images/articles/moku-aisho-hero.svg" alt="「甲」と「乙」の字をそれぞれ緑の円で囲み、そのあいだに赤いハートを置いたイラスト" width="960" height="480" loading="lazy" />
+  <figcaption>イラスト：運営者作成</figcaption>
+</figure>
+
 ## 甲木と乙木、恋愛の違い
 
 同じ木でも、陽の甲木と陰の乙木では、恋愛の進め方が違います。

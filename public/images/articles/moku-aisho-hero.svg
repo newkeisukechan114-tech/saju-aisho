@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-label="木の日主（甲木・乙木）の相性"><defs><radialGradient id="g" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#3a2f22"/><stop offset="1" stop-color="#0b0a0e"/></radialGradient></defs><rect width="960" height="480" fill="#0b0a0e"/><rect width="960" height="480" fill="url(#g)"/><rect x="18" y="18" width="924" height="444" fill="none" stroke="#D4B26C" stroke-opacity=".35"/>
+  <circle cx="330" cy="230" r="120" fill="#15120d" stroke="#5E9C80" stroke-width="4"/><text x="330" y="285" text-anchor="middle" font-family="serif" font-size="140" fill="#5E9C80">甲</text>
+  <circle cx="630" cy="230" r="120" fill="#15120d" stroke="#5E9C80" stroke-width="4"/><text x="630" y="285" text-anchor="middle" font-family="serif" font-size="140" fill="#5E9C80">乙</text>
+  <path d="M480 205 c-14 -24 -46 -10 -36 14 c7 15 36 34 36 34 c0 0 29 -19 36 -34 c10 -24 -22 -38 -36 -14Z" fill="#b0453a"/>
+  <text x="480" y="420" text-anchor="middle" font-family="serif" font-size="34" fill="#D4B26C" letter-spacing="6">木の日主の相性早見表</text></svg>

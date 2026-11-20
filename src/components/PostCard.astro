@@ -1,0 +1,17 @@
+---
+// コラム一覧・トップの新着で使う記事カード（画像＋タイトル）
+import { thumbOf } from '../lib/thumb';
+const { entry } = Astro.props;
+const d: Date = entry.data.publishedAt;
+const date = `${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()}`;
+const thumb = thumbOf(entry);
+---
+<a class="pcard reveal" href={`/articles/${entry.slug}/`}>
+  <span class="pcard-img">
+    {thumb ? <img src={thumb} alt="" width="960" height="480" loading="lazy" decoding="async" /> : <span class="pcard-noimg">合</span>}
+  </span>
+  <span class="pcard-body">
+    <span class="pcard-meta"><span class="pcard-cat">{entry.data.category}</span><span>{date}</span>{entry.data.pr && <span>PR</span>}</span>
+    <b class="pcard-title">{entry.data.title}</b>
+  </span>
+</a>

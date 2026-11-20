@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-label="2027年・乙の運勢"><defs><radialGradient id="g" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#3a2f22"/><stop offset="1" stop-color="#0b0a0e"/></radialGradient></defs><rect width="960" height="480" fill="#0b0a0e"/><rect width="960" height="480" fill="url(#g)"/><rect x="18" y="18" width="924" height="444" fill="none" stroke="#D4B26C" stroke-opacity=".35"/>
+  <text x="300" y="150" text-anchor="middle" font-family="serif" font-size="56" fill="#D4B26C" letter-spacing="6">2027</text>
+  <text x="300" y="215" text-anchor="middle" font-family="serif" font-size="34" fill="#EEE7D7">丁未の年</text>
+  <path d="M200 250 H400" stroke="#D4B26C" stroke-opacity=".5"/>
+  <text x="300" y="310" text-anchor="middle" font-family="serif" font-size="34" fill="#EEE7D7">草花タイプの</text>
+  <text x="300" y="360" text-anchor="middle" font-family="serif" font-size="34" fill="#EEE7D7">運勢</text>
+  <circle cx="660" cy="240" r="150" fill="#15120d" stroke="#5E9C80" stroke-width="4"/>
+  <text x="660" y="300" text-anchor="middle" font-family="serif" font-size="170" fill="#5E9C80">乙</text></svg>

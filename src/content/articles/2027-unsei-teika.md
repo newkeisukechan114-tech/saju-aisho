@@ -12,6 +12,12 @@ draft: false
 
 この記事では、日主が<strong>丁火（ていか・灯火タイプ）</strong>の人の、2027年の運勢を紹介します。自分の日主がわからない人は、[個人占い](/kojin/)で生年月日を入れると調べられます。
 
+
+<figure>
+  <img src="/images/articles/unsei2027-teika-hero.svg" alt="「2027 丁未の年」の文字と、灯火タイプを表す大きな「丁」の字を円で囲んだイラスト" width="960" height="480" loading="lazy" />
+  <figcaption>イラスト：運営者作成</figcaption>
+</figure>
+
 ## 2027年、丁火の人にめぐる星
 
 | | 2027年の文字 | 丁火にとっての星 | 意味 |

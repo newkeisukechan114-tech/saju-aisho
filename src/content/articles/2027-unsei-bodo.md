@@ -12,6 +12,12 @@ draft: false
 
 この記事では、日主が<strong>戊土（ぼど・山タイプ）</strong>の人の、2027年の運勢を紹介します。自分の日主がわからない人は、[個人占い](/kojin/)で生年月日を入れると調べられます。
 
+
+<figure>
+  <img src="/images/articles/unsei2027-bodo-hero.svg" alt="「2027 丁未の年」の文字と、山タイプを表す大きな「戊」の字を円で囲んだイラスト" width="960" height="480" loading="lazy" />
+  <figcaption>イラスト：運営者作成</figcaption>
+</figure>
+
 ## 2027年、戊土の人にめぐる星
 
 | | 2027年の文字 | 戊土にとっての星 | 意味 |

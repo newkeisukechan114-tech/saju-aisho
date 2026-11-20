@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Corners from '../../components/Corners.astro';
+import PostCard from '../../components/PostCard.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../../data/site';
 const articles = (await getCollection('articles', ({ data }) => !data.draft))
@@ -15,20 +15,20 @@ const fmt = (d: Date) => `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate
   {articles.length === 0 ? (
     <p class="note center">記事は準備中です。</p>
   ) : (
-    CATEGORIES.filter((c) => articles.some((a) => a.data.category === c)).map((c) => (
-      <section class="cat-group">
+    <>
+    <nav class="cat-chips" aria-label="カテゴリ">
+      {CATEGORIES.filter((c) => articles.some((a) => a.data.category === c)).map((c, i) => (
+        <a href={`#cat-${i}`}>{c}<span>{articles.filter((a) => a.data.category === c).length}</span></a>
+      ))}
+    </nav>
+    {CATEGORIES.filter((c) => articles.some((a) => a.data.category === c)).map((c, i) => (
+      <section class="cat-group" id={`cat-${i}`}>
         <h2 class="cat-title reveal">{c}</h2>
-        <div class="posts">
-          {articles.filter((a) => a.data.category === c).map((a) => (
-            <a class="post frame reveal" href={`/articles/${a.slug}/`}>
-              <Corners />
-              <span class="cat">{fmt(a.data.publishedAt)}{a.data.pr && ' ・ PR'}</span>
-              <b>{a.data.title}</b>
-              <span class="desc">{a.data.description}</span>
-            </a>
-          ))}
+        <div class="pcards">
+          {articles.filter((a) => a.data.category === c).map((a) => <PostCard entry={a} />)}
         </div>
       </section>
-    ))
+    ))}
+    </>
   )}
 </Base>

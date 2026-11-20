@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Corners from '../components/Corners.astro';
 import { getCollection } from 'astro:content';
 import { SITE } from '../data/site';
+import PostCard from '../components/PostCard.astro';
 const latest = (await getCollection('articles', ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .slice(0, 3);
@@ -57,10 +58,8 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
   {latest.length > 0 && (
     <section class="block">
       <div class="block-head reveal"><span class="en">Column</span><h2>新着コラム</h2></div>
-      <div class="posts">
-        {latest.map((a) => (
-          <a class="post frame reveal" href={`/articles/${a.slug}/`}><Corners /><span class="cat">{a.data.category}</span><b>{a.data.title}</b></a>
-        ))}
+      <div class="pcards">
+        {latest.map((a) => <PostCard entry={a} />)}
       </div>
     </section>
   )}
