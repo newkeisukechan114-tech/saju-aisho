@@ -6,6 +6,7 @@ import { pairSlug } from '../data/pair-data.js';
 import { ctaHTML, shareRowHTML, initShare } from './result-cta.js';
 import { type16HTML, initType16, KAIWAI } from './type16.js';
 import { memoHTML, initMemo } from './memo.js';
+import { iibiHTML, initIibi } from './iibi.js';
 
 const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -100,6 +101,7 @@ function render() {
         <p>2027年（丁未年）は、あなたにとって「${ytg}」の年。恋愛のキーワードは「<b>${KW2027[s]}</b>」です。<a href="/articles/2027-koiun/">2027年の恋愛運</a>もあわせてどうぞ。</p>
       </div></section>
     </div>
+    ${iibiHTML()}
     ${type16HTML()}
     ${memoHTML()}
     ${cta}
@@ -115,6 +117,7 @@ function render() {
   });
   $('save-img').addEventListener('click', saveImage);
   initShare(shareText);
+  initIibi(s);
   const setMemoType = initMemo({ full: STEM_FULL[s], name: STEM_INFO[s][0], mtg, ytg, strong: strong.map(i => EL[i]).join('・'), weak: weak.map(i => EL[i]).join('・'), birth: `${y}年${m}月${d}日`, hour: $('k-hour-btn').querySelector('.dv').textContent });
   initType16(s, STEM_FULL[s], STEM_INFO[s][0], (t, label, kw) => setMemoType(t) || initShare(`わたしは「${STEM_FULL[s]} × ${t}」の${label}。\nひと言でいうと「${me}」。\n${kw}らしいです。\n\n生年月日とMBTIで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #MBTI #韓国占い`));
   $('again').addEventListener('click', () => $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }));
