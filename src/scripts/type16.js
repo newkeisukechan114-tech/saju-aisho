@@ -1,4 +1,4 @@
-// 個人占いの結果：日主 × 16タイプ（4文字のタイプ）のかけ合わせ
+// 個人占いの結果：日主 × MBTI（4文字のタイプ）のかけ合わせ
 // 土台＝日主の文章＋4つの軸の文章を組み合わせる。よく選ばれる組み合わせ（INFP・ENFP）は専用のひとことを足す。
 // 入力内容は保存しない・URLに入れない。
 const D = [
@@ -25,11 +25,11 @@ const SP = {
 export function type16HTML() {
   const g = (n, a, b) => `<div class="t16-axis" role="radiogroup" aria-label="${a[1]}か${b[1]}か"><label><input type="radio" name="t16-${n}" value="${a[0]}"><span><b>${a[0]}</b>${a[1]}</span></label><label><input type="radio" name="t16-${n}" value="${b[0]}"><span><b>${b[0]}</b>${b[1]}</span></label></div>`;
   return `<div class="t16 frame" id="t16">
-    <h3>16タイプとかけ合わせる<span class="t16-opt">任意</span></h3>
-    <p class="t16-lead">性格診断でわかる4文字のタイプ（例：INFP）を知っている人は、選んでみてください。あなたの日主と組み合わせて、得意なことや楽になるコツをお伝えします。</p>
+    <h3>MBTIとかけ合わせる<span class="t16-opt">任意</span></h3>
+    <p class="t16-lead">自分のMBTI（4文字のタイプ。例：INFP）を知っている人は、選んでみてください。あなたの日主と組み合わせて、得意なことや楽になるコツをお伝えします。</p>
     <div class="t16-axes">${g('ei', ['E', '外向'], ['I', '内向'])}${g('sn', ['S', '感覚'], ['N', '直観'])}${g('tf', ['T', '思考'], ['F', '感情'])}${g('jp', ['J', '判断'], ['P', '知覚'])}</div>
     <div class="t16-out" id="t16-out" aria-live="polite"></div>
-    <p class="t16-note">16タイプは自分で答える性格の分類で、サジュとは別の考え方です。自分を知るヒントとしてお楽しみください。つらい気持ちが長く続くときは、ひとりで抱えこまず、身近な人や専門の相談窓口も頼ってください。</p>
+    <p class="t16-note">MBTIは自分で答える性格の分類で、サジュとは別の考え方です。自分を知るヒントとしてお楽しみください。つらい気持ちが長く続くときは、ひとりで抱えこまず、身近な人や専門の相談窓口も頼ってください。※MBTIは一般社団法人日本MBTI協会の登録商標です。</p>
   </div>`;
 }
 export function initType16(s, stemFull, stemName) {
