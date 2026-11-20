@@ -4,7 +4,7 @@ import { initBirthInputs } from './birth-input.js';
 import { STEMS, STEM_KO, EL, stemEl, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
 import { pairSlug } from '../data/pair-data.js';
 import { ctaHTML, shareRowHTML, initShare } from './result-cta.js';
-import { type16HTML, initType16 } from './type16.js';
+import { type16HTML, initType16, KAIWAI } from './type16.js';
 
 const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -63,7 +63,7 @@ function render() {
   const mtg = tengod(s, T.month.s), ytg = tengod(s, 3);
   last = { P, s, strong, weak, main };
   const me = STEM_INFO[s][1].split('。')[0];
-  shareText = `わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}タイプ）」。\nひと言でいうと「${me}」だそうです。\n\n生年月日だけで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #韓国占い`;
+  shareText = `わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}タイプ）」。\nひと言でいうと「${me}」。\nちなみに「${KAIWAI[s]}」らしいです。\n\n生年月日だけで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #韓国占い`;
   const cta = ctaHTML({ aff: AFF, px: PX, corners: CORNERS,
     heading: `${STEM_FULL[s]}のあなたが、<br>この先どう動くといいか`,
     text: `この占いでわかるのは、生まれ持った気質と、今月・2027年の流れの入口です。今月は「${mtg}」の星がめぐる時期。恋愛や仕事でいま迷っていることを、あなたの状況に合わせて占い師が具体的に読み解いてくれます。`,
@@ -73,7 +73,7 @@ function render() {
     <div class="score-card frame">${CORNERS}
       <span class="tag">あなたの日主（イルガン）</span>
       <div class="score gold-text">${STEMS[s]}<small>${STEM_KO[s]}</small></div>
-      <h2>${STEM_FULL[s]}｜${STEM_INFO[s][0]}タイプ</h2><p>${STEM_INFO[s][1]}</p>
+      <h2>${STEM_FULL[s]}｜${STEM_INFO[s][0]}タイプ</h2><p>${STEM_INFO[s][1]}</p><p class="kaiwai">ちなみに、あなたは<b>「${KAIWAI[s]}」</b>かもしれません。</p>
     </div>
     <div class="charts one"><div class="panel frame">${CORNERS}<h3>あなたの四柱</h3>${pillarHTML(P)}<div class="dm">五行は「${EL[e]}」・陰陽は「${s % 2 ? '陰' : '陽'}」</div>${barsHTML(P.count)}<a class="dm-link" href="/articles/${STEM_SLUG[s]}/">${STEM_FULL[s]}の性格と恋愛傾向をくわしく読む →</a></div></div>
     <div class="reading frame">${CORNERS}
@@ -113,7 +113,7 @@ function render() {
   });
   $('save-img').addEventListener('click', saveImage);
   initShare(shareText);
-  initType16(s, STEM_FULL[s], STEM_INFO[s][0], (t, label) => initShare(`わたしは「${STEM_FULL[s]} × ${t}」の${label}。\nひと言でいうと「${me}」だそうです。\n\n生年月日とMBTIで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #MBTI #韓国占い`));
+  initType16(s, STEM_FULL[s], STEM_INFO[s][0], (t, label, kw) => initShare(`わたしは「${STEM_FULL[s]} × ${t}」の${label}。\nひと言でいうと「${me}」。\n${kw}らしいです。\n\n生年月日とMBTIで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #MBTI #韓国占い`));
   $('again').addEventListener('click', () => $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }));
 }
 

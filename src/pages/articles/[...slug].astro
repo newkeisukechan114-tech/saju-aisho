@@ -8,6 +8,8 @@ import { pairSlug, STEM_FULL as SF } from '../../data/pair-data.js';
 import { STEM_SLUG as SS } from '../../data/saju-data.js';
 import { getCollection } from 'astro:content';
 import fs from 'node:fs';
+import PostCard from '../../components/PostCard.astro';
+import { relatedOf, genresOf, GENRE_NAME } from '../../data/genres';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) => !data.draft);
@@ -20,14 +22,10 @@ const site = 'https://saju-aisho.com';
 const url = `${site}/articles/${entry.slug}/`;
 // 記事用のOG画像がまだ無ければ共通画像を使う（tools/make-og.mjs で作成）
 const ogImage = fs.existsSync(`public/og/${entry.slug}.jpg`) ? `/og/${entry.slug}.jpg` : '/og/_default.jpg';
-// 関連記事：同じカテゴリ → 新しい順で3本
-const others = (await getCollection('articles', ({ data }) => !data.draft))
-  .filter((a) => a.slug !== entry.slug)
-  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
-const related = [
-  ...others.filter((a) => a.data.category === entry.data.category),
-  ...others.filter((a) => a.data.category !== entry.data.category),
-].slice(0, 3);
+// 関連記事：同じ趣味嗜好ジャンル → 同じ日主 → 同じカテゴリ の順でおすすめ
+const all = (await getCollection('articles', ({ data }) => !data.draft));
+const related = relatedOf(entry, all, 4);
+const myGenres = genresOf(entry.slug).filter((g, i, x) => x.indexOf(g) === i).map((g) => GENRE_NAME[g]);
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -79,16 +77,9 @@ const jsonLd = [
     <NisshuLinks current={entry.slug} />
     {related.length > 0 && (
       <section class="related">
-        <h2 class="cat-title reveal">関連記事</h2>
-        <div class="posts">
-          {related.map((a) => (
-            <a class="post frame reveal" href={`/articles/${a.slug}/`}>
-              <Corners />
-              <span class="cat">{a.data.category}</span>
-              <b>{a.data.title}</b>
-            </a>
-          ))}
-        </div>
+        <h2 class="cat-title reveal">この記事が好きな人におすすめ</h2>
+        {myGenres.length > 0 && <p class="related-tags">{myGenres.map((g) => <span>#{g}</span>)}</p>}
+        <div class="pcards">{related.map((a) => <PostCard entry={a} />)}</div>
       </section>
     )}
     <div class="next frame reveal"><Corners /><p>あなたとお相手の相性は、生年月日だけで占えます。</p><a class="btn" href="/shindan/">相性を占う</a><a class="sub-link" href="/kojin/">相手がいなくても大丈夫。個人占いで自分のサジュを見る →</a></div>
