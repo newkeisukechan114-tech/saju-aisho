@@ -622,3 +622,4 @@ html.intro-seen .intro { display: none; }
 .quick-alt { justify-self: center; font-size: 13px; color: var(--muted); text-decoration: none; }
 .quick-alt b { color: var(--gold); font-weight: 500; }
 @media (max-width: 600px) { .kw-grid { grid-template-columns: 1fr; gap: 8px; } .kw-tile { padding: 14px; } .kw-q { font-size: 15px; } }
+.kw-ans[hidden], .kw-result[hidden] { display: none !important; }
