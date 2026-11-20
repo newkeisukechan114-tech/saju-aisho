@@ -1,5 +1,5 @@
 // お悩みの種類別の入り口（/nayami/ とトップで使う）
-export type Nayami = { id: string; mark: string; title: string; short: string; lead: string; tool?: { href: string; label: string }; slugs: string[] };
+export type Nayami = { id: string; mark: string; title: string; short: string; lead: string; tool?: { href: string; label: string }; tool2?: { href: string; label: string }; slugs: string[] };
 export const NAYAMI: Nayami[] = [
   { id: 'kataomoi', mark: '想', title: '片思い中で、相手の気持ちが知りたい', short: '片思い', lead: '好きな人との相性や、気持ちの伝え方のヒントを、生まれた日のタイプから探します。',
     tool: { href: '/shindan/', label: 'ふたりの相性を占う' }, slugs: ['kataomoi', 'gengoka-koi', 'sukisugite-metsu', 'pepero-day'] },
@@ -15,6 +15,6 @@ export const NAYAMI: Nayami[] = [
     tool: { href: '/shindan/', label: '相手との相性を占う' }, slugs: ['frenemy-saju', 'bonenkai-saju', 'shichigosan-oyako'] },
   { id: 'unsei', mark: '運', title: 'お金・仕事・これからの運勢', short: '運勢・お金', lead: '今月・来年の運の流れや、お金の使い方のくせを、四柱推命で読み解きます。',
     tool: { href: '/kojin/', label: '今月の運の流れを見る' }, slugs: ['2026-12-unsei', '2027-koiun', '2027-unsei-koboku', 'black-friday-saju'] },
-  { id: 'jibun', mark: '己', title: '自分のことをもっと知りたい', short: '自分を知る', lead: 'サジュのしくみや、ほかの占いとの違いから、自分の気質を多面的に知ることができます。「界隈」から気軽に探すこともできます。',
-    tool: { href: '/kojin/', label: '無料で自分のサジュを占う' }, slugs: ['saju-towa', 'saju-mbti', 'saju-shichusuimei-chigai', 'saju-suhijutsu-chigai'] },
+  { id: 'jibun', mark: '己', title: '自分のことをもっと知りたい', short: '自分を知る', lead: 'サジュのしくみや、ほかの占いとの違いから、自分の気質を多面的に知ることができます。生年月日を入れる前に、「界隈」でのぞいてみることもできます。',
+    tool: { href: '/kojin/', label: '無料で自分のサジュを占う' }, tool2: { href: '/kaiwai/', label: '「界隈」でのぞいてみる' }, slugs: ['saju-towa', 'saju-mbti', 'saju-shichusuimei-chigai', 'saju-suhijutsu-chigai'] },
 ];

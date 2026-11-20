@@ -23,7 +23,7 @@ const groups = NAYAMI.map((n) => ({ ...n, items: n.slugs.map((s) => bySlug.get(s
         <span class="nayami-mark lg">{n.mark}</span>
         <div><h2>{n.title}</h2><p>{n.lead}</p></div>
       </div>
-      {n.tool && <a class="nayami-tool" href={n.tool.href}>{n.tool.label}<span aria-hidden="true">→</span></a>}
+      {n.tool && <div class="nayami-tools"><a class="nayami-tool" href={n.tool.href}>{n.tool.label}<span aria-hidden="true">→</span></a>{n.tool2 && <a class="nayami-tool" href={n.tool2.href}>{n.tool2.label}<span aria-hidden="true">→</span></a>}</div>}
       <div class="pcards">{n.items.map((a) => <PostCard entry={a} />)}</div>
     </section>
   ))}

@@ -73,7 +73,7 @@ function render() {
     <div class="score-card frame">${CORNERS}
       <span class="tag">あなたの日主（イルガン）</span>
       <div class="score gold-text">${STEMS[s]}<small>${STEM_KO[s]}</small></div>
-      <h2>${STEM_FULL[s]}｜${STEM_INFO[s][0]}タイプ</h2><p>${STEM_INFO[s][1]}</p><p class="kaiwai">ちなみに、あなたは<b>「${KAIWAI[s]}」</b>かもしれません。</p>
+      <h2>${STEM_FULL[s]}｜${STEM_INFO[s][0]}タイプ</h2><p>${STEM_INFO[s][1]}</p><p class="kaiwai">ちなみに、あなたは<b>「${KAIWAI[s]}」</b>かもしれません。<a href="/kaiwai/">ほかの界隈も見てみる →</a></p>
     </div>
     <div class="charts one"><div class="panel frame">${CORNERS}<h3>あなたの四柱</h3>${pillarHTML(P)}<div class="dm">五行は「${EL[e]}」・陰陽は「${s % 2 ? '陰' : '陽'}」</div>${barsHTML(P.count)}<a class="dm-link" href="/articles/${STEM_SLUG[s]}/">${STEM_FULL[s]}の性格と恋愛傾向をくわしく読む →</a></div></div>
     <div class="reading frame">${CORNERS}
