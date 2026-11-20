@@ -166,7 +166,7 @@ function render() {
   const hb = $('b-hour').value === '' ? null : Number($('b-hour').value);
   const A = saju(pa[0], pa[1], pa[2], ha), B = saju(pb[0], pb[1], pb[2], hb);
   const c = compat(A, B), t = title(c.score), pts = cautions(A, B);
-  lastText = `【韓国式相性占い クンハプ】ふたりの相性は${c.score}点「${t[0]}」\nあなたの日主：${STEMS[A.day.s]}（${STEM_INFO[A.day.s][0]}）／お相手の日主：${STEMS[B.day.s]}（${STEM_INFO[B.day.s][0]}）\n\n誕生日を入れるだけで、ふたりの相性を無料で占えます👇\nhttps://saju-aisho.com/shindan/\n\n#サジュ #韓国占い #ソウルのサジュ恋愛相性占い`;
+  lastText = `【韓国式相性占い クンハプ】ふたりの相性は${c.score}点「${t[0]}」\nあなたの日主：${STEMS[A.day.s]}（${STEM_INFO[A.day.s][0]}）／お相手の日主：${STEMS[B.day.s]}（${STEM_INFO[B.day.s][0]}）\n\n誕生日を入れるだけで、ふたりの相性を無料で占えます▼\nhttps://saju-aisho.com/shindan/\n\n#サジュ #韓国占い #ソウルのサジュ恋愛相性占い`;
   $('result').innerHTML = `
     <div class="score-card frame">${CORNERS}
       <span class="tag">ふたりの相性</span>
@@ -188,7 +188,7 @@ function render() {
     try { await navigator.clipboard.writeText(lastText); $('copied').textContent = 'コピーしました。SNSに貼り付けてシェアできます。'; }
     catch (e) { $('copied').textContent = 'この画面ではコピーできませんでした。結果を長押しして選択してください。'; }
   });
-  initShare(`ふたりの相性は${c.score}点「${t[0]}」でした。誕生日を入れるだけで、韓国式の相性占いが無料でできます👇\nhttps://saju-aisho.com/shindan/\n#サジュ #韓国占い`);
+  initShare(`ふたりの相性は${c.score}点「${t[0]}」でした。誕生日を入れるだけで、韓国式の相性占いが無料でできます▼\nhttps://saju-aisho.com/shindan/\n#サジュ #韓国占い`);
   $('save-img').addEventListener('click', () => saveImage({ score: c.score, t, A, B, items: c.items }));
   $('again').addEventListener('click', () => { $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); });
   return true;
@@ -264,7 +264,7 @@ async function saveImage(data) {
     const blob = await makeCard(data);
     const file = new File([blob], 'saju-aisho-kekka.png', { type: 'image/png' });
     if (navigator.canShare && navigator.canShare({ files: [file] }) && matchMedia('(pointer: coarse)').matches) {
-      try { await navigator.share({ files: [file], text: '誕生日を入れるだけで、ふたりの相性を無料で占えます👇\nhttps://saju-aisho.com/shindan/' }); msg.textContent = ''; return; }
+      try { await navigator.share({ files: [file], text: '誕生日を入れるだけで、ふたりの相性を無料で占えます▼\nhttps://saju-aisho.com/shindan/' }); msg.textContent = ''; return; }
       catch (e) { if (e.name === 'AbortError') { msg.textContent = ''; return; } }
     }
     const url = URL.createObjectURL(blob), a = document.createElement('a');

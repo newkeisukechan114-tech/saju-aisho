@@ -62,12 +62,12 @@ function render() {
   const now = new Date(), T = saju(now.getFullYear(), now.getMonth() + 1, now.getDate(), null);
   const mtg = tengod(s, T.month.s), ytg = tengod(s, 3);
   last = { P, s, strong, weak, main };
-  shareText = `わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}タイプ）」でした。生年月日だけで、韓国のサジュを無料で占えます👇\nhttps://saju-aisho.com/kojin/\n#サジュ #韓国占い`;
+  shareText = `わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}タイプ）」でした。生年月日だけで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #韓国占い`;
   const cta = ctaHTML({ aff: AFF, px: PX, corners: CORNERS,
     heading: `${STEM_FULL[s]}のあなたが、<br>この先どう動くといいか`,
     text: `この占いでわかるのは、生まれ持った気質と、今月・2027年の流れの入口です。今月は「${mtg}」の星がめぐる時期。恋愛や仕事でいま迷っていることを、あなたの状況に合わせて占い師が具体的に読み解いてくれます。`,
     asks: [`${STEM_FULL[s]}の私が、今月（${mtg}の時期）に恋愛で意識するといいことは？`, `2027年は「${ytg}」の年。どの時期に動くといいですか？`, `足りない「${weak.map(i => EL[i]).join('・')}」の五行を補うには、どう過ごすといいですか？`] });
-  lastText = `【無料サジュ占い】わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}）」でした。いちばん強い五行は「${strong.map(i => EL[i]).join('・')}」\n\n生年月日を入れるだけで、自分のサジュを無料で占えます👇\nhttps://saju-aisho.com/kojin/\n\n#サジュ #韓国占い #ソウルのサジュ恋愛相性占い`;
+  lastText = `【無料サジュ占い】わたしの日主は「${STEMS[s]}（${STEM_INFO[s][0]}）」でした。いちばん強い五行は「${strong.map(i => EL[i]).join('・')}」\n\n生年月日を入れるだけで、自分のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n\n#サジュ #韓国占い #ソウルのサジュ恋愛相性占い`;
   $('result').innerHTML = `
     <div class="score-card frame">${CORNERS}
       <span class="tag">あなたの日主（イルガン）</span>
@@ -153,7 +153,7 @@ async function saveImage() {
   try {
     const blob = await makeCard(), file = new File([blob], 'saju-kojin.png', { type: 'image/png' });
     if (navigator.canShare && navigator.canShare({ files: [file] }) && matchMedia('(pointer: coarse)').matches) {
-      try { await navigator.share({ files: [file], text: '生年月日を入れるだけで、自分のサジュを無料で占えます👇\nhttps://saju-aisho.com/kojin/' }); msg.textContent = ''; return; }
+      try { await navigator.share({ files: [file], text: '生年月日を入れるだけで、自分のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/' }); msg.textContent = ''; return; }
       catch (e) { if (e.name === 'AbortError') { msg.textContent = ''; return; } }
     }
     const url = URL.createObjectURL(blob), a = document.createElement('a');
