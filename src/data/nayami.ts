@@ -15,6 +15,6 @@ export const NAYAMI: Nayami[] = [
     tool: { href: '/shindan/', label: '相手との相性を占う' }, slugs: ['frenemy-saju', 'bonenkai-saju', 'shichigosan-oyako'] },
   { id: 'unsei', mark: '運', title: 'お金・仕事・これからの運勢', short: '運勢・お金', lead: '今月・来年の運の流れや、お金の使い方のくせを、四柱推命で読み解きます。',
     tool: { href: '/kojin/', label: '今月の運の流れを見る' }, slugs: ['2026-12-unsei', '2027-koiun', '2027-unsei-koboku', 'black-friday-saju'] },
-  { id: 'jibun', mark: '己', title: '自分のことをもっと知りたい', short: '自分を知る', lead: 'サジュのしくみや、ほかの占いとの違いから、自分の気質を多面的に知ることができます。',
+  { id: 'jibun', mark: '己', title: '自分のことをもっと知りたい', short: '自分を知る', lead: 'サジュのしくみや、ほかの占いとの違いから、自分の気質を多面的に知ることができます。「界隈」から気軽に探すこともできます。',
     tool: { href: '/kojin/', label: '無料で自分のサジュを占う' }, slugs: ['saju-towa', 'saju-mbti', 'saju-shichusuimei-chigai', 'saju-suhijutsu-chigai'] },
 ];

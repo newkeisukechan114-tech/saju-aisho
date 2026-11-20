@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import Corners from '../components/Corners.astro';
+import { KAIWAI } from '../scripts/type16.js';
+import { STEMS, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
+const items = KAIWAI.map((k, i) => ({ k, i, stem: STEMS[i], full: STEM_FULL[i], name: STEM_INFO[i][0], desc: STEM_INFO[i][1].split('。')[0], slug: STEM_SLUG[i] }));
+---
+<Base title="あなたはどの界隈？界隈から、サジュの日主（10タイプ）を探す" description="「即決・即レス界隈」「寝る前に考えごとがはかどる界隈」など、10の界隈から、自分に近いものを選ぶだけ。韓国の占いサジュ（四柱推命）の日主タイプと、その性格・恋愛の傾向がわかります。">
+  <div class="page-head">
+    <div class="crumb"><a href="/">トップ</a><span>／</span>界隈から探す</div>
+    <div class="block-head"><span class="en">Which One Are You?</span><h1>あなたはどの界隈？</h1><p>いちばん「わかる…」と思うものを、ひとつ選んでください。</p></div>
+  </div>
+  <div class="kw-grid" id="kw-grid">
+    {items.map((it) => (
+      <button type="button" class="kw-tile" data-i={it.i} aria-controls="kw-result"><span class="kw-q">{it.k}</span></button>
+    ))}
+  </div>
+  <div class="kw-result frame" id="kw-result" aria-live="polite" hidden>
+    <Corners />
+    {items.map((it) => (
+      <div class="kw-ans" data-i={it.i} hidden>
+        <span class="kw-label">「{it.k}」に多いのは…</span>
+        <b class="kw-stem gold-text">{it.stem}</b>
+        <span class="kw-name">{it.full}（{it.name}タイプ）</span>
+        <p>{it.desc}。</p>
+        <div class="kw-links">
+          <a class="btn" href={`/articles/${it.slug}/`}>{it.full}の性格・恋愛を読む</a>
+          <a class="kw-more" href="/kojin/">生年月日で、本当の日主を確かめる →</a>
+        </div>
+        <div class="kw-share">
+          <a class="share-btn sb-threads" target="_blank" rel="noopener" data-share>Threadsでシェア</a>
+          <a class="share-btn sb-x" target="_blank" rel="noopener" data-share-x>Xでシェア</a>
+        </div>
+      </div>
+    ))}
+    <p class="kw-note">界隈は、日主のイメージを楽しく表したものです。実際の日主は生年月日で決まるので、選んだ界隈と違うこともあります。ぜひ生年月日でも確かめてみてください。</p>
+  </div>
+  <script>
+    const tiles = document.querySelectorAll('.kw-tile'), box = document.getElementById('kw-result');
+    tiles.forEach((b) => b.addEventListener('click', () => {
+      const i = b.dataset.i;
+      tiles.forEach((t) => t.classList.toggle('on', t === b));
+      box.hidden = false;
+      box.querySelectorAll('.kw-ans').forEach((a) => { a.hidden = a.dataset.i !== i; });
+      const ans = box.querySelector(`.kw-ans[data-i="${i}"]`);
+      const k = b.textContent.trim(), name = ans.querySelector('.kw-name').textContent;
+      const text = encodeURIComponent(`わたしは「${k}」でした。\nサジュでいうと「${name}」に多いらしいです。\n\nあなたはどの界隈？▼\nhttps://saju-aisho.com/kaiwai/\n#サジュ #界隈`);
+      ans.querySelector('[data-share]').href = `https://www.threads.net/intent/post?text=${text}`;
+      ans.querySelector('[data-share-x]').href = `https://twitter.com/intent/tweet?text=${text}`;
+      box.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+    }));
+  </script>
+</Base>
