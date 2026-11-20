@@ -643,3 +643,28 @@ html.intro-seen .intro { display: none; }
 .memo-copied { font-size: 12.5px; color: var(--gold); }
 .memo-tip { margin: 0; font-size: 12px; color: var(--muted); line-height: 1.7; }
 @media (max-width: 600px) { .memo { padding: 20px 14px; } }
+
+/* ===== 個人占い：いい日カレンダー ===== */
+.iibi { padding: 26px 24px; display: grid; gap: 12px; }
+.iibi h3 { margin: 0; font-size: clamp(18px, 3.4vw, 21px); }
+.iibi-lead { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.8; }
+.iibi-nav { display: flex; align-items: center; justify-content: center; gap: 18px; }
+.iibi-nav b { font-family: var(--display); font-size: 18px; min-width: 9em; text-align: center; }
+.iibi-nav button { background: none; border: 1px solid var(--gold-faint); color: var(--gold); width: 36px; height: 36px; font-size: 20px; cursor: pointer; }
+.iibi-best { font-size: 13.5px; text-align: center; color: var(--ivory); }
+.iibi-best b { color: var(--gold); }
+.iibi-cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.iibi-w { font-size: 11px; color: var(--muted); text-align: center; padding: 2px 0; }
+.iibi-d { position: relative; aspect-ratio: 1 / 1; display: grid; place-items: center; font-size: 14px; border: 1px solid rgba(212,178,108,.12); background: rgba(0,0,0,.25); }
+.iibi-d i { position: absolute; top: 2px; right: 4px; font-style: normal; font-size: 11px; }
+.iibi-d.k-gou { border-color: var(--gold); background: rgba(201,165,92,.22); color: var(--gold); font-weight: 700; }
+.iibi-d.k-tell { background: rgba(176,69,58,.18); }
+.iibi-d.k-tell i { color: #e08a7e; }
+.iibi-d.k-rest { background: rgba(92,82,136,.25); }
+.iibi-d.k-rest i { color: #a99be0; }
+.iibi-d.today { outline: 2px solid var(--ivory); outline-offset: -2px; }
+.iibi-d.past { opacity: .4; }
+.iibi-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 12.5px; color: var(--muted); }
+.iibi-legend b { color: var(--ivory); margin-right: 6px; font-weight: 500; }
+.iibi-m { display: inline-block; width: 1.6em; color: var(--gold); }
+@media (max-width: 600px) { .iibi { padding: 20px 12px; } .iibi-d { font-size: 13px; } }
