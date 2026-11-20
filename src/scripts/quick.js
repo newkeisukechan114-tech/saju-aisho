@@ -2,6 +2,8 @@
 import { initBirthInputs } from './birth-input.js';
 import { saju } from './saju-calc.js';
 import { STEMS, STEM_KO, EL, stemEl, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
+import { initToday } from './today.js';
+const setToday = initToday();
 const $ = id => document.getElementById(id);
 function show() {
   const v = $('q-date').value; if (!v) return;
@@ -18,6 +20,7 @@ function show() {
       <a class="qc-more" href="/kojin/">生まれた時間も入れて、くわしく占う →</a>
     </div>`;
   card.classList.remove('flip'); void card.offsetWidth; card.classList.add('flip', 'done');
+  if (setToday) setToday(s);
 }
 initBirthInputs(['q'], show);
 // ロゴ画面：タップ・キーで飛ばす／終わったら取り除く
