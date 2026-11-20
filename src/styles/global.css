@@ -564,3 +564,31 @@ html.intro-seen .intro { display: none; }
   .nayami-s { font-size: 14px; color: var(--ivory); }
   .nayami-head { align-items: flex-start; }
 }
+
+/* ===== 個人占い：日主 × 16タイプ ===== */
+.t16 { padding: 26px 24px; display: grid; gap: 14px; }
+.t16 h3 { margin: 0; font-size: clamp(18px, 3.4vw, 21px); display: flex; align-items: center; gap: 10px; }
+.t16-opt { font-size: 11px; font-family: var(--sans, inherit); color: var(--gold); border: 1px solid var(--gold-faint); padding: 2px 8px; border-radius: 999px; letter-spacing: .1em; }
+.t16-lead { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.8; }
+.t16-axes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.t16-axis { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--gold-faint); }
+.t16-axis label { position: relative; cursor: pointer; }
+.t16-axis input { position: absolute; opacity: 0; pointer-events: none; }
+.t16-axis span { display: grid; justify-items: center; gap: 1px; padding: 9px 6px; font-size: 12px; color: var(--muted); transition: background .25s, color .25s; }
+.t16-axis span b { font-family: var(--latin, serif); font-size: 18px; color: var(--ivory); letter-spacing: .05em; }
+.t16-axis label + label span { border-left: 1px solid var(--gold-faint); }
+.t16-axis input:checked + span { background: rgba(201,165,92,.18); color: var(--gold); }
+.t16-axis input:checked + span b { color: var(--gold); }
+.t16-axis input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: -2px; }
+.t16-out:empty { display: none; }
+.t16-out { display: grid; gap: 12px; padding-top: 6px; border-top: 1px solid var(--gold-faint); animation: hero-up .5s ease both; }
+.t16-head { display: grid; gap: 4px; justify-items: start; }
+.t16-badge { font-size: 12px; color: var(--gold); letter-spacing: .12em; }
+.t16-head b { font-family: var(--display); font-size: 20px; }
+.t16-sp { margin: 0; padding: 12px 14px; background: rgba(201,165,92,.08); border-left: 2px solid var(--gold); font-size: 14px; line-height: 1.8; }
+.t16-sp b { display: block; font-size: 12px; color: var(--gold); margin-bottom: 2px; letter-spacing: .08em; }
+.t16-list { margin: 0; display: grid; gap: 10px; }
+.t16-list dt { font-size: 13px; color: var(--gold); letter-spacing: .08em; }
+.t16-list dd { margin: 2px 0 0; font-size: 14px; line-height: 1.85; }
+.t16-note { margin: 0; font-size: 11.5px; color: var(--muted); line-height: 1.7; }
+@media (max-width: 600px) { .t16 { padding: 20px 14px; } .t16-axes { gap: 8px; } }
