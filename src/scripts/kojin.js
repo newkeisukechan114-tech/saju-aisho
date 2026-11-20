@@ -5,6 +5,7 @@ import { STEMS, STEM_KO, EL, stemEl, STEM_INFO, STEM_SLUG, STEM_FULL } from '../
 import { pairSlug } from '../data/pair-data.js';
 import { ctaHTML, shareRowHTML, initShare } from './result-cta.js';
 import { type16HTML, initType16, KAIWAI } from './type16.js';
+import { memoHTML, initMemo } from './memo.js';
 
 const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -100,6 +101,7 @@ function render() {
       </div></section>
     </div>
     ${type16HTML()}
+    ${memoHTML()}
     ${cta}
     <div class="next-box frame">${CORNERS}
       <h3>気になる人との相性も占ってみませんか</h3>
@@ -113,7 +115,8 @@ function render() {
   });
   $('save-img').addEventListener('click', saveImage);
   initShare(shareText);
-  initType16(s, STEM_FULL[s], STEM_INFO[s][0], (t, label, kw) => initShare(`わたしは「${STEM_FULL[s]} × ${t}」の${label}。\nひと言でいうと「${me}」。\n${kw}らしいです。\n\n生年月日とMBTIで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #MBTI #韓国占い`));
+  const setMemoType = initMemo({ full: STEM_FULL[s], name: STEM_INFO[s][0], mtg, ytg, strong: strong.map(i => EL[i]).join('・'), weak: weak.map(i => EL[i]).join('・'), birth: `${y}年${m}月${d}日`, hour: $('k-hour-btn').querySelector('.dv').textContent });
+  initType16(s, STEM_FULL[s], STEM_INFO[s][0], (t, label, kw) => setMemoType(t) || initShare(`わたしは「${STEM_FULL[s]} × ${t}」の${label}。\nひと言でいうと「${me}」。\n${kw}らしいです。\n\n生年月日とMBTIで、韓国のサジュを無料で占えます▼\nhttps://saju-aisho.com/kojin/\n#サジュ #MBTI #韓国占い`));
   $('again').addEventListener('click', () => $('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }));
 }
 

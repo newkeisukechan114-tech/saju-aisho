@@ -625,3 +625,21 @@ html.intro-seen .intro { display: none; }
 .kw-ans[hidden], .kw-result[hidden] { display: none !important; }
 .nayami-tools { display: flex; flex-wrap: wrap; gap: 10px; }
 .kaiwai a { margin-left: 8px; font-size: 12.5px; color: var(--gold); white-space: nowrap; }
+
+/* ===== 個人占い：相談メモ ===== */
+.memo { padding: 26px 24px; display: grid; gap: 14px; }
+.memo h3 { margin: 0; font-size: clamp(18px, 3.4vw, 21px); }
+.memo-lead { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.8; }
+.memo-topics { display: flex; flex-wrap: wrap; gap: 8px; }
+.memo-topics label { position: relative; cursor: pointer; }
+.memo-topics input { position: absolute; opacity: 0; pointer-events: none; }
+.memo-topics span { display: inline-block; padding: 8px 14px; border: 1px solid var(--gold-faint); border-radius: 999px; font-size: 13px; transition: background .25s, border-color .25s, color .25s; }
+.memo-topics input:checked + span { background: rgba(201,165,92,.18); border-color: var(--gold); color: var(--gold); }
+.memo-topics input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+.memo-free { display: grid; gap: 6px; font-size: 12.5px; color: var(--muted); }
+.memo-free textarea, .memo-out { width: 100%; box-sizing: border-box; background: rgba(0,0,0,.35); color: var(--ivory); border: 1px solid var(--gold-faint); padding: 10px 12px; font: inherit; font-size: 14px; line-height: 1.75; resize: vertical; }
+.memo-out { font-size: 13px; min-height: 260px; }
+.memo-btns { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.memo-copied { font-size: 12.5px; color: var(--gold); }
+.memo-tip { margin: 0; font-size: 12px; color: var(--muted); line-height: 1.7; }
+@media (max-width: 600px) { .memo { padding: 20px 14px; } }
