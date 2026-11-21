@@ -47,7 +47,7 @@ const jsonLd = [{
     <div class="err" id="j-err" role="alert"></div>
   </form>
 
-  <div class="jr-stamp" id="stamp" hidden aria-hidden="true"><span>合</span></div>
+  <div class="jr-stamp" id="stamp" hidden aria-hidden="true"><div class="jr-paper"><img alt=""></div></div>
   <div class="jr-out" id="j-out" aria-live="polite" hidden></div>
 
   <section class="howto">
@@ -72,9 +72,15 @@ const jsonLd = [{
   .jr-clear { position:absolute; left:10px; top:10px; padding:4px 10px; font-size:12px; color:#6b5634; border-color:rgba(107,86,52,.5); }
   .jr-stamp { position:fixed; inset:0; z-index:900; display:grid; place-items:center; background:rgba(10,8,14,.55); pointer-events:none; }
   .jr-stamp[hidden] { display:none !important; }
-  .jr-stamp span { width:140px; height:140px; display:grid; place-items:center; border:6px solid #C8463C; color:#C8463C; font-family:var(--display); font-size:96px; border-radius:10px; transform:rotate(-8deg); opacity:0; }
-  .jr-stamp.go span { animation: jrStamp .8s cubic-bezier(.2,.9,.3,1.2) forwards; }
-  @keyframes jrStamp { 0%{opacity:0; transform:scale(2.6) rotate(-20deg)} 55%{opacity:1; transform:scale(.92) rotate(-8deg)} 70%{transform:scale(1.04) rotate(-8deg)} 100%{opacity:1; transform:scale(1) rotate(-8deg)} }
+  .jr-paper { position:relative; width:220px; height:220px; display:grid; place-items:center; }
+  .jr-paper img { width:200px; height:200px; transform:rotate(-7deg); opacity:0; mix-blend-mode:normal; filter:drop-shadow(0 0 0 transparent); }
+  .jr-stamp.go .jr-paper img { animation: jrPress 1.05s cubic-bezier(.3,.7,.2,1) forwards; }
+  .jr-stamp.go .jr-paper::after { content:""; position:absolute; inset:-30px; border-radius:50%; background:radial-gradient(circle, rgba(200,50,45,.25), transparent 65%); opacity:0; animation: jrThud .6s .38s ease-out; }
+  @keyframes jrPress { 0%{opacity:0; transform:translateY(-40px) scale(1.9) rotate(-16deg); filter:blur(6px)} 35%{opacity:.25; transform:translateY(0) scale(1.06) rotate(-8deg); filter:blur(1px)} 42%{opacity:1; transform:scale(.97) rotate(-7deg); filter:blur(0)} 55%{transform:scale(1.01) rotate(-7deg)} 100%{opacity:1; transform:scale(1) rotate(-7deg)} }
+  @keyframes jrThud { 0%{opacity:1; transform:scale(.6)} 100%{opacity:0; transform:scale(1.3)} }
+  .jr-stamp.go { animation: jrShake .28s .4s; }
+  @keyframes jrShake { 0%,100%{transform:none} 30%{transform:translate(2px,3px)} 60%{transform:translate(-2px,-1px)} }
+  .jr-seal { position:absolute; right:14px; bottom:10px; width:84px; height:84px; transform:rotate(-7deg); mix-blend-mode:multiply; pointer-events:none; }
   .jr-out { scroll-margin-top: 90px; display:grid; gap:20px; padding:28px 0 8px; }
   .jr-out[hidden] { display:none !important; }
   .jr-stage { display:grid; place-items:center; }
@@ -86,18 +92,19 @@ const jsonLd = [{
   .jr-name span:first-child { font-size:28px; padding-bottom:6px; }
   .jr-dono { font-size:22px; padding-bottom:8px; }
   .jr-order { font-size:15px; margin:0 6px 4px; line-height:1.7; }
-  .jr-order b { display:block; font-size:20px; }
+  .jr-order b { display:block; font-size:17px; }
   .jr-order2 { font-size:15px; margin:0 6px 16px; }
   .jr-reason { margin:0 6px 14px; font-size:14px; line-height:1.9; }
   .jr-reason p { margin:0 0 6px; }
-  .jr-reason .jr-r { font-size:18px; font-weight:700; line-height:1.7; margin-bottom:8px; }
-  .jr-rh { color:#7A5E2E; font-size:12px; letter-spacing:.2em; }
+  .jr-reason { position:relative; padding:14px 16px 12px; border-top:2px solid #2B2118; border-bottom:2px solid #2B2118; background:rgba(200,60,50,.06); }
+  .jr-reason .jr-r { font-size:24px; font-weight:700; line-height:1.55; margin:4px 0 10px; letter-spacing:.02em; }
+  .jr-reason p:last-child { font-size:12px; margin:0; }
+  .jr-rh { color:#A33A30; font-size:12px; letter-spacing:.3em; font-weight:700; }
   .jr-rows { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0 6px 18px; font-size:14px; }
   .jr-rows dt { color:#7A5E2E; font-size:12px; padding-top:3px; letter-spacing:.1em; }
   .jr-rows dd { margin:0; }
   .jr-rows dd small { display:block; font-size:11px; color:#6b5634; }
-  .jr-date, .jr-from { text-align:right; margin:0 78px 4px 0; font-size:14px; line-height:1.8; }
-  .jr-seal { position:absolute; right:26px; bottom:26px; width:52px; height:52px; display:grid; place-items:center; border:3px solid #C8463C; color:#C8463C; font-size:34px; border-radius:6px; transform:rotate(-8deg); opacity:.9; }
+  .jr-date, .jr-from { text-align:right; margin:0 88px 4px 0; font-size:14px; line-height:1.8; }
   .jr-detail { padding:22px 24px; display:grid; gap:10px; font-size:15px; }
   .jr-detail p { margin:0; }
   .jr-why b { color:var(--gold); } .jr-why small { display:block; font-size:12px; color:var(--muted); margin-top:6px; }
@@ -109,5 +116,5 @@ const jsonLd = [{
   .jr-next-a small { color:var(--gold); font-size:12px; letter-spacing:.12em; }
   .jr-next-a b { font-family:var(--display); font-size:16px; }
   .jr-next-a .pr { border:1px solid var(--gold-soft); padding:0 5px; margin-left:4px; font-size:10px; }
-  @media (max-width:720px){ .jr-doc{ padding:30px 22px 26px; } .jr-title{ font-size:28px; } .jr-order b{ font-size:17px; } .jr-seal{ right:18px; width:46px; height:46px; font-size:30px; } .jr-date, .jr-from{ margin-right:66px; } }
+  @media (max-width:720px){ .jr-doc{ padding:30px 22px 26px; } .jr-title{ font-size:28px; } .jr-order b{ font-size:15px; } .jr-reason .jr-r{ font-size:21px; } .jr-seal{ right:8px; bottom:8px; width:72px; height:72px; } .jr-date, .jr-from{ margin-right:66px; } }
 </style>

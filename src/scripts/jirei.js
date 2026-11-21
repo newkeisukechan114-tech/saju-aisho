@@ -96,6 +96,62 @@ pad.addEventListener('pointermove', e => {
 ['pointerup', 'pointercancel', 'pointerleave'].forEach(t => pad.addEventListener(t, () => { drawing = false; }));
 $('sign-clear').addEventListener('click', fitPad);
 
+/* ---------- 印影（朱肉のかすれ・にじみ・押しムラを再現） ---------- */
+let SEAL = null;
+function rng(seed) { return () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
+function noiseLayer(size, cells, rand) {
+  const n = document.createElement('canvas'); n.width = n.height = cells;
+  const nx = n.getContext('2d'), im = nx.createImageData(cells, cells);
+  for (let i = 0; i < im.data.length; i += 4) { const v = rand() * 255; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 255; }
+  nx.putImageData(im, 0, 0);
+  const big = document.createElement('canvas'); big.width = big.height = size;
+  const bx = big.getContext('2d'); bx.imageSmoothingEnabled = true; bx.imageSmoothingQuality = 'high'; bx.drawImage(n, 0, 0, size, size);
+  return bx.getImageData(0, 0, size, size).data;
+}
+async function makeSeal(size = 480) {
+  try { await document.fonts.load(`700 40px "Shippori Mincho"`); } catch (e) {}
+  const font = '"Shippori Mincho","Yu Mincho","YuMincho","Hiragino Mincho ProN","MS Mincho",serif';
+  const c = document.createElement('canvas'); c.width = c.height = size;
+  const g = c.getContext('2d'), R = size / 2, rand = rng(20270204);
+  g.translate(R, R);
+  g.fillStyle = g.strokeStyle = '#000';
+  // 外枠（太）と内枠（細）。わずかに楕円・ゆがみを入れる
+  g.save(); g.scale(1, 0.985);
+  g.lineWidth = size * 0.05; g.beginPath(); g.arc(0, 0, R * 0.9, 0, Math.PI * 2); g.stroke();
+  g.lineWidth = size * 0.016; g.beginPath(); g.arc(0, 0, R * 0.6, 0, Math.PI * 2); g.stroke();
+  g.restore();
+  // 外周の文字
+  const ring = 'ソウルのサジュ株式会社・人事部・';
+  const chars = [...ring], step = (Math.PI * 2) / chars.length;
+  g.font = `700 ${size * 0.105}px ${font}`; g.textAlign = 'center'; g.textBaseline = 'middle';
+  chars.forEach((ch, i) => { g.save(); g.rotate(-Math.PI / 2 + i * step + step / 2 - Math.PI / 2 + Math.PI / 2); g.translate(0, -R * 0.745); g.fillText(ch, 0, 0); g.restore(); });
+  // 中央の「合」
+  g.font = `700 ${size * 0.5}px ${font}`; g.fillText('合', 0, size * 0.02);
+  // かすれ・ムラ：形をアルファに変換して、大小のノイズで削る
+  const im = g.getImageData(0, 0, size, size), d = im.data;
+  const coarse = noiseLayer(size, 7, rand), mid = noiseLayer(size, 28, rand), fine = noiseLayer(size, 140, rand);
+  for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) {
+    const i = (y * size + x) * 4; const a = d[i + 3];
+    if (!a) continue;
+    // 左下を強く押した想定の濃淡
+    const press = 0.78 + 0.3 * ((size - y) / size * 0.3 + x / size * -0.15 + 0.5);
+    let k = (coarse[i] / 255) * 0.35 + (mid[i] / 255) * 0.35 + (fine[i] / 255) * 0.3;
+    k = k * press;
+    let alpha = a / 255 * Math.min(1, Math.max(0, (k - 0.22) * 2.4));
+    if (fine[i] > 236 && mid[i] > 150) alpha *= 0.15; // 小さな白抜け
+    d[i] = 196 + (mid[i] / 255) * 22; d[i + 1] = 38 + (coarse[i] / 255) * 14; d[i + 2] = 38 + (fine[i] / 255) * 10;
+    d[i + 3] = alpha * 238;
+  }
+  g.setTransform(1, 0, 0, 1, 0, 0); g.putImageData(im, 0, 0);
+  // にじみ：少しぼかしたものを重ねる
+  const out = document.createElement('canvas'); out.width = out.height = size;
+  const o = out.getContext('2d');
+  o.filter = 'blur(1.2px)'; o.globalAlpha = 0.55; o.drawImage(c, 0, 0);
+  o.filter = 'none'; o.globalAlpha = 1; o.drawImage(c, 0, 0);
+  return out;
+}
+async function sealURL() { if (!SEAL) SEAL = await makeSeal(); return SEAL; }
+
 /* ---------- 辞令の表示 ---------- */
 let R = null, signURL = '';
 function esc(t) { return String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
@@ -121,7 +177,7 @@ function show() {
         </dl>
         <p class="jr-date">令和9年2月4日</p>
         <p class="jr-from">ソウルのサジュ株式会社<br>人事部長　天乙貴人</p>
-        <span class="jr-seal" aria-hidden="true">合</span>
+        <img class="jr-seal" src="${SEAL.toDataURL()}" alt="" aria-hidden="true">
       </article>
     </div>
     <div class="jr-detail frame">
@@ -177,15 +233,18 @@ async function saveImage() {
   g.font = `500 42px ${serif}`; g.fillText('殿', W / 2 + 290, 355);
   g.strokeStyle = INK; g.lineWidth = 2; g.beginPath(); g.moveTo(230, 380); g.lineTo(850, 380); g.stroke();
   g.textAlign = 'left';
-  fit(R.dept + '勤務を命ずる', Rr - L, 46, 700); g.fillText(R.dept + '勤務を命ずる', L, 490);
-  g.font = `500 36px ${serif}`; g.fillText(R.post + 'に任ずる', L, 555);
-  g.fillStyle = SUB; g.font = `500 26px ${serif}`; g.fillText('任命理由', L, 655);
+  fit(R.dept + '勤務を命ずる', Rr - L, 38, 700); g.fillText(R.dept + '勤務を命ずる', L, 470);
+  g.font = `500 30px ${serif}`; g.fillText(R.post + 'に任ずる', L, 525);
+  g.fillStyle = '#A33A30'; g.font = `700 26px ${serif}`; g.fillText('任 命 理 由', L, 640);
   g.fillStyle = INK; g.font = `500 29px ${serif}`;
-  fit(R.sh + '。', Rr - L, 40, 700);
-  let y = wrap(R.sh + '。', L, 720, Rr - L, 56);
-  g.font = `500 28px ${serif}`;
+  g.fillStyle = INK; g.font = `700 50px ${serif}`;
+  let y = wrap(R.sh + '。', L, 715, Rr - L, 68);
+  g.font = `500 24px ${serif}`;
   y = wrap(`あわせて令和9年の「${R.star}」の星に鑑み、上記のとおり命ずる。`, L, y + 10, Rr - L, 44);
-  y += 40;
+  const boxB = y - 10;
+  g.save(); g.globalCompositeOperation = 'multiply'; g.fillStyle = 'rgba(200,60,50,.07)'; g.fillRect(L - 24, 590, Rr - L + 48, boxB - 590); g.restore();
+  g.fillStyle = INK; g.fillRect(L - 24, 588, Rr - L + 48, 4); g.fillRect(L - 24, boxB, Rr - L + 48, 4);
+  y = boxB + 66;
   g.fillStyle = SUB; g.font = `500 26px ${serif}`; g.fillText('特記事項', L, y);
   g.fillStyle = INK; fit(R.nt + (R.nr ? `（${R.nr}）` : ''), Rr - L - 140, 29, 500); g.fillText(R.nt + (R.nr ? `（${R.nr}）` : ''), L + 140, y);
   y += 50;
@@ -195,9 +254,8 @@ async function saveImage() {
   g.fillText('令和9年2月4日', Rr - 120, 1080);
   g.fillText('ソウルのサジュ株式会社', Rr - 120, 1130);
   g.fillText('人事部長　天乙貴人', Rr - 120, 1178);
-  g.save(); g.translate(Rr - 45, 1140); g.rotate(-0.1);
-  g.strokeStyle = '#B83A32'; g.lineWidth = 5; g.strokeRect(-46, -46, 92, 92);
-  g.fillStyle = '#B83A32'; g.textAlign = 'center'; g.font = `700 64px ${serif}`; g.fillText('合', 0, 23); g.restore();
+  g.save(); g.translate(Rr - 40, 1135); g.rotate(-0.12); g.globalCompositeOperation = 'multiply';
+  g.drawImage(SEAL, -78, -78, 156, 156); g.restore();
   g.textAlign = 'center'; g.fillStyle = '#C9A55C'; g.font = `500 26px ${serif}`; g.fillText('占いで、あなたの来年の配属先も → saju-aisho.com/jirei', W / 2, 1318);
   c.toBlob(b => {
     const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'jirei-2027.png';
@@ -212,8 +270,11 @@ $('jirei-form').addEventListener('submit', e => {
   if (!$('j-date').value) { $('j-err').textContent = '生年月日を選んでください。'; return; }
   $('j-err').textContent = '';
   const st = $('stamp');
-  st.hidden = false; st.classList.remove('go'); void st.offsetWidth; st.classList.add('go');
-  setTimeout(() => { st.hidden = true; show(); }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 50 : 1100);
+  sealURL().then(seal => {
+    st.querySelector('img').src = seal.toDataURL();
+    st.hidden = false; st.classList.remove('go'); void st.offsetWidth; st.classList.add('go');
+    setTimeout(() => { st.hidden = true; show(); }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 50 : 1250);
+  });
 });
 initBirthInputs(['j'], () => { $('j-err').textContent = ''; });
 fitPad();
