@@ -1,0 +1,113 @@
+---
+import Base from '../layouts/Base.astro';
+import Corners from '../components/Corners.astro';
+const jsonLd = [{
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'トップ', item: 'https://saju-aisho.com/' },
+    { '@type': 'ListItem', position: 2, name: '2027年 辞令', item: 'https://saju-aisho.com/jirei/' },
+  ],
+}];
+---
+<Base title="2027年 辞令｜生年月日でわかる、あなたの来年の「配属先」【無料サジュ】" description="生年月日を入れてサインすると、韓国の四柱推命「サジュ」から、2027年のあなたの配属先・役職・昇進率がわかる辞令が届きます。無料・登録なし。生年月日もサインも保存しません。" jsonLd={jsonLd}>
+  <div class="page-head">
+    <div class="crumb"><a href="/">トップ</a><span>／</span>2027年 辞令</div>
+    <div class="block-head"><span class="en">Notice of Assignment</span><h1>2027年 辞令｜あなたの来年の配属先</h1><p>生年月日を入れて、サインをするだけ。サジュの星から、<b>2027年のあなたの「配属先」</b>をお知らせします。</p></div>
+  </div>
+
+  <form class="tool frame" id="jirei-form" novalidate>
+    <Corners />
+    <div class="people solo">
+      <div class="person">
+        <h3><span class="jr-step">1</span>生年月日</h3>
+        <div class="field">
+          <span class="flabel" id="j-date-l">生年月日</span>
+          <button type="button" class="date-btn" id="j-date-btn" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="j-date-l j-date-btn"><span class="dv">クリックして選ぶ</span><span class="ic" aria-hidden="true"></span></button>
+          <input type="hidden" id="j-date">
+          <div class="picker frame" id="j-picker" role="dialog" aria-label="生年月日を選ぶ" hidden></div>
+        </div>
+        <div class="field" hidden style="display:none">
+          <button type="button" class="date-btn" id="j-hour-btn"><span class="dv">わからない</span></button>
+          <input type="hidden" id="j-hour" value="">
+          <div class="picker frame" id="j-hpicker" hidden></div>
+        </div>
+        <h3 class="jr-h"><span class="jr-step">2</span>受け取りのサイン <small>（指やマウスで。しなくてもOK）</small></h3>
+        <div class="jr-sign">
+          <canvas id="sign-pad" aria-label="サイン欄"></canvas>
+          <span class="jr-sign-hint" id="sign-hint">ここにサイン</span>
+          <span class="jr-sign-dono" aria-hidden="true">殿</span>
+          <button type="button" class="btn-ghost jr-clear" id="sign-clear">書きなおす</button>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn" type="submit">辞令を受け取る</button>
+      <span class="note">生年月日とサインはこの画面の中だけで使い、保存も送信もしません。</span>
+    </div>
+    <div class="err" id="j-err" role="alert"></div>
+  </form>
+
+  <div class="jr-stamp" id="stamp" hidden aria-hidden="true"><span>合</span></div>
+  <div class="jr-out" id="j-out" aria-live="polite" hidden></div>
+
+  <section class="howto">
+    <div class="block-head reveal"><span class="en">How it works</span><h2>配属先はどうやって決まるの？</h2>
+      <p>2027年は、サジュでいうと「丁未（ひのとひつじ）」の年です。あなたの日主（生まれた日の天干）から見て、2027年の「丁」がどの星（十神）にあたるかで配属先が決まります。特記事項は、生まれた日の地支と2027年の「未」との関係から出しています。</p>
+      <p>年の切りかわりは、サジュでは立春（2月4日ごろ）なので、辞令も2月4日付です。もっとくわしく知りたい人は、<a href="/kojin/">個人占い</a>や<a href="/nisshu/">10の日主</a>もどうぞ。</p>
+    </div>
+  </section>
+</Base>
+<script>
+  import '../scripts/jirei.js';
+</script>
+<style is:global>
+  .jr-step { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; border:1px solid var(--gold); color:var(--gold); font-size:13px; margin-right:10px; font-family:var(--latin); }
+  .jr-h { margin-top: 22px; flex-wrap: wrap; }
+  .jr-h small { display:block; flex-basis:100%; margin:6px 0 0 36px; letter-spacing:.05em; font-size: 12px; color: var(--muted); font-weight: 400; }
+  .jr-sign { position:relative; margin-top:10px; background:#F3EAD6; border-radius:4px; box-shadow: inset 0 0 0 1px #B38C45, inset 0 0 0 5px #F3EAD6, inset 0 0 0 6px rgba(179,140,69,.5); }
+  .jr-sign canvas { display:block; width:100%; height:150px; touch-action:none; cursor:crosshair; }
+  .jr-sign-hint { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); color:rgba(43,33,24,.3); font-family:var(--display); letter-spacing:.3em; pointer-events:none; }
+  .jr-sign-dono { position:absolute; right:18px; bottom:16px; color:#2B2118; font-family:"Yu Mincho","YuMincho","游明朝","MS PMincho","MS Mincho","Hiragino Mincho ProN",serif; font-size:22px; pointer-events:none; }
+  .jr-sign::after { content:""; position:absolute; left:8%; right:60px; bottom:22px; border-bottom:1px solid rgba(43,33,24,.35); pointer-events:none; }
+  .jr-clear { position:absolute; left:10px; top:10px; padding:4px 10px; font-size:12px; color:#6b5634; border-color:rgba(107,86,52,.5); }
+  .jr-stamp { position:fixed; inset:0; z-index:900; display:grid; place-items:center; background:rgba(10,8,14,.55); pointer-events:none; }
+  .jr-stamp[hidden] { display:none !important; }
+  .jr-stamp span { width:140px; height:140px; display:grid; place-items:center; border:6px solid #C8463C; color:#C8463C; font-family:var(--display); font-size:96px; border-radius:10px; transform:rotate(-8deg); opacity:0; }
+  .jr-stamp.go span { animation: jrStamp .8s cubic-bezier(.2,.9,.3,1.2) forwards; }
+  @keyframes jrStamp { 0%{opacity:0; transform:scale(2.6) rotate(-20deg)} 55%{opacity:1; transform:scale(.92) rotate(-8deg)} 70%{transform:scale(1.04) rotate(-8deg)} 100%{opacity:1; transform:scale(1) rotate(-8deg)} }
+  .jr-out { scroll-margin-top: 90px; display:grid; gap:20px; padding:28px 0 8px; }
+  .jr-out[hidden] { display:none !important; }
+  .jr-stage { display:grid; place-items:center; }
+  .jr-doc { position:relative; width:min(100%, 520px); background:#F3EAD6; color:#2B2118; padding:38px 34px 30px; border-radius:3px; box-shadow:0 18px 50px rgba(0,0,0,.45), inset 0 0 0 10px #F3EAD6, inset 0 0 0 11px #B38C45, inset 0 0 0 15px #F3EAD6, inset 0 0 0 16px rgba(179,140,69,.5); font-family:"Yu Mincho","YuMincho","游明朝","MS PMincho","MS Mincho","ＭＳ 明朝","Hiragino Mincho ProN","Hiragino Mincho Pro",serif; font-weight:500; animation: jrIn .7s ease both; }
+  @keyframes jrIn { from{opacity:0; transform:translateY(16px) scale(.98)} to{opacity:1; transform:none} }
+  .jr-title { text-align:center; font-size:34px; letter-spacing:.4em; margin:0 0 14px; font-weight:700; }
+  .jr-name { display:flex; align-items:flex-end; justify-content:center; gap:10px; border-bottom:1px solid #2B2118; margin:0 18px 16px; min-height:78px; }
+  .jr-name img { height:78px; max-width:72%; object-fit:contain; }
+  .jr-name span:first-child { font-size:28px; padding-bottom:6px; }
+  .jr-dono { font-size:22px; padding-bottom:8px; }
+  .jr-order { font-size:15px; margin:0 6px 4px; line-height:1.7; }
+  .jr-order b { display:block; font-size:20px; }
+  .jr-order2 { font-size:15px; margin:0 6px 16px; }
+  .jr-reason { margin:0 6px 14px; font-size:14px; line-height:1.9; }
+  .jr-reason p { margin:0 0 6px; }
+  .jr-reason .jr-r { font-size:18px; font-weight:700; line-height:1.7; margin-bottom:8px; }
+  .jr-rh { color:#7A5E2E; font-size:12px; letter-spacing:.2em; }
+  .jr-rows { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0 6px 18px; font-size:14px; }
+  .jr-rows dt { color:#7A5E2E; font-size:12px; padding-top:3px; letter-spacing:.1em; }
+  .jr-rows dd { margin:0; }
+  .jr-rows dd small { display:block; font-size:11px; color:#6b5634; }
+  .jr-date, .jr-from { text-align:right; margin:0 78px 4px 0; font-size:14px; line-height:1.8; }
+  .jr-seal { position:absolute; right:26px; bottom:26px; width:52px; height:52px; display:grid; place-items:center; border:3px solid #C8463C; color:#C8463C; font-size:34px; border-radius:6px; transform:rotate(-8deg); opacity:.9; }
+  .jr-detail { padding:22px 24px; display:grid; gap:10px; font-size:15px; }
+  .jr-detail p { margin:0; }
+  .jr-why b { color:var(--gold); } .jr-why small { display:block; font-size:12px; color:var(--muted); margin-top:6px; }
+  .jr-note { color:var(--muted); }
+  .jr-small { font-size:12px; color:var(--muted); }
+  .jr-next { display:grid; gap:12px; }
+  .jr-next-a { display:grid; gap:4px; padding:16px 20px; text-decoration:none; color:var(--ivory); transition:border-color .4s; }
+  .jr-next-a:hover { border-color:var(--gold); }
+  .jr-next-a small { color:var(--gold); font-size:12px; letter-spacing:.12em; }
+  .jr-next-a b { font-family:var(--display); font-size:16px; }
+  .jr-next-a .pr { border:1px solid var(--gold-soft); padding:0 5px; margin-left:4px; font-size:10px; }
+  @media (max-width:720px){ .jr-doc{ padding:30px 22px 26px; } .jr-title{ font-size:28px; } .jr-order b{ font-size:17px; } .jr-seal{ right:18px; width:46px; height:46px; font-size:30px; } .jr-date, .jr-from{ margin-right:66px; } }
+</style>
