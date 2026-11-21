@@ -189,6 +189,9 @@ function show() {
     </div>
     <div class="share-box">
       <p class="share-h">辞令をシェアする</p>
+      <button class="btn jr-share-img" type="button" id="jr-share">辞令の画像つきでシェアする</button>
+      <p class="jr-small jr-share-note" id="jr-share-note">Threads・Instagram・LINE・Xなど、使っているアプリを選べます。シェアの文章もコピーされるので、必要なら貼り付けてください。</p>
+      <p class="jr-small jr-alt-h">文章だけでシェアする</p>
       <div class="share-row">
         <a class="share-btn sb-threads" id="jr-th" target="_blank" rel="noopener">Threads</a>
         <a class="share-btn sb-x" id="jr-x" target="_blank" rel="noopener">X</a>
@@ -207,14 +210,37 @@ function show() {
   $('jr-th').href = `https://www.threads.net/intent/post?text=${e}`;
   $('jr-x').href = `https://twitter.com/intent/tweet?text=${e}`;
   $('jr-line').href = `https://line.me/R/share?text=${e}`;
-  $('jr-save').addEventListener('click', saveImage);
+  SHARE_TEXT = text; IMG = null;
+  renderImage().then(blob => { IMG = new File([blob], 'jirei-2027.png', { type: 'image/png' }); });
+  const canFiles = !!(navigator.canShare && navigator.canShare({ files: [new File([new Blob(['x'])], 'a.png', { type: 'image/png' })] }));
+  if (!canFiles) {
+    $('jr-share').textContent = '画像を保存して、Threadsで投稿する';
+    $('jr-share-note').textContent = '画像を保存したあと、Threadsの投稿画面が開きます。保存した画像を添付して投稿してください。';
+  }
+  $('jr-share').addEventListener('click', () => shareWithImage(canFiles));
+  $('jr-save').addEventListener('click', () => { if (IMG) download(IMG); else renderImage().then(download); });
   $('jr-again').addEventListener('click', () => { $('j-out').innerHTML = ''; fitPad(); $('jirei-form').scrollIntoView({ behavior: 'smooth' }); });
   $('j-out').hidden = false;
   $('j-out').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /* ---------- 画像で保存（1080×1350） ---------- */
-async function saveImage() {
+let SHARE_TEXT = '', IMG = null;
+function download(blob) {
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'jirei-2027.png';
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  $('jr-msg').textContent = '画像を保存しました。';
+}
+function shareWithImage(canFiles) {
+  try { navigator.clipboard && navigator.clipboard.writeText(SHARE_TEXT).catch(() => {}); } catch (e) {}
+  if (canFiles && IMG) {
+    navigator.share({ files: [IMG], text: SHARE_TEXT }).catch(() => {});
+    return;
+  }
+  const go = blob => { download(blob); window.open(`https://www.threads.net/intent/post?text=${encodeURIComponent(SHARE_TEXT)}`, '_blank', 'noopener'); };
+  if (IMG) go(IMG); else { $('jr-msg').textContent = '画像を準備しています…'; renderImage().then(go); }
+}
+async function renderImage() {
   const W = 1080, H = 1350, c = document.createElement('canvas'); c.width = W; c.height = H;
   const g = c.getContext('2d');
   await document.fonts.ready;
@@ -257,12 +283,32 @@ async function saveImage() {
   g.save(); g.translate(Rr - 40, 1135); g.rotate(-0.12); g.globalCompositeOperation = 'multiply';
   g.drawImage(SEAL, -78, -78, 156, 156); g.restore();
   g.textAlign = 'center'; g.fillStyle = '#C9A55C'; g.font = `500 26px ${serif}`; g.fillText('占いで、あなたの来年の配属先も → saju-aisho.com/jirei', W / 2, 1318);
-  c.toBlob(b => {
-    const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'jirei-2027.png';
-    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
-    $('jr-msg').textContent = '画像を保存しました。';
-  }, 'image/png');
+  return new Promise(res => c.toBlob(res, 'image/png'));
 }
+
+/* ---------- ハンコの音（その場で合成。音声ファイルは使わない） ---------- */
+let AC = null, soundOn = true;
+function stampSound(delay) {
+  if (!soundOn) return;
+  try {
+    AC = AC || new (window.AudioContext || window.webkitAudioContext)();
+    if (AC.state === 'suspended') AC.resume();
+    const t = AC.currentTime + delay;
+    // ドン：低い胴鳴り
+    const o = AC.createOscillator(), og = AC.createGain();
+    o.type = 'sine'; o.frequency.setValueAtTime(140, t); o.frequency.exponentialRampToValueAtTime(48, t + 0.16);
+    og.gain.setValueAtTime(0.0001, t); og.gain.exponentialRampToValueAtTime(0.9, t + 0.006); og.gain.exponentialRampToValueAtTime(0.0001, t + 0.22);
+    o.connect(og).connect(AC.destination); o.start(t); o.stop(t + 0.25);
+    // バン：紙と机に当たる音（ノイズを低域で）
+    const len = Math.floor(AC.sampleRate * 0.12), buf = AC.createBuffer(1, len, AC.sampleRate), ch = buf.getChannelData(0);
+    for (let i = 0; i < len; i++) ch[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3);
+    const n = AC.createBufferSource(), lp = AC.createBiquadFilter(), ng = AC.createGain();
+    n.buffer = buf; lp.type = 'lowpass'; lp.frequency.value = 1400; ng.gain.value = 0.55;
+    n.connect(lp).connect(ng).connect(AC.destination); n.start(t);
+  } catch (e) {}
+}
+const sb = $('j-sound');
+if (sb) sb.addEventListener('click', () => { soundOn = !soundOn; sb.setAttribute('aria-pressed', String(soundOn)); sb.textContent = soundOn ? 'ハンコの音：オン' : 'ハンコの音：オフ'; });
 
 /* ---------- 流れ：受け取る → 判子 → 辞令 ---------- */
 $('jirei-form').addEventListener('submit', e => {
@@ -270,10 +316,13 @@ $('jirei-form').addEventListener('submit', e => {
   if (!$('j-date').value) { $('j-err').textContent = '生年月日を選んでください。'; return; }
   $('j-err').textContent = '';
   const st = $('stamp');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try { if (soundOn) { AC = AC || new (window.AudioContext || window.webkitAudioContext)(); AC.resume(); } } catch (e2) {}
   sealURL().then(seal => {
+    stampSound(reduce ? 0 : 0.4);
     st.querySelector('img').src = seal.toDataURL();
     st.hidden = false; st.classList.remove('go'); void st.offsetWidth; st.classList.add('go');
-    setTimeout(() => { st.hidden = true; show(); }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 50 : 1250);
+    setTimeout(() => { st.hidden = true; show(); }, reduce ? 50 : 1250);
   });
 });
 initBirthInputs(['j'], () => { $('j-err').textContent = ''; });
