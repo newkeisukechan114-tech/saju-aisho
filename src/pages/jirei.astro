@@ -85,22 +85,21 @@ const jsonLd = [{
   .jr-name img { height:78px; max-width:72%; object-fit:contain; }
   .jr-name span:first-child { font-size:28px; padding-bottom:6px; }
   .jr-dono { font-size:22px; padding-bottom:8px; }
-  .jr-lead { text-align:center; font-size:15px; line-height:1.9; margin:0 0 16px; }
-  .jr-rows { display:grid; grid-template-columns:auto 1fr; gap:10px 16px; margin:0 6px 18px; font-size:15px; }
-  .jr-rows dt { color:#8A6B33; font-size:13px; padding-top:3px; letter-spacing:.1em; }
+  .jr-order { font-size:15px; margin:0 6px 4px; line-height:1.7; }
+  .jr-order b { display:block; font-size:20px; }
+  .jr-order2 { font-size:15px; margin:0 6px 16px; }
+  .jr-reason { margin:0 6px 14px; font-size:14px; line-height:1.9; }
+  .jr-reason p { margin:0 0 6px; }
+  .jr-rh { color:#7A5E2E; font-size:12px; letter-spacing:.2em; }
+  .jr-rows { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0 6px 18px; font-size:14px; }
+  .jr-rows dt { color:#7A5E2E; font-size:12px; padding-top:3px; letter-spacing:.1em; }
   .jr-rows dd { margin:0; }
-  .jr-rows dd b { font-size:19px; }
-  .jr-stats { display:grid; grid-template-columns:1fr 1fr; border-top:1px solid rgba(43,33,24,.3); border-bottom:1px solid rgba(43,33,24,.3); margin:0 6px 18px; }
-  .jr-stats div { text-align:center; padding:10px 0 6px; }
-  .jr-stats div + div { border-left:1px solid rgba(43,33,24,.3); }
-  .jr-stats small { display:block; color:#8A6B33; font-size:12px; letter-spacing:.1em; }
-  .jr-stats b { font-size:40px; font-family:var(--latin); }
-  .jr-stats i { font-style:normal; font-size:16px; margin-left:2px; }
-  .jr-from { text-align:right; margin:0 92px 0 0; font-size:15px; }
-  .jr-seal { position:absolute; right:30px; bottom:18px; width:58px; height:58px; display:grid; place-items:center; border:3px solid #C8463C; color:#C8463C; font-size:38px; border-radius:6px; transform:rotate(-8deg); opacity:.9; }
+  .jr-rows dd small { display:block; font-size:11px; color:#6b5634; }
+  .jr-date, .jr-from { text-align:right; margin:0 78px 4px 0; font-size:14px; line-height:1.8; }
+  .jr-seal { position:absolute; right:26px; bottom:26px; width:52px; height:52px; display:grid; place-items:center; border:3px solid #C8463C; color:#C8463C; font-size:34px; border-radius:6px; transform:rotate(-8deg); opacity:.9; }
   .jr-detail { padding:22px 24px; display:grid; gap:10px; font-size:15px; }
   .jr-detail p { margin:0; }
-  .jr-why b { color:var(--gold); }
+  .jr-why b { color:var(--gold); } .jr-why small { display:block; font-size:12px; color:var(--muted); margin-top:6px; }
   .jr-note { color:var(--muted); }
   .jr-small { font-size:12px; color:var(--muted); }
   .jr-next { display:grid; gap:12px; }
@@ -109,5 +108,5 @@ const jsonLd = [{
   .jr-next-a small { color:var(--gold); font-size:12px; letter-spacing:.12em; }
   .jr-next-a b { font-family:var(--display); font-size:16px; }
   .jr-next-a .pr { border:1px solid var(--gold-soft); padding:0 5px; margin-left:4px; font-size:10px; }
-  @media (max-width:720px){ .jr-doc{ padding:30px 22px 26px; } .jr-title{ font-size:28px; } .jr-stats b{ font-size:32px; } .jr-from{ margin-right:72px; } .jr-rows dd b{ font-size:16px; } .jr-seal{ right:20px; width:48px; height:48px; font-size:30px; } }
+  @media (max-width:720px){ .jr-doc{ padding:30px 22px 26px; } .jr-title{ font-size:28px; } .jr-order b{ font-size:17px; } .jr-seal{ right:18px; width:46px; height:46px; font-size:30px; } .jr-date, .jr-from{ margin-right:66px; } }
 </style>

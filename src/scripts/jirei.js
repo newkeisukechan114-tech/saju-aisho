@@ -8,47 +8,61 @@ const YEAR_STEM = 3; // 2027年＝丁未
 
 // 2027年の天干「丁」が、あなたの日主から見てどの星か → 配属先
 const DEPT = {
-  '傷官': { dept: '表現開発部 本音発信課', post: 'チーフ・クリエイター', base: [74, 62],
-    body: '言いたかったことが、やっと言葉になる年です。黙って我慢するより、気持ちを形にするほど評価が上がります。',
-    love: '恋愛業務：「好き」を先に伝えた人が、流れをつかみます。' },
-  '食神': { dept: 'ごほうび推進部 たのしみ企画課', post: '企画リーダー', base: [80, 34],
-    body: '楽しいことを企画するほど、人とお金が集まってくる年です。がんばりすぎより「おいしい・うれしい」を優先してください。',
-    love: '恋愛業務：ごはんや趣味のお誘いから、ご縁が育ちます。' },
-  '劫財': { dept: 'ライバル調整部 競争課', post: '現場責任者', base: [66, 78],
-    body: '負けず嫌いに火がつく年です。張り合う相手がいるほど力が出ますが、お金と体力の使いすぎには注意です。',
-    love: '恋愛業務：ライバル出現でスイッチが入りやすい年です。焦りすぎないこと。' },
-  '比肩': { dept: '自分らしさ本部 独立準備室', post: '室長', base: [72, 55],
-    body: '人に合わせるより、自分のやり方を通したほうがうまくいく年です。ひとり立ちの準備にぴったりです。',
-    love: '恋愛業務：対等でいられる相手が、いちばん長続きします。' },
-  '正印': { dept: '学び直し部 資格取得課', post: '研修主任', base: [78, 40],
-    body: '学んだことがそのまま味方になる年です。資格や勉強を始めると、まわりから自然に頼られるようになります。',
-    love: '恋愛業務：年上や、尊敬できる人とのご縁に注目です。' },
-  '偏印': { dept: 'ひらめき研究所 ひとり時間課', post: '主任研究員', base: [64, 48],
-    body: 'ひとりで考える時間から、思わぬアイデアが生まれる年です。予定を詰めすぎず、余白を確保してください。',
-    love: '恋愛業務：にぎやかな場より、少人数や趣味の場で出会いやすい年です。' },
-  '正官': { dept: '信頼構築部 管理職候補課', post: '管理職候補', base: [88, 66],
-    body: 'まじめさがきちんと評価される年です。任される仕事が増えますが、それは期待されている証拠です。',
-    love: '恋愛業務：誠実な人との「ちゃんとした」ご縁が近づきます。' },
-  '偏官': { dept: '挑戦突破部 特命プロジェクト課', post: '特命担当', base: [70, 86],
-    body: '急な依頼や大きな挑戦がめぐってくる年です。忙しいぶん、乗り越えたあとの成長がいちばん大きい配属です。',
-    love: '恋愛業務：刺激的な相手にひかれやすい年。勢いだけで決めないこと。' },
-  '正財': { dept: 'ご縁営業部 恋愛成約課', post: '成約担当マネージャー', base: [86, 38],
-    body: 'コツコツ積み上げたものが、目に見える成果になる年です。2027年の「丁」とあなたの日主は、引き合う組み合わせ（干合）です。',
-    love: '恋愛業務：まじめなお付き合いや、関係を一歩進める話が出やすい年です。' },
-  '偏財': { dept: '出会い拡大部 新規開拓課', post: '新規開拓リーダー', base: [76, 52],
-    body: '人の輪が一気に広がる年です。誘われたら一度は顔を出すと、仕事も恋もチャンスが増えます。',
-    love: '恋愛業務：飲み会・紹介・イベントなど、新しい場所に出会いがあります。' },
+  '傷官': { dept: '傷官本部 本音発信課', post: '主任', base: [74, 62],
+    why: '本音が言葉になりやすい「傷官」の星', body: '言いたかったことが、やっと言葉になる年です。黙って我慢するより、気持ちを形にするほど評価が上がります。',
+    love: '恋愛：「好き」を先に伝えた人が、流れをつかみます。' },
+  '食神': { dept: '食神本部 ごほうび企画課', post: '企画主任', base: [80, 34],
+    why: '楽しみと豊かさを呼ぶ「食神」の星', body: '楽しいことを企画するほど、人とお金が集まってくる年です。がんばりすぎより「おいしい・うれしい」を優先してください。',
+    love: '恋愛：ごはんや趣味のお誘いから、ご縁が育ちます。' },
+  '劫財': { dept: '劫財本部 ライバル対策課', post: '係長', base: [66, 78],
+    why: '負けず嫌いに火がつく「劫財」の星', body: '張り合う相手がいるほど力が出る年です。ただし、お金と体力の使いすぎには注意です。',
+    love: '恋愛：ライバル出現でスイッチが入りやすい年です。焦りすぎないこと。' },
+  '比肩': { dept: '比肩本部 独立準備室', post: '室長', base: [72, 55],
+    why: '自分の足で立つ「比肩」の星', body: '人に合わせるより、自分のやり方を通したほうがうまくいく年です。ひとり立ちの準備にぴったりです。',
+    love: '恋愛：対等でいられる相手が、いちばん長続きします。' },
+  '正印': { dept: '正印本部 学び直し課', post: '研修主任', base: [78, 40],
+    why: '学びと後ろ盾に恵まれる「正印」の星', body: '学んだことがそのまま味方になる年です。資格や勉強を始めると、まわりから自然に頼られるようになります。',
+    love: '恋愛：年上や、尊敬できる人とのご縁に注目です。' },
+  '偏印': { dept: '偏印研究所 ひらめき課', post: '主任研究員', base: [64, 48],
+    why: 'ひらめきと個性が冴える「偏印」の星', body: 'ひとりで考える時間から、思わぬアイデアが生まれる年です。予定を詰めすぎず、余白を確保してください。',
+    love: '恋愛：にぎやかな場より、少人数や趣味の場で出会いやすい年です。' },
+  '正官': { dept: '正官本部 管理職候補課', post: '課長代理', base: [88, 66],
+    why: '信頼と責任が集まる「正官」の星', body: 'まじめさがきちんと評価される年です。任される仕事が増えますが、それは期待されている証拠です。',
+    love: '恋愛：誠実な人との「ちゃんとした」ご縁が近づきます。' },
+  '偏官': { dept: '偏官本部 特命プロジェクト課', post: '特命担当', base: [70, 86],
+    why: '試練と突破の「偏官」の星', body: '急な依頼や大きな挑戦がめぐってくる年です。忙しいぶん、乗り越えたあとの成長がいちばん大きい配属です。',
+    love: '恋愛：刺激的な相手にひかれやすい年。勢いだけで決めないこと。' },
+  '正財': { dept: '正財本部 ご縁成約課', post: '課長', base: [86, 38],
+    why: '積み上げが実を結ぶ「正財」の星（しかも日主と引き合う干合）', body: 'コツコツ積み上げたものが、目に見える成果になる年です。2027年の「丁」とあなたの日主は、引き合う組み合わせ（干合）です。',
+    love: '恋愛：まじめなお付き合いや、関係を一歩進める話が出やすい年です。' },
+  '偏財': { dept: '偏財本部 新規開拓課', post: '開拓主任', base: [76, 52],
+    why: '人とお金の輪が広がる「偏財」の星', body: '人の輪が一気に広がる年です。誘われたら一度は顔を出すと、仕事も恋もチャンスが増えます。',
+    love: '恋愛：飲み会・紹介・イベントなど、新しい場所に出会いがあります。' },
 };
+
+// 日主ごとの任命理由（性格のあるあるを、辞令らしい言い回しで）
+const REASON = [
+  { t: '大樹', r: '貴殿は、頼まれてもいないのに後輩の面倒を見始め、気づけば全体のまとめ役になっている大樹のごとき人材である。曲がったことが許せず、会議でひとりだけ正論を言える胆力も高く評価する。', sh: '頼まれてもいないのに後輩の面倒を見始めるため' },
+  { t: '草花', r: '貴殿は、場の空気を三秒で読み、角を立てずに話を通す草花のごときしなやかさを有する。断れずに引き受けた仕事を、なぜか全部こなしてしまう点も高く評価する。', sh: '断れずに引き受けた仕事を、なぜか全部こなしてしまうため' },
+  { t: '太陽', r: '貴殿は、出社するだけで部署の照明が一段明るくなる太陽のごとき人材である。考えていることがすべて顔に出るため、裏表がないと社内で厚く信頼されている点も評価する。', sh: '考えていることが全部顔に出るため' },
+  { t: '灯火', r: '貴殿は、好きなことには夜中まで燃え続ける灯火のごとき集中力を有する。人の小さな変化にいち早く気づき、さりげなく声をかける細やかさも高く評価する。', sh: '好きなことには夜中まで燃え続けるため' },
+  { t: '山', r: '貴殿は、社内でトラブルが起きても「まあ、大丈夫でしょう」と動じない山のごとき安定感を有する。いつの間にか社内に非公式の相談窓口ができている点も評価する。', sh: 'トラブルが起きても「まあ大丈夫でしょう」と動じないため' },
+  { t: '田畑', r: '貴殿は、人の話を最後まで聞き、相手の良さを育てる田畑のごとき人材である。心配性ゆえに準備が万全で、会議の資料が誰よりも先にそろっている点も高く評価する。', sh: '心配性ゆえに、資料が誰よりも先にそろっているため' },
+  { t: '鋼', r: '貴殿は、一度決めたら曲げない鋼の意志を有し、長引く会議で「で、結論は？」と切り出せる貴重な人材である。言い方は少々まっすぐだが、裏がない点を高く評価する。', sh: '長引く会議で「で、結論は？」と切り出せるため' },
+  { t: '宝石', r: '貴殿は、資料の文字のずれひとつ見逃さない宝石のごとき美意識を有する。繊細で傷つきやすいが、それを表に出さずに完璧に仕上げてくる点を高く評価する。', sh: '資料の文字のずれひとつ見逃さないため' },
+  { t: '大海', r: '貴殿は、発想のスケールが大海のごとく大きく、会議の議題をいつの間にか三つ増やす人材である。束縛を嫌うが、自由にさせると誰よりも遠くまで進む点を評価する。', sh: '会議の議題をいつの間にか三つ増やすため' },
+  { t: '雨露', r: '貴殿は、言われる前に相手の気持ちを察する雨露のごとき感受性を有する。おとなしく見えて、実は社内でいちばん人をよく見ている観察眼を高く評価する。', sh: 'おとなしく見えて、実は社内でいちばん人を見ているため' },
+];
 
 // 生まれた日の地支と、2027年の「未」との関係 → 特記事項
 function note(b) {
   const B = BRANCHES[b];
-  if (B === '午') return ['★ ご縁手当を支給する', '日の地支「午」が2027年の「未」と結びつく（支合）ため、人とのご縁が深まりやすい年です。', 8, -6];
-  if (B === '卯' || B === '亥') return ['チーム手当を支給する', `日の地支「${B}」が「未」と同じ仲間（三合）のため、協力者に恵まれやすい年です。`, 6, -4];
-  if (B === '丑') return ['転勤の可能性あり', '日の地支「丑」が「未」とぶつかる（冲）ため、環境や住まいが動きやすい年です。変化はチャンスとして受け取ってください。', -4, 12];
-  if (B === '未') return ['現部署に残留', '日の地支が年と同じ「未」のため、同じ場所で深めるほど力が出る年です。', 2, 4];
-  if (B === '子') return ['人間関係の見直しあり', '日の地支「子」と「未」は、すれ違いやすい組み合わせ（害）です。言葉を省かないのがコツです。', -2, 8];
-  return ['通常勤務', '大きな波は少なく、配属先の仕事に集中しやすい年です。', 0, 0];
+  if (B === '午') return ['ご縁手当を支給する', '日支「午」と年支「未」の支合による', '生まれた日の地支「午」が2027年の「未」と結びつく（支合）ため、人とのご縁が深まりやすい年です。', 8, -6];
+  if (B === '卯' || B === '亥') return ['チーム手当を支給する', `日支「${B}」と年支「未」の三合による`, `生まれた日の地支「${B}」が「未」と同じ仲間（三合）のため、協力者に恵まれやすい年です。`, 6, -4];
+  if (B === '丑') return ['転勤の可能性あり', '日支「丑」と年支「未」の冲による', '生まれた日の地支「丑」が「未」とぶつかる（冲）ため、環境や住まいが動きやすい年です。変化はチャンスとして受け取ってください。', -4, 12];
+  if (B === '未') return ['現部署にて引き続き勤務', '日支と年支がともに「未」のため', '生まれた日の地支が年と同じ「未」のため、同じ場所で深めるほど力が出る年です。', 2, 4];
+  if (B === '子') return ['報告・連絡・相談を徹底すること', '日支「子」と年支「未」の害による', '生まれた日の地支「子」と「未」は、すれ違いやすい組み合わせ（害）です。言葉を省かないのがコツです。', -2, 8];
+  return ['なし', '', '大きな波は少なく、配属先の仕事に集中しやすい年です。', 0, 0];
 }
 
 function compute(y, m, d) {
@@ -56,11 +70,11 @@ function compute(y, m, d) {
   const s = p.day.s, b = p.day.b;
   const star = tengod(s, YEAR_STEM);
   const D = DEPT[star];
-  const [nt, nd, up, ot] = note(b);
+  const [nt, nr, nd, up, ot] = note(b);
   const clamp = v => Math.max(12, Math.min(98, v));
   // 同じ日主でも生まれ日で少しずつ変わるように（決まった計算なので何度やっても同じ結果）
   const wob = ((y * 7 + m * 13 + d * 31) % 7) - 3;
-  return { s, b, star, ...D, nt, nd, rise: clamp(D.base[0] + up + wob), over: clamp(D.base[1] + ot - wob) };
+  return { s, b, star, ...D, ...REASON[s], nt, nr, nd, rise: clamp(D.base[0] + up + wob), over: clamp(D.base[1] + ot - wob) };
 }
 
 /* ---------- サイン ---------- */
@@ -98,22 +112,20 @@ function show() {
       <article class="jr-doc" id="jr-doc" aria-label="2027年の辞令">
         <p class="jr-title">辞　令</p>
         <div class="jr-name">${signURL ? `<img src="${signURL}" alt="あなたのサイン">` : '<span>あなた</span>'}<span class="jr-dono">殿</span></div>
-        <p class="jr-lead">2027年2月4日（立春）付をもって<br>下記のとおり配属を命ずる。</p>
+        <p class="jr-order"><b>${R.dept}</b>勤務を命ずる</p>
+        <p class="jr-order2">${R.post}に任ずる</p>
+        <div class="jr-reason"><p class="jr-rh">任命理由</p><p>${R.r}</p><p>よって、令和9年にめぐる${R.why}に鑑み、上記のとおり命ずる。</p></div>
         <dl class="jr-rows">
-          <dt>配属</dt><dd><b>${R.dept}</b></dd>
-          <dt>役職</dt><dd>${R.post}</dd>
-          <dt>特記事項</dt><dd>${R.nt}</dd>
+          <dt>特記事項</dt><dd>${R.nt}${R.nr ? `<small>（${R.nr}）</small>` : ''}</dd>
+          <dt>査定見込</dt><dd>昇進率 <b>${R.rise}％</b>　残業（試練）度 <b>${R.over}％</b></dd>
         </dl>
-        <div class="jr-stats">
-          <div><small>昇進率</small><b>${R.rise}<i>%</i></b></div>
-          <div><small>残業（試練）度</small><b>${R.over}<i>%</i></b></div>
-        </div>
-        <p class="jr-from">ソウルのサジュ 人事部</p>
+        <p class="jr-date">令和9年2月4日</p>
+        <p class="jr-from">ソウルのサジュ株式会社<br>人事部長　天乙貴人</p>
         <span class="jr-seal" aria-hidden="true">合</span>
       </article>
     </div>
     <div class="jr-detail frame">
-      <p class="jr-why">あなたの日主は<b>${STEM_FULL[R.s]}</b>。2027年の「丁」は、あなたから見て<b>「${R.star}」</b>の星にあたります。</p>
+      <p class="jr-why">あなたの日主は<b>${STEM_FULL[R.s]}（${R.t}）</b>。2027年（丁未）の「丁」は、あなたから見て<b>「${R.star}」</b>の星にあたります。配属先はこの星から、任命理由は日主の性格から出しています。<small>※「天乙貴人」は、サジュで困ったときに助けてくれるとされる吉星の名前です。</small></p>
       <p>${R.body}</p>
       <p>${R.love}</p>
       <p class="jr-note">${R.nd}</p>
@@ -134,7 +146,7 @@ function show() {
       <a class="jr-next-a frame" href="/kojin/"><small>あなたの人事ファイル</small><b>自分のサジュをぜんぶ見る（相談メモつき）→</b></a>
       <a class="jr-next-a frame" href="/guide/"><small>異動前の個別面談 <span class="pr">PR</span></small><b>2027年の流れをプロに聞く：はじめての電話占い →</b></a>
     </nav>`;
-  const text = `【辞令】2027年、わたしは「${R.dept}」に配属されました。\n昇進率${R.rise}%・残業（試練）度${R.over}%。\n\nあなたの来年の配属先は？▼\nhttps://saju-aisho.com/jirei/\n#サジュ #2027年の運勢`;
+  const text = `【辞令】令和9年2月4日付で「${R.dept}」勤務を命じられました。\n理由：${R.sh}。\n\n占いで、あなたの来年の配属先も出ます▼\nhttps://saju-aisho.com/jirei/\n#サジュ #2027年の運勢`;
   const e = encodeURIComponent(text);
   $('jr-th').href = `https://www.threads.net/intent/post?text=${e}`;
   $('jr-x').href = `https://twitter.com/intent/tweet?text=${e}`;
@@ -149,35 +161,42 @@ function show() {
 async function saveImage() {
   const W = 1080, H = 1350, c = document.createElement('canvas'); c.width = W; c.height = H;
   const g = c.getContext('2d');
+  await document.fonts.ready;
   const serif = '"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif';
+  const INK = '#2B2118', SUB = '#7A5E2E', L = 150, Rr = W - 150;
   g.fillStyle = '#16121C'; g.fillRect(0, 0, W, H);
-  g.fillStyle = '#F3EAD6'; g.fillRect(70, 70, W - 140, H - 140);
-  g.strokeStyle = '#B38C45'; g.lineWidth = 3; g.strokeRect(96, 96, W - 192, H - 192);
-  g.lineWidth = 1; g.strokeRect(108, 108, W - 216, H - 216);
-  g.fillStyle = '#2B2118'; g.textAlign = 'center';
-  g.font = `700 76px ${serif}`; g.fillText('辞　令', W / 2, 230);
-  if (signURL) {
-    const im = new Image(); im.src = signURL; await im.decode();
-    const h = 150, w = Math.min(560, im.width * h / im.height);
-    g.drawImage(im, W / 2 - w / 2 - 40, 280, w, h);
-  } else { g.font = `600 64px ${serif}`; g.fillText('あなた', W / 2 - 40, 390); }
-  g.font = `600 44px ${serif}`; g.fillText('殿', W / 2 + 290, 400);
-  g.strokeStyle = '#2B2118'; g.lineWidth = 2; g.beginPath(); g.moveTo(230, 430); g.lineTo(850, 430); g.stroke();
-  g.font = `400 34px ${serif}`;
-  g.fillText('2027年2月4日（立春）付をもって', W / 2, 510); g.fillText('下記のとおり配属を命ずる。', W / 2, 560);
+  g.fillStyle = '#F5EEDC'; g.fillRect(60, 50, W - 120, H - 130);
+  g.strokeStyle = '#B38C45'; g.lineWidth = 3; g.strokeRect(84, 74, W - 168, H - 178);
+  g.lineWidth = 1; g.strokeRect(96, 86, W - 192, H - 202);
+  const fit = (t, w, size, weight) => { let f = size; g.font = `${weight} ${f}px ${serif}`; while (g.measureText(t).width > w && f > 20) { f -= 2; g.font = `${weight} ${f}px ${serif}`; } };
+  const wrap = (t, x, y, w, lh) => { let line = ''; for (const ch of t) { if (g.measureText(line + ch).width > w && !'、。」）'.includes(ch)) { g.fillText(line, x, y); y += lh; line = ch; } else line += ch; } if (line) { g.fillText(line, x, y); y += lh; } return y; };
+  g.fillStyle = INK; g.textAlign = 'center';
+  g.font = `700 72px ${serif}`; g.fillText('辞　令', W / 2, 190);
+  if (signURL) { const im = new Image(); im.src = signURL; await im.decode(); const h = 120, w = Math.min(520, im.width * h / im.height); g.drawImage(im, W / 2 - w / 2 - 40, 225, w, h); }
+  else { g.font = `500 56px ${serif}`; g.fillText('あなた', W / 2 - 40, 325); }
+  g.font = `500 42px ${serif}`; g.fillText('殿', W / 2 + 290, 335);
+  g.strokeStyle = INK; g.lineWidth = 2; g.beginPath(); g.moveTo(230, 360); g.lineTo(850, 360); g.stroke();
   g.textAlign = 'left';
-  const row = (k, v, y, big) => { g.font = `400 30px ${serif}`; g.fillStyle = '#8A6B33'; g.fillText(k, 190, y); g.fillStyle = '#2B2118'; let fs = big ? 44 : 36; g.font = `${big ? 700 : 500} ${fs}px ${serif}`; while (g.measureText(v).width > 540 && fs > 24) { fs -= 2; g.font = `${big ? 700 : 500} ${fs}px ${serif}`; } g.fillText(v, 360, y); };
-  row('配　属', R.dept, 680, true); row('役　職', R.post, 770); row('特記事項', R.nt, 860);
-  g.textAlign = 'center';
-  [['昇進率', R.rise, 360], ['残業（試練）度', R.over, 720]].forEach(([k, v, x]) => {
-    g.fillStyle = '#8A6B33'; g.font = `400 30px ${serif}`; g.fillText(k, x, 945);
-    g.fillStyle = '#2B2118'; g.font = `700 96px ${serif}`; g.fillText(`${v}%`, x, 1045);
-  });
-  g.fillStyle = '#2B2118'; g.font = `500 36px ${serif}`; g.fillText('ソウルのサジュ 人事部', W / 2 - 50, 1160);
-  g.save(); g.translate(W / 2 + 220, 1145); g.rotate(-0.12);
-  g.strokeStyle = '#B83A32'; g.lineWidth = 6; g.strokeRect(-52, -52, 104, 104);
-  g.fillStyle = '#B83A32'; g.font = `700 72px ${serif}`; g.fillText('合', 0, 26); g.restore();
-  g.fillStyle = '#8A6B33'; g.font = `400 26px ${serif}`; g.fillText('saju-aisho.com/jirei', W / 2, 1222);
+  fit(R.dept + '勤務を命ずる', Rr - L, 44, 700); g.fillText(R.dept + '勤務を命ずる', L, 445);
+  g.font = `500 36px ${serif}`; g.fillText(R.post + 'に任ずる', L, 505);
+  g.fillStyle = SUB; g.font = `500 26px ${serif}`; g.fillText('任命理由', L, 575);
+  g.fillStyle = INK; g.font = `500 29px ${serif}`;
+  let y = wrap(R.r, L, 622, Rr - L, 46);
+  y = wrap(`よって、令和9年にめぐる${R.why}に鑑み、上記のとおり命ずる。`, L, y + 6, Rr - L, 46);
+  y += 22;
+  g.fillStyle = SUB; g.font = `500 26px ${serif}`; g.fillText('特記事項', L, y);
+  g.fillStyle = INK; fit(R.nt + (R.nr ? `（${R.nr}）` : ''), Rr - L - 140, 29, 500); g.fillText(R.nt + (R.nr ? `（${R.nr}）` : ''), L + 140, y);
+  y += 50;
+  g.fillStyle = SUB; g.font = `500 26px ${serif}`; g.fillText('査定見込', L, y);
+  g.fillStyle = INK; g.font = `700 32px ${serif}`; g.fillText(`昇進率 ${R.rise}％　残業（試練）度 ${R.over}％`, L + 140, y);
+  g.textAlign = 'right'; g.font = `500 30px ${serif}`;
+  g.fillText('令和9年2月4日', Rr - 120, 1080);
+  g.fillText('ソウルのサジュ株式会社', Rr - 120, 1130);
+  g.fillText('人事部長　天乙貴人', Rr - 120, 1178);
+  g.save(); g.translate(Rr - 45, 1140); g.rotate(-0.1);
+  g.strokeStyle = '#B83A32'; g.lineWidth = 5; g.strokeRect(-46, -46, 92, 92);
+  g.fillStyle = '#B83A32'; g.textAlign = 'center'; g.font = `700 64px ${serif}`; g.fillText('合', 0, 23); g.restore();
+  g.textAlign = 'center'; g.fillStyle = '#C9A55C'; g.font = `500 26px ${serif}`; g.fillText('占いで、あなたの来年の配属先も → saju-aisho.com/jirei', W / 2, 1318);
   c.toBlob(b => {
     const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'jirei-2027.png';
     document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
