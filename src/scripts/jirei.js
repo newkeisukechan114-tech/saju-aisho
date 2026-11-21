@@ -146,7 +146,7 @@ function show() {
       <a class="jr-next-a frame" href="/kojin/"><small>あなたの人事ファイル</small><b>自分のサジュをぜんぶ見る（相談メモつき）→</b></a>
       <a class="jr-next-a frame" href="/guide/"><small>異動前の個別面談 <span class="pr">PR</span></small><b>2027年の流れをプロに聞く：はじめての電話占い →</b></a>
     </nav>`;
-  const text = `【辞令】令和9年2月4日付で「${R.dept}」勤務を命じられました。\n理由：${R.sh}。\n\n占いで、あなたの来年の配属先も出ます▼\nhttps://saju-aisho.com/jirei/\n#サジュ #2027年の運勢`;
+  const text = `【辞令】令和9年2月4日付で「${R.dept}」勤務を命じられました。\n理由：${R.sh}。\n\n占いで、あなたの来年の配属先も出ます▼\nhttps://saju-aisho.com/th/jirei/\n#サジュ #2027年の運勢`;
   const e = encodeURIComponent(text);
   $('jr-th').href = `https://www.threads.net/intent/post?text=${e}`;
   $('jr-x').href = `https://twitter.com/intent/tweet?text=${e}`;

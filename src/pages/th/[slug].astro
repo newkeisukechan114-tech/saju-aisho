@@ -11,6 +11,7 @@ export async function getStaticPaths() {
     { slug: 'top', title: 'ソウルのサジュ恋愛相性占い', path: '/' },
     { slug: 'kojin', title: '無料のサジュ占い（個人）', path: '/kojin/' },
     { slug: 'shindan', title: '無料のサジュ相性占い', path: '/shindan/' },
+    { slug: 'jirei', title: '2027年 辞令｜あなたの来年の配属先', path: '/jirei/' },
   ].map((t) => ({ params: { slug: t.slug }, props: { title: t.title, description: '生年月日だけで、韓国の四柱推命「サジュ」を無料で占えます。', path: t.path, og: '/og/_default.jpg' } }));
   return [...pages, ...tools];
 }
