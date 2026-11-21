@@ -162,7 +162,7 @@ async function saveImage() {
   const W = 1080, H = 1350, c = document.createElement('canvas'); c.width = W; c.height = H;
   const g = c.getContext('2d');
   await document.fonts.ready;
-  const serif = '"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif';
+  const serif = '"Yu Mincho","YuMincho","游明朝","MS PMincho","MS Mincho","ＭＳ 明朝","Hiragino Mincho ProN","Hiragino Mincho Pro",serif';
   const INK = '#2B2118', SUB = '#7A5E2E', L = 150, Rr = W - 150;
   g.fillStyle = '#16121C'; g.fillRect(0, 0, W, H);
   g.fillStyle = '#F5EEDC'; g.fillRect(60, 50, W - 120, H - 130);

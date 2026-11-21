@@ -67,7 +67,7 @@ const jsonLd = [{
   .jr-sign { position:relative; margin-top:10px; background:#F3EAD6; border-radius:4px; box-shadow: inset 0 0 0 1px #B38C45, inset 0 0 0 5px #F3EAD6, inset 0 0 0 6px rgba(179,140,69,.5); }
   .jr-sign canvas { display:block; width:100%; height:150px; touch-action:none; cursor:crosshair; }
   .jr-sign-hint { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); color:rgba(43,33,24,.3); font-family:var(--display); letter-spacing:.3em; pointer-events:none; }
-  .jr-sign-dono { position:absolute; right:18px; bottom:16px; color:#2B2118; font-family:var(--display); font-size:22px; pointer-events:none; }
+  .jr-sign-dono { position:absolute; right:18px; bottom:16px; color:#2B2118; font-family:"Yu Mincho","YuMincho","游明朝","MS PMincho","MS Mincho","Hiragino Mincho ProN",serif; font-size:22px; pointer-events:none; }
   .jr-sign::after { content:""; position:absolute; left:8%; right:60px; bottom:22px; border-bottom:1px solid rgba(43,33,24,.35); pointer-events:none; }
   .jr-clear { position:absolute; left:10px; top:10px; padding:4px 10px; font-size:12px; color:#6b5634; border-color:rgba(107,86,52,.5); }
   .jr-stamp { position:fixed; inset:0; z-index:900; display:grid; place-items:center; background:rgba(10,8,14,.55); pointer-events:none; }
@@ -78,7 +78,7 @@ const jsonLd = [{
   .jr-out { scroll-margin-top: 90px; display:grid; gap:20px; padding:28px 0 8px; }
   .jr-out[hidden] { display:none !important; }
   .jr-stage { display:grid; place-items:center; }
-  .jr-doc { position:relative; width:min(100%, 520px); background:#F3EAD6; color:#2B2118; padding:38px 34px 30px; border-radius:3px; box-shadow:0 18px 50px rgba(0,0,0,.45), inset 0 0 0 10px #F3EAD6, inset 0 0 0 11px #B38C45, inset 0 0 0 15px #F3EAD6, inset 0 0 0 16px rgba(179,140,69,.5); font-family:var(--display); animation: jrIn .7s ease both; }
+  .jr-doc { position:relative; width:min(100%, 520px); background:#F3EAD6; color:#2B2118; padding:38px 34px 30px; border-radius:3px; box-shadow:0 18px 50px rgba(0,0,0,.45), inset 0 0 0 10px #F3EAD6, inset 0 0 0 11px #B38C45, inset 0 0 0 15px #F3EAD6, inset 0 0 0 16px rgba(179,140,69,.5); font-family:"Yu Mincho","YuMincho","游明朝","MS PMincho","MS Mincho","ＭＳ 明朝","Hiragino Mincho ProN","Hiragino Mincho Pro",serif; font-weight:500; animation: jrIn .7s ease both; }
   @keyframes jrIn { from{opacity:0; transform:translateY(16px) scale(.98)} to{opacity:1; transform:none} }
   .jr-title { text-align:center; font-size:34px; letter-spacing:.4em; margin:0 0 14px; font-weight:700; }
   .jr-name { display:flex; align-items:flex-end; justify-content:center; gap:10px; border-bottom:1px solid #2B2118; margin:0 18px 16px; min-height:78px; }
