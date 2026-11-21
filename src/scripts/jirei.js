@@ -205,7 +205,7 @@ function show() {
       <a class="jr-next-a frame" href="/kojin/"><small>あなたの人事ファイル</small><b>自分のサジュをぜんぶ見る（相談メモつき）→</b></a>
       <a class="jr-next-a frame" href="/guide/"><small>異動前の個別面談 <span class="pr">PR</span></small><b>2027年の流れをプロに聞く：はじめての電話占い →</b></a>
     </nav>`;
-  const text = `【辞令】令和9年2月4日付で「${R.dept}」勤務を命じられました。\n理由：${R.sh}。\n\n占いで、あなたの来年の配属先も出ます▼\nhttps://saju-aisho.com/th/jirei/\n#サジュ #2027年の運勢`;
+  const text = `【辞令】令和9年2月4日付で「${R.dept}」勤務を命じられました。\n理由：${R.sh}。\n\n占いで、あなたの来年の配属先も出ます▼\nhttps://saju-aisho.com/th/jirei/`;
   const e = encodeURIComponent(text);
   $('jr-th').href = `https://www.threads.net/intent/post?text=${e}`;
   $('jr-x').href = `https://twitter.com/intent/tweet?text=${e}`;
@@ -218,7 +218,8 @@ function show() {
     $('jr-share-note').textContent = '画像を保存したあと、Threadsの投稿画面が開きます。保存した画像を添付して投稿してください。';
   }
   $('jr-share').addEventListener('click', () => shareWithImage(canFiles));
-  $('jr-save').addEventListener('click', () => { if (IMG) download(IMG); else renderImage().then(download); });
+  $('jr-save').addEventListener('click', () => saveToPhone(canFiles));
+  if (canFiles) $('jr-save').textContent = '辞令の画像を写真に保存';
   $('jr-again').addEventListener('click', () => { $('j-out').innerHTML = ''; fitPad(); $('jirei-form').scrollIntoView({ behavior: 'smooth' }); });
   $('j-out').hidden = false;
   $('j-out').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -230,6 +231,26 @@ function download(blob) {
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'jirei-2027.png';
   document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
   $('jr-msg').textContent = '画像を保存しました。';
+}
+// スマホは共有画面の「画像を保存」から写真アプリへ。使えない端末は長押し保存用に画像を大きく表示
+function saveToPhone(canFiles) {
+  const run = blob => {
+    const file = blob instanceof File ? blob : new File([blob], 'jirei-2027.png', { type: 'image/png' });
+    if (canFiles) {
+      $('jr-msg').textContent = '共有画面の「画像を保存」を選ぶと、写真に保存されます。';
+      navigator.share({ files: [file] }).catch(() => {});
+    } else if (matchMedia('(pointer: coarse)').matches) {
+      showForLongPress(file);
+    } else download(file);
+  };
+  if (IMG) run(IMG); else renderImage().then(run);
+}
+function showForLongPress(file) {
+  const url = URL.createObjectURL(file);
+  const box = document.createElement('div'); box.className = 'jr-lp';
+  box.innerHTML = `<p>画像を長押しして「写真に保存」（「“写真”に追加」）を選んでください。</p><img src="${url}" alt="2027年の辞令"><button type="button" class="btn-ghost">閉じる</button>`;
+  box.querySelector('button').addEventListener('click', () => { box.remove(); URL.revokeObjectURL(url); });
+  document.body.appendChild(box);
 }
 function shareWithImage(canFiles) {
   try { navigator.clipboard && navigator.clipboard.writeText(SHARE_TEXT).catch(() => {}); } catch (e) {}
