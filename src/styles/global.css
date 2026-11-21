@@ -697,3 +697,32 @@ html.intro-seen .intro { display: none; }
   .menu-card { grid-template-columns: 1fr; }
   .menu-card .mi { grid-column: 1; grid-row: auto; width: 72px; height: 72px; margin-bottom: 4px; }
 }
+/* 遊べる占い（辞令・界隈の入口） */
+.play { padding: 8px 0 28px; }
+.play-head { text-align: center; margin-bottom: 18px; }
+.play-head .en { display:block; font-family: var(--latin); color: var(--gold); letter-spacing: .4em; font-size: 13px; text-transform: uppercase; }
+.play-head h2 { font-size: 24px; margin-top: 6px; }
+.play-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.play-card { display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: center; padding: 22px 24px; text-decoration: none; color: var(--ivory); transition: border-color .4s, transform .4s; }
+.play-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.pc-vis { display: grid; place-items: center; min-height: 150px; }
+.pc-txt { display: grid; gap: 8px; justify-items: start; }
+.pc-badge { font-family: var(--latin); font-size: 11px; letter-spacing: .25em; color: #16121C; background: var(--gold); padding: 2px 9px; }
+.pc-title { font-family: var(--display); font-size: 22px; line-height: 1.4; }
+.pc-desc { font-size: 13px; color: var(--muted); line-height: 1.8; }
+.pc-go { margin-top: 4px; color: var(--gold); font-size: 14px; letter-spacing: .1em; }
+.mini-doc { position: relative; width: 126px; height: 150px; background: #F3EAD6; color: #2B2118; padding: 14px 12px 10px; transform: rotate(-4deg); box-shadow: 0 10px 24px rgba(0,0,0,.45), inset 0 0 0 4px #F3EAD6, inset 0 0 0 5px #B38C45; display: grid; align-content: start; gap: 6px; font-family: "Yu Mincho","YuMincho","Hiragino Mincho ProN",serif; transition: transform .5s; }
+.play-card:hover .mini-doc { transform: rotate(-1deg) scale(1.04); }
+.mini-doc b { text-align: center; font-size: 15px; letter-spacing: .3em; }
+.mini-doc i { display: block; height: 3px; background: rgba(43,33,24,.22); border-radius: 2px; }
+.mini-doc i:nth-of-type(2) { width: 70%; }
+.md-reason { font-size: 8px; color: #A33A30; border-top: 1px solid #2B2118; border-bottom: 1px solid #2B2118; padding: 3px 0; background: rgba(200,60,50,.06); line-height: 1.5; }
+.md-reason em { font-style: normal; font-size: 12px; color: #2B2118; font-weight: 700; }
+.mini-doc img { position: absolute; right: 6px; bottom: 6px; width: 40px; height: 40px; transform: rotate(-10deg); mix-blend-mode: multiply; }
+.kw-pills { display: grid; gap: 7px; justify-items: center; }
+.kw-pills span { font-size: 12px; line-height: 1.4; text-align: center; padding: 6px 12px; border: 1px solid var(--gold-soft, rgba(201,165,92,.5)); border-radius: 999px; color: var(--ivory); background: rgba(201,165,92,.08); white-space: nowrap; }
+.kw-pills span:nth-child(2) { background: var(--gold); color: #16121C; border-color: var(--gold); transform: rotate(-3deg) scale(1.05); }
+.kw-pills span:nth-child(odd) { transform: translateX(-6px); }
+.kw-pills { max-width: 100%; overflow: hidden; padding: 4px; }
+@media (max-width: 860px) { .play-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .play-card { grid-template-columns: 112px 1fr; gap: 14px; padding: 18px 16px; } .mini-doc { width: 100px; height: 124px; } .pc-vis { min-height: 124px; } .kw-pills span { font-size: 11px; padding: 5px 9px; } .pc-title { font-size: 19px; } }
