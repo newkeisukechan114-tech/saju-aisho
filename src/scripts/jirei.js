@@ -42,16 +42,16 @@ const DEPT = {
 
 // 日主ごとの任命理由（性格のあるあるを、辞令らしい言い回しで）
 const REASON = [
-  { t: '大樹', r: '貴殿は、友人との旅行で頼まれてもいないのに行程表を作成し、当日は全員の点呼まで取っていた。その統率力を高く評価する。なお、本人の希望は聞いていない。', sh: '友だちとの旅行で、頼まれてもいないのに点呼を取っていたため' },
-  { t: '草花', r: '貴殿は、行きたくない飲み会に「行けたら行く」と返信し、結局最後まで残っていた。その断れなさを順応力として高く評価する。なお、異論は受け付けない。', sh: '「行けたら行く」と返信して、最後まで残っていたため' },
-  { t: '太陽', r: '貴殿は、友人へのサプライズの計画を本人の前で話しかけ、しかも顔に全部出ていた。その隠しごとのできなさを誠実さとして評価する。なお、サプライズは失敗に終わった。', sh: 'サプライズの計画が、顔に全部出ていたため' },
-  { t: '灯火', r: '貴殿は、推しの配信を見るために一週間の予定をすべて組み替え、翌朝も平然と起きてきた。その一点集中の熱量を評価する。なお、休日の扱いについては追って通知する。', sh: '推しの配信のために、一週間の予定を全部組み替えたため' },
-  { t: '山', r: '貴殿は、休日に一歩も家から出ず、それを「充電」と言い張った。その動かざること山のごとき安定感を評価する。なお、本人が動かないため、会社が動かすこととした。', sh: '休日に一歩も家を出ず「充電」と言い張ったため' },
-  { t: '田畑', r: '貴殿は、一泊二日の旅行に絆創膏・胃薬・予備の充電器を持参し、全員に配っていた。その心配性を危機管理能力として評価する。なお、荷物の重さは考慮しない。', sh: '一泊旅行に、全員分の胃薬を持ってきたため' },
-  { t: '鋼', r: '貴殿は、友人の恋愛相談に「で、別れるの？別れないの？」と三分で結論を求めた。その決断力を評価する。なお、友人はまだ迷っている。', sh: '友だちの恋愛相談に、3分で結論を求めたため' },
-  { t: '宝石', r: '貴殿は、カフェで料理が冷めるまで写真の角度を調整し続けた。その妥協なき美意識を評価する。なお、冷めた料理の責任は問わない。', sh: '料理が冷めるまで、写真の角度を調整していたため' },
-  { t: '大海', r: '貴殿は、近所のコンビニに行くと言って出かけ、なぜか隣の県から連絡してきた。その行動範囲の広さを評価する。なお、帰りの交通費は自己負担とする。', sh: 'コンビニに行くと言って、隣の県から連絡してきたため' },
-  { t: '雨露', r: '貴殿は、友人から届いた「了解」に句点がないことを三十分気にしていた。その並外れた察知能力を評価する。なお、友人は何も考えていなかった。', sh: '「了解」に句点がないのを、30分気にしていたため' },
+  { t: '大樹', sh: '友人との旅行で、頼まれてもいないのに点呼を取っていたため' },
+  { t: '草花', sh: '「行けたら行く」と言って、最後まで残っていたため' },
+  { t: '太陽', sh: 'サプライズの計画が、顔に全部出ていたため' },
+  { t: '灯火', sh: '推しのために、有給の使い道がもう決まっているため' },
+  { t: '山', sh: '休日に一歩も家を出ず、それを「充電」と呼んでいるため' },
+  { t: '田畑', sh: '一泊旅行に、全員分の胃薬を持ってきたため' },
+  { t: '鋼', sh: '友人の恋愛相談に、3分で結論を出したため' },
+  { t: '宝石', sh: '料理が冷めるまで、写真を撮っていたため' },
+  { t: '大海', sh: 'コンビニに行くと言って、隣の県にいたため' },
+  { t: '雨露', sh: '「了解」に句点がないだけで、30分悩んだため' },
 ];
 
 // 生まれた日の地支と、2027年の「未」との関係 → 特記事項
@@ -114,7 +114,7 @@ function show() {
         <div class="jr-name">${signURL ? `<img src="${signURL}" alt="あなたのサイン">` : '<span>あなた</span>'}<span class="jr-dono">殿</span></div>
         <p class="jr-order"><b>${R.dept}</b>勤務を命ずる</p>
         <p class="jr-order2">${R.post}に任ずる</p>
-        <div class="jr-reason"><p class="jr-rh">任命理由</p><p>${R.r}</p><p>よって、令和9年にめぐる${R.why}に鑑み、上記のとおり命ずる。</p></div>
+        <div class="jr-reason"><p class="jr-rh">任命理由</p><p class="jr-r">${R.sh}。</p><p>あわせて令和9年の「${R.star}」の星に鑑み、上記のとおり命ずる。</p></div>
         <dl class="jr-rows">
           <dt>特記事項</dt><dd>${R.nt}${R.nr ? `<small>（${R.nr}）</small>` : ''}</dd>
           <dt>査定見込</dt><dd>昇進率 <b>${R.rise}％</b>　残業（試練）度 <b>${R.over}％</b></dd>
@@ -171,19 +171,21 @@ async function saveImage() {
   const fit = (t, w, size, weight) => { let f = size; g.font = `${weight} ${f}px ${serif}`; while (g.measureText(t).width > w && f > 20) { f -= 2; g.font = `${weight} ${f}px ${serif}`; } };
   const wrap = (t, x, y, w, lh) => { let line = ''; for (const ch of t) { if (g.measureText(line + ch).width > w && !'、。」）'.includes(ch)) { g.fillText(line, x, y); y += lh; line = ch; } else line += ch; } if (line) { g.fillText(line, x, y); y += lh; } return y; };
   g.fillStyle = INK; g.textAlign = 'center';
-  g.font = `700 72px ${serif}`; g.fillText('辞　令', W / 2, 190);
-  if (signURL) { const im = new Image(); im.src = signURL; await im.decode(); const h = 120, w = Math.min(520, im.width * h / im.height); g.drawImage(im, W / 2 - w / 2 - 40, 225, w, h); }
-  else { g.font = `500 56px ${serif}`; g.fillText('あなた', W / 2 - 40, 325); }
-  g.font = `500 42px ${serif}`; g.fillText('殿', W / 2 + 290, 335);
-  g.strokeStyle = INK; g.lineWidth = 2; g.beginPath(); g.moveTo(230, 360); g.lineTo(850, 360); g.stroke();
+  g.font = `700 72px ${serif}`; g.fillText('辞　令', W / 2, 205);
+  if (signURL) { const im = new Image(); im.src = signURL; await im.decode(); const h = 120, w = Math.min(520, im.width * h / im.height); g.drawImage(im, W / 2 - w / 2 - 40, 245, w, h); }
+  else { g.font = `500 56px ${serif}`; g.fillText('あなた', W / 2 - 40, 345); }
+  g.font = `500 42px ${serif}`; g.fillText('殿', W / 2 + 290, 355);
+  g.strokeStyle = INK; g.lineWidth = 2; g.beginPath(); g.moveTo(230, 380); g.lineTo(850, 380); g.stroke();
   g.textAlign = 'left';
-  fit(R.dept + '勤務を命ずる', Rr - L, 44, 700); g.fillText(R.dept + '勤務を命ずる', L, 445);
-  g.font = `500 36px ${serif}`; g.fillText(R.post + 'に任ずる', L, 505);
-  g.fillStyle = SUB; g.font = `500 26px ${serif}`; g.fillText('任命理由', L, 575);
+  fit(R.dept + '勤務を命ずる', Rr - L, 46, 700); g.fillText(R.dept + '勤務を命ずる', L, 490);
+  g.font = `500 36px ${serif}`; g.fillText(R.post + 'に任ずる', L, 555);
+  g.fillStyle = SUB; g.font = `500 26px ${serif}`; g.fillText('任命理由', L, 655);
   g.fillStyle = INK; g.font = `500 29px ${serif}`;
-  let y = wrap(R.r, L, 622, Rr - L, 46);
-  y = wrap(`よって、令和9年にめぐる${R.why}に鑑み、上記のとおり命ずる。`, L, y + 6, Rr - L, 46);
-  y += 22;
+  fit(R.sh + '。', Rr - L, 40, 700);
+  let y = wrap(R.sh + '。', L, 720, Rr - L, 56);
+  g.font = `500 28px ${serif}`;
+  y = wrap(`あわせて令和9年の「${R.star}」の星に鑑み、上記のとおり命ずる。`, L, y + 10, Rr - L, 44);
+  y += 40;
   g.fillStyle = SUB; g.font = `500 26px ${serif}`; g.fillText('特記事項', L, y);
   g.fillStyle = INK; fit(R.nt + (R.nr ? `（${R.nr}）` : ''), Rr - L - 140, 29, 500); g.fillText(R.nt + (R.nr ? `（${R.nr}）` : ''), L + 140, y);
   y += 50;
