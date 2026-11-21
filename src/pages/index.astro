@@ -48,8 +48,32 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
           <div class="qc-face qc-back" id="q-result"></div>
         </div>
       </div>
-      <a class="quick-alt" href="/kaiwai/">生年月日を入れる前に、<b>「界隈」でのぞいてみる →</b></a>
-      <a class="quick-alt" href="/jirei/">来年の配属先は？<b>「2027年 辞令」を受け取る →</b></a>
+    </section>
+    <section class="play" aria-labelledby="play-title">
+      <div class="play-head"><span class="en">Play</span><h2 id="play-title">30秒で遊べる占い</h2></div>
+      <div class="play-grid">
+        <a class="play-card pc-jirei frame" href="/jirei/">
+          <div class="pc-vis" aria-hidden="true">
+            <div class="mini-doc"><b>辞　令</b><i></i><span class="md-reason">任命理由<br><em>〇〇のため。</em></span><img src="/images/menu/seal.svg" alt="" width="46" height="46" /></div>
+          </div>
+          <div class="pc-txt">
+            <span class="pc-badge">NEW</span>
+            <b class="pc-title">2027年 辞令</b>
+            <span class="pc-desc">生年月日とサインで、来年の「配属先」と、ちょっと理不尽な任命理由が届きます。</span>
+            <span class="pc-go">辞令を受け取る →</span>
+          </div>
+        </a>
+        <a class="play-card pc-kaiwai frame" href="/kaiwai/">
+          <div class="pc-vis" aria-hidden="true">
+            <div class="kw-pills"><span>即決・即レス界隈</span><span>思い立ったら<br>旅に出る界隈</span><span>実家の安心感界隈</span></div>
+          </div>
+          <div class="pc-txt">
+            <b class="pc-title">あなたは何界隈？</b>
+            <span class="pc-desc">生年月日を入れる前に、10の「界隈」から自分っぽいものを選んでのぞけます。</span>
+            <span class="pc-go">界隈をのぞく →</span>
+          </div>
+        </a>
+      </div>
     </section>
     <nav class="menu" aria-label="コンテンツ">
       <a class="menu-card frame reveal" href="/shindan/"><img class="mi" src="/images/menu/aisho.svg" alt="" width="120" height="120" loading="lazy" decoding="async" /><span class="en">Gunghap</span><b>相性占い（ふたり用）</b><span class="desc">ふたりの四柱から、相性の点数と4つの読み解きを出します。</span><span class="go">占う</span></a>
