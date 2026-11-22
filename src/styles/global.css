@@ -726,3 +726,20 @@ html.intro-seen .intro { display: none; }
 .kw-pills { max-width: 100%; overflow: hidden; padding: 4px; }
 @media (max-width: 860px) { .play-grid { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .play-card { grid-template-columns: 112px 1fr; gap: 14px; padding: 18px 16px; } .mini-doc { width: 100px; height: 124px; } .pc-vis { min-height: 124px; } .kw-pills span { font-size: 11px; padding: 5px 9px; } .pc-title { font-size: 19px; } }
+/* スマホのヘッダーを小さく（ロゴ1行＋メニュー1行） */
+.nl-short { display: none; }
+@media (max-width: 640px) {
+  .pr-bar { font-size: 10px; padding: 3px 12px; }
+  header.site .wrap { gap: 6px 12px; padding-top: 8px; padding-bottom: 6px; }
+  .logo { gap: 8px; }
+  .logo .mark { width: 30px; height: 30px; }
+  .logo .words small { font-size: 8px; letter-spacing: .3em; }
+  .logo .words b { font-size: 15px; }
+  nav.main { width: 100%; flex-wrap: nowrap; gap: 0; font-size: 12px; letter-spacing: .04em; overflow-x: auto; scrollbar-width: none; justify-content: space-between; }
+  nav.main::-webkit-scrollbar { display: none; }
+  nav.main a { white-space: nowrap; padding: 6px 4px; }
+  .nl-long { display: none; }
+  .nl-short { display: inline; }
+}
+header.site { transition: transform .3s ease; }
+@media (max-width: 640px) { header.site.hide { transform: translateY(-100%); } }
