@@ -4,7 +4,7 @@ description: 韓国では年末から旧正月にかけて「신년운세（シ�
 category: 年運
 publishedAt: 2026-11-22
 pr: true
-draft: true
+draft: false
 ---
 
 年末が近づくと、日本では「来年はどんな年になるかな」と、雑誌やテレビの占い特集が増えてきます。
