@@ -4,13 +4,13 @@ export const GENRE_NAME: Record<string, string> = {
   unsei: '運勢・開運', aisho: '相性', ningen: '人間関係', nisshu: '日主を知る', okane: 'お金', denwa: '電話占い',
 };
 const G: Record<string, string[]> = {
-  hikaku: ['saju-shichusuimei-chigai', 'saju-mbti', 'saju-doubutsu-chigai', 'saju-astromap', 'saju-tarot-chigai', 'saju-suhijutsu-chigai', 'saju-kyusei-chigai', 'saju-sanmeigaku-chigai', 'saju-seiza-chigai', 'kankoku-ai-uranai', 'saju-towa', 'gunghap-towa', 'hagaren-gogyo'],
+  hikaku: ['saju-ketsuekigata', 'saju-shichusuimei-chigai', 'saju-mbti', 'saju-doubutsu-chigai', 'saju-astromap', 'saju-tarot-chigai', 'saju-suhijutsu-chigai', 'saju-kyusei-chigai', 'saju-sanmeigaku-chigai', 'saju-seiza-chigai', 'kankoku-ai-uranai', 'saju-towa', 'gunghap-towa', 'hagaren-gogyo'],
   kankoku: ['shinnyeon-unse', 'pepero-day', 'suneung-gokaku', 'kankoku-ai-uranai', 'saju-mbti', 'gunghap-towa', 'saju-towa', 'touji-patjuk', 'hug-day', 'saju-shichusuimei-chigai'],
-  koi: ['kataomoi', 'gengoka-koi', 'sukisugite-metsu', 'pepero-day', 'xmas-deai', 'ritto-fuyu-koi', 'aisare-jikkan', 'xmas-cospa', 'fukuen', 'shitsuren-tachinaori', 'guilty-saju', '2027-koiun', 'hug-day'],
+  koi: ['saju-ketsuekigata', 'kataomoi', 'gengoka-koi', 'sukisugite-metsu', 'pepero-day', 'xmas-deai', 'ritto-fuyu-koi', 'aisare-jikkan', 'xmas-cospa', 'fukuen', 'shitsuren-tachinaori', 'guilty-saju', '2027-koiun', 'hug-day'],
   trend: ['gengoka-koi', 'frenemy-saju', 'sukisugite-metsu', 'guilty-saju', 'un-ga-ii-hito', 'xmas-cospa', 'aisare-jikkan', 'hagaren-gogyo', 'saju-mbti'],
   kisetsu: ['shinnyeon-unse', 'pepero-day', 'xmas-deai', 'xmas-cospa', 'ritto-fuyu-koi', 'black-friday-saju', 'bonenkai-saju', 'shichigosan-oyako', 'fufu-arigato', 'suneung-gokaku', '2026-12-unsei', 'touji-patjuk', 'hug-day'],
   unsei: ['shinnyeon-unse', '2026-12-unsei', '2027-koiun', 'un-ga-ii-hito', 'black-friday-saju', 'saju-kyusei-chigai', 'touji-patjuk'],
-  aisho: ['gunghap-towa', 'gogyo-aisho', 'aisho-warui', 'moku-aisho', 'fufu-arigato', 'frenemy-saju', 'kataomoi', 'hug-day'],
+  aisho: ['saju-ketsuekigata', 'gunghap-towa', 'gogyo-aisho', 'aisho-warui', 'moku-aisho', 'fufu-arigato', 'frenemy-saju', 'kataomoi', 'hug-day'],
   ningen: ['frenemy-saju', 'bonenkai-saju', 'shichigosan-oyako', 'fufu-arigato', 'aisare-jikkan'],
   okane: ['black-friday-saju', '2026-12-unsei'],
   denwa: ['denwa-hajimete', 'denwa-kowai'],
