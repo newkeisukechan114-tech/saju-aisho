@@ -4,7 +4,7 @@ export const GENRE_NAME: Record<string, string> = {
   unsei: '運勢・開運', aisho: '相性', ningen: '人間関係', nisshu: '日主を知る', okane: 'お金', denwa: '電話占い',
 };
 const G: Record<string, string[]> = {
-  hikaku: ['saju-ketsuekigata', 'saju-shichusuimei-chigai', 'saju-mbti', 'saju-doubutsu-chigai', 'saju-astromap', 'saju-tarot-chigai', 'saju-suhijutsu-chigai', 'saju-kyusei-chigai', 'saju-sanmeigaku-chigai', 'saju-seiza-chigai', 'kankoku-ai-uranai', 'saju-towa', 'gunghap-towa', 'hagaren-gogyo'],
+  hikaku: ['nicchu-60', 'saju-ketsuekigata', 'saju-shichusuimei-chigai', 'saju-mbti', 'saju-doubutsu-chigai', 'saju-astromap', 'saju-tarot-chigai', 'saju-suhijutsu-chigai', 'saju-kyusei-chigai', 'saju-sanmeigaku-chigai', 'saju-seiza-chigai', 'kankoku-ai-uranai', 'saju-towa', 'gunghap-towa', 'hagaren-gogyo'],
   kankoku: ['shinnyeon-unse', 'pepero-day', 'suneung-gokaku', 'kankoku-ai-uranai', 'saju-mbti', 'gunghap-towa', 'saju-towa', 'touji-patjuk', 'hug-day', 'saju-shichusuimei-chigai'],
   koi: ['saju-ketsuekigata', 'kataomoi', 'gengoka-koi', 'sukisugite-metsu', 'pepero-day', 'xmas-deai', 'ritto-fuyu-koi', 'aisare-jikkan', 'xmas-cospa', 'fukuen', 'shitsuren-tachinaori', 'guilty-saju', '2027-koiun', 'hug-day'],
   trend: ['gengoka-koi', 'frenemy-saju', 'sukisugite-metsu', 'guilty-saju', 'un-ga-ii-hito', 'xmas-cospa', 'aisare-jikkan', 'hagaren-gogyo', 'saju-mbti'],
