@@ -1,7 +1,7 @@
 // 個人のサジュ鑑定（生年月日はこの画面の中だけで計算し、保存も送信もしない）
 import { saju, tengod, CORNERS, pillarHTML, barsHTML } from './saju-calc.js';
 import { initBirthInputs } from './birth-input.js';
-import { STEMS, STEM_KO, EL, stemEl, STEM_INFO, STEM_SLUG, STEM_FULL } from '../data/saju-data.js';
+import { STEMS, STEM_KO, EL, stemEl, STEM_INFO, STEM_SLUG, STEM_FULL, BRANCHES } from '../data/saju-data.js';
 import { pairSlug } from '../data/pair-data.js';
 import { ctaHTML, shareRowHTML, initShare } from './result-cta.js';
 import { type16HTML, initType16, KAIWAI } from './type16.js';
@@ -77,7 +77,7 @@ function render() {
       <div class="score gold-text">${STEMS[s]}<small>${STEM_KO[s]}</small></div>
       <h2>${STEM_FULL[s]}｜${STEM_INFO[s][0]}タイプ</h2><p>${STEM_INFO[s][1]}</p><p class="kaiwai">ちなみに、あなたは<b>「${KAIWAI[s]}」</b>かもしれません。<a href="/kaiwai/">ほかの界隈も見てみる →</a></p>
     </div>
-    <div class="charts one"><div class="panel frame">${CORNERS}<h3>あなたの四柱</h3>${pillarHTML(P)}<div class="dm">五行は「${EL[e]}」・陰陽は「${s % 2 ? '陰' : '陽'}」</div>${barsHTML(P.count)}<a class="dm-link" href="/articles/${STEM_SLUG[s]}/">${STEM_FULL[s]}の性格と恋愛傾向をくわしく読む →</a></div></div>
+    <div class="charts one"><div class="panel frame">${CORNERS}<h3>あなたの四柱</h3>${pillarHTML(P)}<div class="dm">五行は「${EL[e]}」・陰陽は「${s % 2 ? '陰' : '陽'}」</div>${barsHTML(P.count)}<a class="dm-link" href="/articles/${STEM_SLUG[s]}/">${STEM_FULL[s]}の性格と恋愛傾向をくわしく読む →</a><a class="dm-link" href="/articles/nicchu-60/#d${String(((6 * s - 5 * P.day.b) % 60 + 60) % 60 + 1).padStart(2, '0')}">あなたの日柱「${STEMS[s]}${BRANCHES[P.day.b]}」の二つ名を見る →</a></div></div>
     <div class="reading frame">${CORNERS}
       <div class="sec-head"><span class="en">Reading</span><h3>あなたのサジュを読み解く</h3></div>
       <section><h4>五行のバランス</h4><div class="rd">
