@@ -4,7 +4,7 @@ description: 韓国の占いサジュ（四柱推命）で、生まれた日の�
 category: サジュの基本
 publishedAt: 2026-11-24
 pr: true
-draft: true
+draft: false
 ---
 
 韓国の占い「サジュ（四柱推命）」では、生まれた年・月・日・時間を、それぞれ2文字の干支であらわします。そのうち、<strong>生まれた日の干支</strong>のことを「日柱（にっちゅう）」といいます。
