@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="ピンクのハートがとろけて、ティーカップの中へ流れこんでいるイラスト">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <defs><linearGradient id="h" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4B7C2"/><stop offset="1" stop-color="#C9667A"/></linearGradient></defs>
+<circle cx="480" cy="230" r="230" fill="#E59AA8" opacity=".08"/>
+<path d="M480 250 C430 200 360 170 360 120 C360 80 395 60 425 60 C452 60 470 76 480 96 C490 76 508 60 535 60 C565 60 600 80 600 120 C600 170 530 200 480 250Z" fill="url(#h)"/>
+<path d="M472 244 Q474 280 476 318 Q480 330 484 318 Q486 280 488 244Z" fill="#C9667A"/><circle cx="420" cy="200" r="7" fill="#C9667A"/><circle cx="545" cy="215" r="5" fill="#C9667A"/>
+<path d="M350 330 H610 Q606 420 520 430 H440 Q354 420 350 330Z" fill="#F3EAD6"/>
+<path d="M610 345 Q665 345 660 380 Q655 410 600 405" fill="none" stroke="#F3EAD6" stroke-width="14"/>
+<ellipse cx="480" cy="332" rx="130" ry="14" fill="#C9667A" opacity=".85"/>
+
+<g fill="#D4B26C"><path transform="translate(300 110) scale(1.2)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3Z"/><path transform="translate(660 90) scale(1)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3Z"/><path transform="translate(700 250) scale(0.8)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3Z"/><path transform="translate(260 260) scale(0.9)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3Z"/><path transform="translate(620 190) scale(0.6)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3Z"/><path transform="translate(330 190) scale(0.6)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3Z"/></g><text x="480.0" y="468" text-anchor="middle" font-family="serif" font-size="21" fill="#D4B26C" letter-spacing="5">心がとろける「メロい」瞬間</text>
+</svg>
