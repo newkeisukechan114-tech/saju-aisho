@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 410" role="img" aria-label="サジュの月の区切りである立春などの節入りと、星座の境目が、約半月ずれていることを示す図">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1622"/><stop offset="1" stop-color="#0c0b10"/></linearGradient><radialGradient id="g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4B26C" stop-opacity=".3"/><stop offset="1" stop-color="#D4B26C" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="410" fill="url(#bg)"/>
+  <text x="480" y="48" text-anchor="middle" font-family="serif" font-size="22" fill="#D4B26C" letter-spacing="3">区切りが、約半月ずれている</text><path d="M230 110 V330" stroke="#6178AE" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="230" y="100" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">立春 2/4ごろ</text>
+  <path d="M315 140 V330" stroke="#D4B26C" stroke-width="2"/>
+  <text x="315" y="352" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">魚座 2/19ごろ〜</text><path d="M400 110 V330" stroke="#6178AE" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="400" y="100" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">啓蟄 3/6ごろ</text>
+  <path d="M485 140 V330" stroke="#D4B26C" stroke-width="2"/>
+  <text x="485" y="352" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">牡羊座 3/21ごろ〜</text><path d="M570 110 V330" stroke="#6178AE" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="570" y="100" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">清明 4/5ごろ</text>
+  <path d="M655 140 V330" stroke="#D4B26C" stroke-width="2"/>
+  <text x="655" y="352" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">牡牛座 4/20ごろ〜</text><path d="M740 110 V330" stroke="#6178AE" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="740" y="100" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">立夏 5/6ごろ</text>
+  <path d="M825 140 V330" stroke="#D4B26C" stroke-width="2"/>
+  <text x="825" y="352" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#EEE7D7">双子座 5/21ごろ〜</text><rect x="230" y="180" width="680" height="40" fill="#6178AE" opacity=".18"/><text x="40" y="198" font-family="sans-serif" font-size="15" fill="#EEE7D7">サジュの月</text><text x="40" y="216" font-family="sans-serif" font-size="12" fill="#EEE7D7" opacity=".7">節入りで切りかわる</text>
+  <rect x="315.0" y="250" width="595" height="40" fill="#D4B26C" opacity=".18"/><text x="40" y="268" font-family="sans-serif" font-size="15" fill="#EEE7D7">太陽星座</text><text x="40" y="286" font-family="sans-serif" font-size="12" fill="#EEE7D7" opacity=".7">約1か月ごと</text>
+  <text x="60" y="392" font-family="sans-serif" font-size="13" fill="#EEE7D7" opacity=".75">※日付は年によって1日ほど前後します</text>
+</svg>
